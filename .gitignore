@@ -1,0 +1,47 @@
+# --- SECRETS ---
+# This is the most important section. It prevents our environment file,
+# which contains all API keys and passwords, from ever being tracked by Git.
+.env
+
+# --- PYTHON ---
+# Ignore Python's bytecode cache directories.
+__pycache__/
+
+# Ignore Python virtual environment folders.
+venv/
+env/
+.venv/
+
+# Ignore distribution and build artifacts.
+dist/
+build/
+*.egg-info/
+
+# --- DOCKER ---
+# Ignore local Docker-related files.
+.dockerignore
+docker-compose.override.yml
+
+# --- LOGS ---
+# Ignore all files that end with .log and any files inside a logs/ directory.
+*.log
+logs/
+
+# --- DATABASES ---
+# Ignore local database files.
+*.db
+*.sqlite3
+
+# --- OS-SPECIFIC FILES ---
+# Ignore macOS-specific system files.
+.DS_Store
+
+# Ignore Windows-specific thumbnail cache.
+Thumbs.db
+
+# --- IDE & EDITOR CONFIGURATION ---
+# Ignore configuration folders from popular code editors.
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace

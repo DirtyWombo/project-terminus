@@ -1,0 +1,47 @@
+[
+  {
+    "symbol": "CRWD",
+    "export_timestamp": "2025-07-21T07:03:44.170060",
+    "shares_owned": 15,
+    "average_cost_per_share": 280.5,
+    "current_price": 295.75,
+    "market_value": 4436.25,
+    "cost_basis": 4207.5,
+    "unrealized_gain_loss": 228.75,
+    "unrealized_gain_loss_pct": 5.436720142602495,
+    "daily_change_pct": 2.3,
+    "performance_30d_pct": 18.3,
+    "volatility_30d_pct": 0.01764249691238988,
+    "last_updated": "2025-07-21 07:03:44"
+  },
+  {
+    "symbol": "SNOW",
+    "export_timestamp": "2025-07-21T07:03:44.170060",
+    "shares_owned": 8,
+    "average_cost_per_share": 155.25,
+    "current_price": 148.9,
+    "market_value": 1191.2,
+    "cost_basis": 1242.0,
+    "unrealized_gain_loss": -50.799999999999955,
+    "unrealized_gain_loss_pct": -4.0901771336553905,
+    "daily_change_pct": -1.5,
+    "performance_30d_pct": 0,
+    "volatility_30d_pct": 0.01246035470051524,
+    "last_updated": "2025-07-21 07:03:44"
+  },
+  {
+    "symbol": "PLTR",
+    "export_timestamp": "2025-07-21T07:03:44.170060",
+    "shares_owned": 50,
+    "average_cost_per_share": 18.75,
+    "current_price": 22.1,
+    "market_value": 1105.0,
+    "cost_basis": 937.5,
+    "unrealized_gain_loss": 167.5,
+    "unrealized_gain_loss_pct": 17.866666666666667,
+    "daily_change_pct": 0.8,
+    "performance_30d_pct": 0,
+    "volatility_30d_pct": 0.2959324324025842,
+    "last_updated": "2025-07-21 07:03:44"
+  }
+]

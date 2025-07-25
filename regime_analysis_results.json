@@ -1,0 +1,132 @@
+{
+  "analysis_date": "2025-07-21T14:00:08.195235",
+  "regime_results": {
+    "covid_crash": {
+      "regime_info": {
+        "period": "2020-02-01 to 2020-05-01",
+        "description": "COVID-19 Market Crash",
+        "characteristics": "High volatility, panic selling, central bank intervention",
+        "market_return": -0.2,
+        "volatility": 0.5
+      },
+      "raw_signals": 200,
+      "performance": {
+        "num_signals": 31,
+        "win_rate": 0.6129032258064516,
+        "mean_return": 0.007203436620406809,
+        "std_return": 0.025385641136259282,
+        "sharpe_ratio": 4.504554786774326,
+        "max_drawdown": 0.0699723353327008,
+        "total_return": 0.23712775052596835,
+        "viable": "True"
+      }
+    },
+    "recovery_bull": {
+      "regime_info": {
+        "period": "2020-06-01 to 2021-12-31",
+        "description": "Post-COVID Bull Market",
+        "characteristics": "Strong growth, low rates, tech rally",
+        "market_return": 0.35,
+        "volatility": 0.25
+      },
+      "raw_signals": 200,
+      "performance": {
+        "num_signals": 41,
+        "win_rate": 0.4146341463414634,
+        "mean_return": 0.0025382516387067863,
+        "std_return": 0.013056228431965348,
+        "sharpe_ratio": 3.086151243101113,
+        "max_drawdown": 0.02503258770736211,
+        "total_return": 0.10571737212688026,
+        "viable": "True"
+      }
+    },
+    "inflation_bear": {
+      "regime_info": {
+        "period": "2022-01-01 to 2022-10-31",
+        "description": "Inflation/Rate Rise Bear Market",
+        "characteristics": "Rising rates, inflation fears, growth rotation",
+        "market_return": -0.15,
+        "volatility": 0.3
+      },
+      "raw_signals": 200,
+      "performance": {
+        "num_signals": 38,
+        "win_rate": 0.47368421052631576,
+        "mean_return": -0.003598747112702303,
+        "std_return": 0.015050520372448162,
+        "sharpe_ratio": -3.7957717033035387,
+        "max_drawdown": 0.17496860725884136,
+        "total_return": -0.13180476710579803,
+        "viable": "False"
+      }
+    },
+    "normalization": {
+      "regime_info": {
+        "period": "2023-01-01 to 2023-12-31",
+        "description": "Market Normalization",
+        "characteristics": "Stabilizing rates, mixed signals, sector rotation",
+        "market_return": 0.08,
+        "volatility": 0.2
+      },
+      "raw_signals": 200,
+      "performance": {
+        "num_signals": 33,
+        "win_rate": 0.42424242424242425,
+        "mean_return": -0.0035779653498394246,
+        "std_return": 0.015806145686278906,
+        "sharpe_ratio": -3.593440185800257,
+        "max_drawdown": 0.13192707096217723,
+        "total_return": -0.11525101532506266,
+        "viable": "False"
+      }
+    },
+    "sideways_grind": {
+      "regime_info": {
+        "period": "2015-01-01 to 2016-12-31",
+        "description": "Sideways Market Grind",
+        "characteristics": "Range-bound, low growth, energy crash",
+        "market_return": 0.02,
+        "volatility": 0.18
+      },
+      "raw_signals": 200,
+      "performance": {
+        "num_signals": 37,
+        "win_rate": 0.5675675675675675,
+        "mean_return": 0.0029394250336456217,
+        "std_return": 0.017396129322223272,
+        "sharpe_ratio": 2.682316563354932,
+        "max_drawdown": 0.10701789604093499,
+        "total_return": 0.10849760870027692,
+        "viable": "True"
+      }
+    }
+  },
+  "cross_regime_analysis": {
+    "average_sharpe": 0.5767621408253152,
+    "sharpe_standard_deviation": 3.5402708321672596,
+    "viable_regimes": "3",
+    "total_regimes": 5
+  },
+  "correlation_analysis": {
+    "correlations": {
+      "market_return_vs_strategy": -0.08630308647658275,
+      "volatility_vs_sharpe": 0.4056303371189986,
+      "market_vs_winrate": -0.6917653227406458
+    },
+    "regime_dependency": {
+      "bull_market_sharpe": 0.7250092068852627,
+      "bear_market_sharpe": 0.3543915417353938,
+      "high_vol_sharpe": 0.3543915417353938,
+      "low_vol_sharpe": 0.7250092068852627,
+      "regime_agnostic": "True"
+    }
+  },
+  "verdict": {
+    "regime_robust": "False",
+    "consistent_performance": "False",
+    "regime_agnostic": "True",
+    "overall_positive": "True",
+    "consistency_score": 0.22025117817094153
+  }
+}

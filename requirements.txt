@@ -1,0 +1,128 @@
+# Operation Badger - Python Dependencies
+# Advanced Stock Trading System
+# All dependencies for fully operational equity trading
+
+# ============================================================================
+# CORE OPERATIONAL DEPENDENCIES (Currently Used)
+# ============================================================================
+
+# Core Data Processing
+pandas>=2.0.0
+numpy>=1.24.0
+scipy>=1.10.0
+python-dateutil>=2.8.0
+
+# System Monitoring & Health
+psutil>=5.9.0
+requests>=2.31.0
+
+# Environment & Configuration
+python-dotenv>=1.0.0
+
+# Web Framework (Dashboard)
+flask>=2.3.0
+
+# Slack Integration (Janus AI Agent)
+slack-bolt>=1.18.0
+slack-sdk>=3.21.0
+
+# Task Scheduling & Automation
+schedule>=1.2.0
+
+# Stock Market APIs & Trading
+alpaca-trade-api>=3.1.0
+polygon-api-client>=1.13.0
+yfinance>=0.2.18
+
+# Market Calendar & Trading Hours
+pandas-market-calendars>=4.3.0
+
+# Backtesting Framework
+backtrader>=1.9.78
+
+# Security & Authentication
+cryptography>=41.0.0
+pyjwt>=2.8.0
+
+# HTTP & Async Support
+aiohttp>=3.8.0
+aiodns>=3.5.0
+pycares>=4.9.0
+
+# Utilities
+typing-extensions>=4.7.0
+setuptools>=68.0.0
+certifi>=2023.7.22
+
+# ============================================================================
+# LEGACY DEPENDENCIES (From Original System)
+# ============================================================================
+
+# ML & Analytics (For Future Feature Testing)
+pandas-ta
+scikit-learn
+joblib
+
+# Database (If Needed)
+sqlalchemy
+# psycopg2-binary  # Uncomment if PostgreSQL needed
+
+# Additional Data Sources (Optional)
+beautifulsoup4
+# tweepy  # Uncomment if Twitter integration needed
+# python-telegram-bot  # Uncomment if Telegram needed
+# google-api-python-client  # Uncomment if Google APIs needed
+yfinance
+
+# Advanced Web Framework Features (Optional)
+# Flask-SQLAlchemy  # Uncomment if database needed
+# Flask-Login  # Uncomment if user auth needed
+# Flask-WTF  # Uncomment if forms needed
+# gunicorn  # Uncomment for production deployment
+websockets
+
+# AI & NLP (For Future Enhancements)
+vaderSentiment
+# transformers  # Uncomment for local transformer models
+# torch  # Uncomment for PyTorch models
+
+# Additional Security (Optional)
+bcrypt
+# secrets  # Built into Python 3.6+
+
+# ============================================================================
+# EXTERNAL DEPENDENCIES (Installed Separately)
+# ============================================================================
+
+# Ollama AI Service:
+# 1. Install Ollama: https://ollama.ai/download
+# 2. Pull model: ollama pull llama3.2:latest
+# 3. Verify: curl http://localhost:11434/api/version
+
+# ============================================================================
+# INSTALLATION NOTES
+# ============================================================================
+
+# Install all dependencies:
+# pip install -r requirements.txt
+
+# Verify installation:
+# python -c "import pandas, flask, slack_bolt, alpaca_trade_api, psutil; print('All dependencies installed successfully')"
+
+# Alpha Validation Dependencies (CRITICAL FIRST STEP)
+jupyter>=1.0.0
+matplotlib>=3.5.0
+seaborn>=0.11.0
+
+# System Requirements:
+# - Python 3.11+ (tested on 3.13)
+# - 8GB+ RAM (recommended)
+# - 2GB+ storage for Ollama model
+# - Windows 10/11 or Linux/macOS
+# - Internet connection for initial setup
+
+# Production Notes:
+# - Use virtual environment: python -m venv cyberjackal_env
+# - Activate: cyberjackal_env\Scripts\activate (Windows) or source cyberjackal_env/bin/activate (Linux/Mac)
+# - Install: pip install -r requirements.txt
+# - Configure: Copy .env.example to .env and fill in values

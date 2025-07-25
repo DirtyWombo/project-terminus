@@ -1,0 +1,14 @@
+{
+  "validation_date": "2025-07-21T05:26:34.915935",
+  "total_signals": 391,
+  "high_confidence_signals": 290,
+  "sample_size": 290,
+  "mean_return_pct": 0.3292432834497059,
+  "volatility_pct": 3.268206438487936,
+  "p_value": 0.08731399238133178,
+  "information_ratio": 0.10074127496120873,
+  "win_rate": 0.5241379310344828,
+  "annual_sharpe_ratio": 1.5992181618416186,
+  "tests_passed": "3/5",
+  "decision": "REFINE"
+}

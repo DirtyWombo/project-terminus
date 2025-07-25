@@ -1,0 +1,32 @@
+category,metric,value,export_timestamp
+validation_results,tests_passed,4/5,2025-07-21T07:03:44.170670
+validation_results,statistical_significance_p_value,0.00390946267584668,2025-07-21T07:03:44.170670
+validation_results,information_ratio,0.16566690471384463,2025-07-21T07:03:44.170670
+validation_results,win_rate,0.5454545454545454,2025-07-21T07:03:44.170670
+validation_results,annual_sharpe_ratio,2.6298805820800024,2025-07-21T07:03:44.170670
+validation_results,sample_size,308,2025-07-21T07:03:44.170670
+validation_results,mean_return_pct,0.7287826597562006,2025-07-21T07:03:44.170670
+validation_results,volatility_pct,4.39908418048265,2025-07-21T07:03:44.170670
+validation_results,confidence_threshold,0.75,2025-07-21T07:03:44.170670
+validation_results,validation_date,2025-07-21T06:40:30.973651,2025-07-21T07:03:44.170670
+recent_signal,CRWD_symbol,CRWD,2025-07-21T07:03:44.170670
+recent_signal,CRWD_filing_date,2024-07-15,2025-07-21T07:03:44.170670
+recent_signal,CRWD_velocity_score,0.45,2025-07-21T07:03:44.170670
+recent_signal,CRWD_confidence,0.82,2025-07-21T07:03:44.170670
+recent_signal,CRWD_accession_number,0001535527-24-000089,2025-07-21T07:03:44.170670
+recent_signal,CRWD_filing_type,8-K,2025-07-21T07:03:44.170670
+recent_signal,CRWD_ai_reasoning,"Positive earnings guidance update, strategic partnership announcement",2025-07-21T07:03:44.170670
+recent_signal,SNOW_symbol,SNOW,2025-07-21T07:03:44.170670
+recent_signal,SNOW_filing_date,2024-07-10,2025-07-21T07:03:44.170670
+recent_signal,SNOW_velocity_score,-0.23,2025-07-21T07:03:44.170670
+recent_signal,SNOW_confidence,0.78,2025-07-21T07:03:44.170670
+recent_signal,SNOW_accession_number,0001640147-24-000156,2025-07-21T07:03:44.170670
+recent_signal,SNOW_filing_type,8-K,2025-07-21T07:03:44.170670
+recent_signal,SNOW_ai_reasoning,"Executive departure announcement, potential market impact",2025-07-21T07:03:44.170670
+recent_signal,PLTR_symbol,PLTR,2025-07-21T07:03:44.170670
+recent_signal,PLTR_filing_date,2024-07-08,2025-07-21T07:03:44.170670
+recent_signal,PLTR_velocity_score,0.67,2025-07-21T07:03:44.170670
+recent_signal,PLTR_confidence,0.91,2025-07-21T07:03:44.170670
+recent_signal,PLTR_accession_number,0001321655-24-000234,2025-07-21T07:03:44.170670
+recent_signal,PLTR_filing_type,8-K,2025-07-21T07:03:44.170670
+recent_signal,PLTR_ai_reasoning,"Major government contract award, significant revenue implications",2025-07-21T07:03:44.170670

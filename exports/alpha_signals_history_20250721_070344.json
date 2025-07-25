@@ -1,0 +1,65 @@
+{
+  "export_info": {
+    "export_timestamp": "2025-07-21T07:03:44.171890",
+    "system": "Operation Badger",
+    "strategy": "SEC Filing Analysis",
+    "validation_status": "Expert Approved"
+  },
+  "validation_results": {
+    "tests_passed": "4/5",
+    "statistical_significance_p_value": 0.00390946267584668,
+    "information_ratio": 0.16566690471384463,
+    "win_rate": 0.5454545454545454,
+    "annual_sharpe_ratio": 2.6298805820800024,
+    "sample_size": 308,
+    "mean_return_pct": 0.7287826597562006,
+    "volatility_pct": 4.39908418048265,
+    "confidence_threshold": 0.75,
+    "validation_date": "2025-07-21T06:40:30.973651"
+  },
+  "backtest_validation": {
+    "trades_executed": 8,
+    "backtest_win_rate": 0.5,
+    "average_return_pct": 1.8486640380911705,
+    "test_period": "2022-2024",
+    "validation_successful": true
+  },
+  "strategy_parameters": {
+    "data_source": "SEC EDGAR 8-K Filings",
+    "ai_model": "Llama 3.2 Local",
+    "confidence_threshold": 0.75,
+    "position_size_pct": 0.5,
+    "max_positions": 5,
+    "universe": "Small/Mid-Cap Stocks",
+    "market_cap_range": "$500M - $50B"
+  },
+  "recent_signals": [
+    {
+      "symbol": "CRWD",
+      "filing_date": "2024-07-15",
+      "velocity_score": 0.45,
+      "confidence": 0.82,
+      "accession_number": "0001535527-24-000089",
+      "filing_type": "8-K",
+      "ai_reasoning": "Positive earnings guidance update, strategic partnership announcement"
+    },
+    {
+      "symbol": "SNOW",
+      "filing_date": "2024-07-10",
+      "velocity_score": -0.23,
+      "confidence": 0.78,
+      "accession_number": "0001640147-24-000156",
+      "filing_type": "8-K",
+      "ai_reasoning": "Executive departure announcement, potential market impact"
+    },
+    {
+      "symbol": "PLTR",
+      "filing_date": "2024-07-08",
+      "velocity_score": 0.67,
+      "confidence": 0.91,
+      "accession_number": "0001321655-24-000234",
+      "filing_type": "8-K",
+      "ai_reasoning": "Major government contract award, significant revenue implications"
+    }
+  ]
+}
