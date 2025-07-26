@@ -1,10 +1,10 @@
-# GitHub Automation Guide - Operation Badger
+# Git Helper Guide - Operation Badger
 
-This guide explains how to use the automated GitHub system for Operation Badger project management.
+This guide explains how to use the simplified Git automation system for Operation Badger project management.
 
 ## Overview
 
-The GitHub automation system provides simple commands to handle all common Git/GitHub operations without needing to remember complex git commands or manage credentials manually.
+The Git Helper provides three simple commands to handle all common Git/GitHub operations without needing to remember complex git commands or manage credentials manually.
 
 ## Setup
 
@@ -21,103 +21,66 @@ The automation system is already set up and ready to use. Required packages are 
 
 ## Commands
 
-### Basic Usage
+There are only three commands you need to remember:
 
-**Windows Users:**
-```batch
-github.bat <command>
-```
-
-**All Users:**
+### 1. Commit and Push
+Stage all changes, create a commit with your message, and push to GitHub.
 ```bash
-python github_automation.py <command>
+python git_helper.py "Your commit message here"
 ```
 
-### Available Commands
-
-#### `status`
-Check the current repository status and see which files have been modified.
+Examples:
 ```bash
-python github_automation.py status
+python git_helper.py "Fix trading strategy bug"
+python git_helper.py "Add new backtest results"  
+python git_helper.py "Complete Sprint 12 development"
 ```
 
-#### `commit [message]`
-Stage all changes, create a commit, and push to GitHub. Automatically creates the repository if it doesn't exist.
-```bash
-python github_automation.py commit "Your commit message"
-python github_automation.py commit  # Uses automatic timestamp message
-```
-
-#### `pull`
+### 2. Pull from GitHub
 Pull the latest changes from the remote repository.
 ```bash
-python github_automation.py pull
+python git_helper.py pull
 ```
 
-#### `sync`
-Full synchronization: pull remote changes first, then commit and push any local changes.
+### 3. Full Synchronization  
+Pull remote changes first, then commit and push any local changes.
 ```bash
-python github_automation.py sync
-```
-
-#### `force-sync`
-Force synchronization with automatic conflict resolution using rebase/merge strategies.
-```bash
-python github_automation.py force-sync
-```
-
-#### `history [count]`
-Show recent commit history (default: 10 commits).
-```bash
-python github_automation.py history
-python github_automation.py history 20
-```
-
-#### `sprint <number>`
-Create a specialized commit for sprint completion with automatic result file detection.
-```bash
-python github_automation.py sprint 11
-```
-
-#### `tag <version> <description>`
-Create and push a release tag.
-```bash
-python github_automation.py tag v1.0.0 "Sprint 11 Release - First Valid Multi-Factor Strategy"
+python git_helper.py sync
 ```
 
 ## Examples
 
 ### Daily Development Workflow
 ```bash
-# Check what's changed
-python github_automation.py status
+# Start work: sync with remote
+python git_helper.py sync
 
-# Commit and push changes
-python github_automation.py commit "Implement new trading strategy"
+# Make changes, then commit and push
+python git_helper.py "Implement new trading strategy"
 
-# Sync with remote (pull first, then push any changes)
-python github_automation.py sync
-```
-
-### Sprint Completion Workflow
-```bash
-# Complete a sprint with specialized commit
-python github_automation.py sprint 11
-
-# Create a release tag for the sprint
-python github_automation.py tag v11.0 "Sprint 11 - PIT Multi-Factor Strategy Complete"
+# End of day: final sync to ensure everything is up to date
+python git_helper.py sync
 ```
 
 ### Collaboration Workflow
 ```bash
-# Start work: sync with remote
-python github_automation.py sync
+# Before starting work
+python git_helper.py pull
 
-# During work: commit frequently
-python github_automation.py commit "Work in progress on feature X"
+# After making changes
+python git_helper.py "Add Sprint 12 backtest results"
 
-# End work: final sync
-python github_automation.py sync
+# Before ending work session
+python git_helper.py sync
+```
+
+### Sprint Completion Workflow
+```bash
+# Complete sprint work
+python git_helper.py "Complete Sprint 12 - Enhanced Multi-Factor Strategy"
+
+# Ensure everything is synchronized
+python git_helper.py sync
 ```
 
 ## Features
@@ -182,7 +145,7 @@ Ensure your GitHub token has these permissions:
 The `GitHubAutomation` class can be imported and used in custom Python scripts:
 
 ```python
-from github_automation import GitHubAutomation
+from git_helper import GitHubAutomation
 
 gh = GitHubAutomation()
 gh.create_and_push_commit("Custom commit message")
@@ -192,24 +155,24 @@ gh.sync_repository()
 ### Batch Operations
 Multiple commands can be chained:
 ```bash
-python github_automation.py status && python github_automation.py commit "Batch update" && python github_automation.py sync
+python git_helper.py pull && python git_helper.py "Batch update with latest changes" && python git_helper.py sync
 ```
 
 ## Integration with Operation Badger
 
 ### Sprint Management
-Each sprint completion should use the sprint command:
+Each sprint completion should use descriptive commit messages:
 ```bash
-python github_automation.py sprint 11
+python git_helper.py "Complete Sprint 12 - Enhanced Multi-Factor Strategy with Risk Management"
 ```
 
 ### Result Archiving
-Results are automatically detected and included in sprint commits.
+Results are automatically detected and included in commits when using sync.
 
-### Release Management
-Major milestones should be tagged:
+### Regular Synchronization
+Use sync frequently to keep the repository up to date:
 ```bash
-python github_automation.py tag v11.0 "First Valid Multi-Factor Strategy"
+python git_helper.py sync
 ```
 
 ## Maintenance
