@@ -9,7 +9,7 @@ minimize API calls during backtests.
 Sprint 11: The First Valid Multi-Factor Test
 """
 
-import nasdaqdatalink
+import nasdaqdatalink as ndl
 import pandas as pd
 import os
 import json
@@ -35,7 +35,7 @@ class PITDataManager:
             cache_dir (str): Directory for caching PIT data
         """
         if api_key:
-            nasdaqdatalink.ApiConfig.api_key = api_key
+            ndl.ApiConfig.api_key = api_key
         
         self.cache_dir = cache_dir
         os.makedirs(cache_dir, exist_ok=True)
@@ -105,7 +105,7 @@ class PITDataManager:
             
             # Sharadar data is reported quarterly. We need to find the most recent
             # report that was public knowledge as of the given 'date'.
-            data = nasdaqdatalink.get_table(
+            data = ndl.get_table(
                 'SHARADAR/SF1', 
                 ticker=ticker,
                 dimension=dimension,  # As-Reported Quarterly

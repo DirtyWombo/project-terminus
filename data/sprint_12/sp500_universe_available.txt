@@ -1,0 +1,25 @@
+# S&P 500 Universe with Available Data - Sprint 12
+# Generated: 2025-07-26 00:25:07
+# Total tickers: 21
+
+AEP
+AZO
+BLDR
+CMG
+CPAY
+D
+EQR
+FTNT
+HCA
+ICE
+KKR
+MCO
+MMC
+MMM
+OXY
+PPG
+ROL
+SYK
+TRV
+VST
+ZBRA

@@ -1,0 +1,20 @@
+{
+  "strategy": "Golden Cross",
+  "test_date": "2025-07-24T00:03:48.278051",
+  "original_performance": {
+    "sharpe_ratio": 2.5413049428005468,
+    "win_rate": 0.6190476190476191,
+    "mean_return": 0.026019961417185728,
+    "sample_size": 63
+  },
+  "net_performance": {
+    "sharpe_ratio": 1.8576323456592458,
+    "win_rate": 0.5555555555555556,
+    "mean_return": 0.019019961417185736
+  },
+  "cost_impact": {
+    "cost_per_trade_bps": 35.0,
+    "sharpe_degradation": 26.90242267375776,
+    "performance_impact": "PASS"
+  }
+}

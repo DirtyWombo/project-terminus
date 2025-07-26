@@ -1,0 +1,75 @@
+The Alpha Hunt: An Action Plan for Strategy Research
+1. Assessment of the Compendium
+This document represents the successful completion of the foundational research phase. It is an A+ institutional-grade literature review that provides our team with a universe of testable hypotheses.
+
+What It Is: A comprehensive library of established trading paradigms and specific, well-defined strategies. It is our "map of the known world."
+
+What It Is Not: It is not, in itself, a source of proprietary alpha. The strategies outlined here are public knowledge. Our competitive edge will come from our unique implementation, our rigorous testing, and the novel ways we combine or enhance these foundational ideas.
+
+Its Role: This compendium is now the central playbook for the "Operation Badger" research group. It will guide our hypothesis generation, provide benchmarks for our proprietary strategies, and ensure we explore a diverse range of alpha sources.
+
+2. The Research Mandate: From Library to Laboratory
+Our objective is to systematically transform the theoretical strategies in this compendium into a portfolio of robust, validated, and uncorrelated alpha streams. We will achieve this by treating each chapter as a workstream and each strategy as a candidate for our "Alpha Gauntlet."
+
+The process is as follows:
+
+Hypothesis Generation: We will create a "Strategy Backlog," treating each strategy from the compendium as an individual research ticket.
+
+The Litmus Test: Each idea will first be subjected to a rapid, high-level validation in our alpha_validation.ipynb notebook. The goal is to fail bad ideas quickly.
+
+The Alpha Gauntlet: Ideas that pass the litmus test will be formalized and run through our full, automated robustness testing pipeline.
+
+Strategy Profiling: Strategies that survive the gauntlet will be deeply profiled to understand their performance characteristics (regime sensitivity, factor exposures, etc.).
+
+Portfolio Integration: Finally, profitable and robust strategies will be considered for inclusion in our master portfolio, with a focus on diversification and low correlation.
+
+3. Action Plan: Executing the Research Cycle
+This is our operational plan for the next 1-3 months.
+
+Phase 1: Initial Hypothesis Backlog & Prioritization (1 Week)
+Action: We will create a project board (e.g., on Jira, Trello, or a simple spreadsheet) and populate it with tickets for each of the 28 strategies outlined in the compendium.
+
+Prioritization: We will prioritize the backlog based on a combination of factors:
+
+Data Availability: We already have SEC data, so Factor-Based strategies (Chapter 9) and SEC-driven event strategies are high priority.
+
+Simplicity: We will start with simpler concepts like Moving Average Crossovers (Chapter 5) to ensure our backtesting infrastructure is flawless before moving to more complex strategies like Pairs Trading (Chapter 8).
+
+Paradigm Diversification: We will ensure our initial sprints include a mix of Trend, Mean Reversion, and Factor strategies.
+
+Phase 2: The First Research Sprint (2-4 Weeks)
+Our first sprint will focus on testing three distinct hypotheses sourced from the compendium.
+
+Candidate 1 (Trend): Strategy 2 - Double MA Crossover.
+
+Hypothesis: A 50/200-day "Golden Cross" system, filtered by a long-term trend (e.g., price > 200-day SMA), provides a statistically significant edge in the small/mid-cap universe.
+
+Goal: Validate a simple, classic trend strategy and benchmark its performance.
+
+Candidate 2 (Mean Reversion): Strategy 7 - Bollinger Bounce.
+
+Hypothesis: Buying small/mid-cap stocks when their price touches the lower 2.0 standard deviation Bollinger Band (20-period) and selling at the middle band generates consistent, small profits in non-trending markets.
+
+Goal: Test a classic mean-reversion strategy and profile its performance during different volatility regimes.
+
+Candidate 3 (Factor): Strategy 11 - Single-Factor Portfolio (Value).
+
+Hypothesis: A portfolio of the top decile of small-cap stocks, ranked by Earnings Yield (EBIT/EV), rebalanced monthly, will outperform the Russell 2000 index on a risk-adjusted basis.
+
+Goal: Build and validate our first factor-based strategy using our existing SEC data pipeline.
+
+Phase 3: Continuous Research & Portfolio Construction (Ongoing)
+As we complete sprints, we will add the results to our "Strategy Profile" database.
+
+The goal is to find at least three robust, validated strategies that have a historical correlation of less than 0.3 with each other.
+
+Once we have this initial portfolio of uncorrelated alphas, we can begin the process of paper trading the combined portfolio, not just a single strategy.
+
+4. Final Assessment
+This compendium is the intellectual foundation upon which we will build our entire trading business. It provides the structure, the ideas, and the discipline needed for systematic research.
+
+Software Engineering: Our infrastructure is ready. The focus now is on automating the research pipeline and building tools for advanced backtest analysis.
+
+Quantitative Research: The "hunt" has officially begun. Our process is sound, our map is complete, and our objectives are clear.
+
+We have moved past the stage of building a single bot. We are now building a scalable, data-driven investment process. This document is the cornerstone of that effort.
