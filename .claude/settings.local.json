@@ -18,7 +18,9 @@
       "Bash(mkdir:*)",
       "Bash(ls:*)",
       "Bash(cp:*)",
-      "Bash(rd:*)"
+      "Bash(rd:*)",
+      "Bash(move github_automation.py git_helper.py)",
+      "Bash(mv:*)"
     ],
     "deny": []
   }

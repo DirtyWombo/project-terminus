@@ -296,56 +296,25 @@ def main():
         gh = GitHubAutomation()
         
         if len(sys.argv) < 2:
-            print("GitHub Automation Commands:")
-            print("  status      - Show repository status")
-            print("  commit      - Stage, commit, and push all changes")
-            print("  pull        - Pull latest changes from remote")
-            print("  sync        - Pull remote changes and push local changes") 
-            print("  force-sync  - Force sync with automatic conflict resolution")
-            print("  history     - Show recent commit history")
-            print("  sprint <N>  - Create sprint completion commit")
-            print("  tag <ver> <desc> - Create release tag")
+            print("Git Helper Commands:")
+            print('  python git_helper.py "message" - Commit and push with message')
+            print("  python git_helper.py pull      - Pull from GitHub")
+            print("  python git_helper.py sync      - Full synchronization")
             return
         
         command = sys.argv[1].lower()
         
-        if command == 'status':
-            gh.get_status()
-            
-        elif command == 'commit':
-            message = sys.argv[2] if len(sys.argv) > 2 else None
-            gh.create_and_push_commit(message)
-            
-        elif command == 'pull':
+        # Handle the three main commands as specified
+        if command == 'pull':
             gh.pull_latest_changes()
             
         elif command == 'sync':
             gh.sync_repository()
             
-        elif command == 'force-sync':
-            gh.force_sync()
-            
-        elif command == 'history':
-            count = int(sys.argv[2]) if len(sys.argv) > 2 else 10
-            gh.get_commit_history(count)
-            
-        elif command == 'sprint':
-            if len(sys.argv) < 3:
-                print("Usage: python github_automation.py sprint <sprint_number>")
-                return
-            sprint_num = sys.argv[2]
-            gh.create_sprint_report_commit(sprint_num)
-            
-        elif command == 'tag':
-            if len(sys.argv) < 4:
-                print("Usage: python github_automation.py tag <version> <description>")
-                return
-            version = sys.argv[2]
-            description = ' '.join(sys.argv[3:])
-            gh.create_release_tag(version, description)
-            
         else:
-            print(f"Unknown command: {command}")
+            # If it's not 'pull' or 'sync', treat it as a commit message
+            commit_message = sys.argv[1]  # First argument is the commit message
+            gh.create_and_push_commit(commit_message)
     
     except Exception as e:
         print(f"Error: {e}")

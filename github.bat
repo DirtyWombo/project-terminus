@@ -19,7 +19,7 @@ if errorlevel 1 (
     pip install python-dotenv
 )
 
-REM Run the GitHub automation script
-python github_automation.py %*
+REM Run the git helper script
+python git_helper.py %*
 
 pause
