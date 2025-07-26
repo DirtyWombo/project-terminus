@@ -1,0 +1,493 @@
+{
+  "test": "Sprint #5 Test B - ADX Filter",
+  "test_date": "2025-07-25 08:38:25",
+  "strategy": "Golden Cross + ADX Filter (ADX > 25)",
+  "universe": [
+    "CRWD",
+    "SNOW",
+    "PLTR",
+    "U",
+    "RBLX",
+    "NET",
+    "DDOG",
+    "MDB",
+    "OKTA",
+    "ZS"
+  ],
+  "successful_tests": 10,
+  "individual_results": {
+    "CRWD": {
+      "ticker": "CRWD",
+      "test_date": "2025-07-25 08:38:24",
+      "strategy": "Golden Cross + ADX Filter",
+      "universe": "Small/Mid-Cap Growth",
+      "data_period": "2018-01-02 to 2023-12-29",
+      "initial_cash": 10000,
+      "performance": {
+        "final_value": 10000.0,
+        "total_return_pct": 0.0,
+        "max_drawdown_pct": 0.0,
+        "sharpe_ratio": null
+      },
+      "trading": {
+        "total_trades": 0,
+        "win_rate_pct": 0,
+        "avg_profit": 0,
+        "avg_loss": 0,
+        "expectancy": 0,
+        "profit_factor": 0,
+        "signals_generated": 2,
+        "signals_filtered": 0,
+        "filter_pass_rate_pct": 0,
+        "adx_rejections": 2
+      },
+      "transaction_costs": {
+        "total_costs_usd": 0,
+        "cost_impact_pct": 0.0,
+        "cost_breakdown_usd": {
+          "commission": 0,
+          "spread_cost": 0,
+          "slippage": 0,
+          "market_impact": 0,
+          "timing_cost": 0
+        },
+        "cost_per_trade": 0.0
+      },
+      "filter_analysis": {
+        "filter_type": "ADX Filter (ADX > 25)",
+        "signals_generated": 2,
+        "signals_passed_filter": 0,
+        "signals_rejected": 2,
+        "filter_pass_rate_pct": 0
+      }
+    },
+    "SNOW": {
+      "ticker": "SNOW",
+      "test_date": "2025-07-25 08:38:24",
+      "strategy": "Golden Cross + ADX Filter",
+      "universe": "Small/Mid-Cap Growth",
+      "data_period": "2018-01-02 to 2023-12-29",
+      "initial_cash": 10000,
+      "performance": {
+        "final_value": 10000.0,
+        "total_return_pct": 0.0,
+        "max_drawdown_pct": 0.0,
+        "sharpe_ratio": null
+      },
+      "trading": {
+        "total_trades": 0,
+        "win_rate_pct": 0,
+        "avg_profit": 0,
+        "avg_loss": 0,
+        "expectancy": 0,
+        "profit_factor": 0,
+        "signals_generated": 3,
+        "signals_filtered": 0,
+        "filter_pass_rate_pct": 0,
+        "adx_rejections": 3
+      },
+      "transaction_costs": {
+        "total_costs_usd": 0,
+        "cost_impact_pct": 0.0,
+        "cost_breakdown_usd": {
+          "commission": 0,
+          "spread_cost": 0,
+          "slippage": 0,
+          "market_impact": 0,
+          "timing_cost": 0
+        },
+        "cost_per_trade": 0.0
+      },
+      "filter_analysis": {
+        "filter_type": "ADX Filter (ADX > 25)",
+        "signals_generated": 3,
+        "signals_passed_filter": 0,
+        "signals_rejected": 3,
+        "filter_pass_rate_pct": 0
+      }
+    },
+    "PLTR": {
+      "ticker": "PLTR",
+      "test_date": "2025-07-25 08:38:24",
+      "strategy": "Golden Cross + ADX Filter",
+      "universe": "Small/Mid-Cap Growth",
+      "data_period": "2018-01-02 to 2023-12-29",
+      "initial_cash": 10000,
+      "performance": {
+        "final_value": 10000.0,
+        "total_return_pct": 0.0,
+        "max_drawdown_pct": 0.0,
+        "sharpe_ratio": null
+      },
+      "trading": {
+        "total_trades": 0,
+        "win_rate_pct": 0,
+        "avg_profit": 0,
+        "avg_loss": 0,
+        "expectancy": 0,
+        "profit_factor": 0,
+        "signals_generated": 2,
+        "signals_filtered": 0,
+        "filter_pass_rate_pct": 0,
+        "adx_rejections": 2
+      },
+      "transaction_costs": {
+        "total_costs_usd": 0,
+        "cost_impact_pct": 0.0,
+        "cost_breakdown_usd": {
+          "commission": 0,
+          "spread_cost": 0,
+          "slippage": 0,
+          "market_impact": 0,
+          "timing_cost": 0
+        },
+        "cost_per_trade": 0.0
+      },
+      "filter_analysis": {
+        "filter_type": "ADX Filter (ADX > 25)",
+        "signals_generated": 2,
+        "signals_passed_filter": 0,
+        "signals_rejected": 2,
+        "filter_pass_rate_pct": 0
+      }
+    },
+    "U": {
+      "ticker": "U",
+      "test_date": "2025-07-25 08:38:24",
+      "strategy": "Golden Cross + ADX Filter",
+      "universe": "Small/Mid-Cap Growth",
+      "data_period": "2018-01-02 to 2023-12-29",
+      "initial_cash": 10000,
+      "performance": {
+        "final_value": 10000.0,
+        "total_return_pct": 0.0,
+        "max_drawdown_pct": 0.0,
+        "sharpe_ratio": null
+      },
+      "trading": {
+        "total_trades": 0,
+        "win_rate_pct": 0,
+        "avg_profit": 0,
+        "avg_loss": 0,
+        "expectancy": 0,
+        "profit_factor": 0,
+        "signals_generated": 2,
+        "signals_filtered": 0,
+        "filter_pass_rate_pct": 0,
+        "adx_rejections": 2
+      },
+      "transaction_costs": {
+        "total_costs_usd": 0,
+        "cost_impact_pct": 0.0,
+        "cost_breakdown_usd": {
+          "commission": 0,
+          "spread_cost": 0,
+          "slippage": 0,
+          "market_impact": 0,
+          "timing_cost": 0
+        },
+        "cost_per_trade": 0.0
+      },
+      "filter_analysis": {
+        "filter_type": "ADX Filter (ADX > 25)",
+        "signals_generated": 2,
+        "signals_passed_filter": 0,
+        "signals_rejected": 2,
+        "filter_pass_rate_pct": 0
+      }
+    },
+    "RBLX": {
+      "ticker": "RBLX",
+      "test_date": "2025-07-25 08:38:24",
+      "strategy": "Golden Cross + ADX Filter",
+      "universe": "Small/Mid-Cap Growth",
+      "data_period": "2018-01-02 to 2023-12-29",
+      "initial_cash": 10000,
+      "performance": {
+        "final_value": 10000.0,
+        "total_return_pct": 0.0,
+        "max_drawdown_pct": 0.0,
+        "sharpe_ratio": null
+      },
+      "trading": {
+        "total_trades": 0,
+        "win_rate_pct": 0,
+        "avg_profit": 0,
+        "avg_loss": 0,
+        "expectancy": 0,
+        "profit_factor": 0,
+        "signals_generated": 2,
+        "signals_filtered": 0,
+        "filter_pass_rate_pct": 0,
+        "adx_rejections": 2
+      },
+      "transaction_costs": {
+        "total_costs_usd": 0,
+        "cost_impact_pct": 0.0,
+        "cost_breakdown_usd": {
+          "commission": 0,
+          "spread_cost": 0,
+          "slippage": 0,
+          "market_impact": 0,
+          "timing_cost": 0
+        },
+        "cost_per_trade": 0.0
+      },
+      "filter_analysis": {
+        "filter_type": "ADX Filter (ADX > 25)",
+        "signals_generated": 2,
+        "signals_passed_filter": 0,
+        "signals_rejected": 2,
+        "filter_pass_rate_pct": 0
+      }
+    },
+    "NET": {
+      "ticker": "NET",
+      "test_date": "2025-07-25 08:38:24",
+      "strategy": "Golden Cross + ADX Filter",
+      "universe": "Small/Mid-Cap Growth",
+      "data_period": "2018-01-02 to 2023-12-29",
+      "initial_cash": 10000,
+      "performance": {
+        "final_value": 10000.0,
+        "total_return_pct": 0.0,
+        "max_drawdown_pct": 0.0,
+        "sharpe_ratio": null
+      },
+      "trading": {
+        "total_trades": 0,
+        "win_rate_pct": 0,
+        "avg_profit": 0,
+        "avg_loss": 0,
+        "expectancy": 0,
+        "profit_factor": 0,
+        "signals_generated": 1,
+        "signals_filtered": 0,
+        "filter_pass_rate_pct": 0,
+        "adx_rejections": 1
+      },
+      "transaction_costs": {
+        "total_costs_usd": 0,
+        "cost_impact_pct": 0.0,
+        "cost_breakdown_usd": {
+          "commission": 0,
+          "spread_cost": 0,
+          "slippage": 0,
+          "market_impact": 0,
+          "timing_cost": 0
+        },
+        "cost_per_trade": 0.0
+      },
+      "filter_analysis": {
+        "filter_type": "ADX Filter (ADX > 25)",
+        "signals_generated": 1,
+        "signals_passed_filter": 0,
+        "signals_rejected": 1,
+        "filter_pass_rate_pct": 0
+      }
+    },
+    "DDOG": {
+      "ticker": "DDOG",
+      "test_date": "2025-07-25 08:38:24",
+      "strategy": "Golden Cross + ADX Filter",
+      "universe": "Small/Mid-Cap Growth",
+      "data_period": "2018-01-02 to 2023-12-29",
+      "initial_cash": 10000,
+      "performance": {
+        "final_value": 10000.0,
+        "total_return_pct": 0.0,
+        "max_drawdown_pct": 0.0,
+        "sharpe_ratio": null
+      },
+      "trading": {
+        "total_trades": 0,
+        "win_rate_pct": 0,
+        "avg_profit": 0,
+        "avg_loss": 0,
+        "expectancy": 0,
+        "profit_factor": 0,
+        "signals_generated": 2,
+        "signals_filtered": 0,
+        "filter_pass_rate_pct": 0,
+        "adx_rejections": 2
+      },
+      "transaction_costs": {
+        "total_costs_usd": 0,
+        "cost_impact_pct": 0.0,
+        "cost_breakdown_usd": {
+          "commission": 0,
+          "spread_cost": 0,
+          "slippage": 0,
+          "market_impact": 0,
+          "timing_cost": 0
+        },
+        "cost_per_trade": 0.0
+      },
+      "filter_analysis": {
+        "filter_type": "ADX Filter (ADX > 25)",
+        "signals_generated": 2,
+        "signals_passed_filter": 0,
+        "signals_rejected": 2,
+        "filter_pass_rate_pct": 0
+      }
+    },
+    "MDB": {
+      "ticker": "MDB",
+      "test_date": "2025-07-25 08:38:24",
+      "strategy": "Golden Cross + ADX Filter",
+      "universe": "Small/Mid-Cap Growth",
+      "data_period": "2018-01-02 to 2023-12-29",
+      "initial_cash": 10000,
+      "performance": {
+        "final_value": 10045.573666986777,
+        "total_return_pct": 0.4557366698677652,
+        "max_drawdown_pct": 2.5197383137458553,
+        "sharpe_ratio": -0.8022196630253694
+      },
+      "trading": {
+        "total_trades": 2,
+        "winning_trades": 1,
+        "losing_trades": 1,
+        "win_rate_pct": 50.0,
+        "avg_profit": 114.739990234375,
+        "avg_loss": 62.94000244140631,
+        "expectancy": 25.899993896484347,
+        "profit_factor": 1.8230058116249939,
+        "total_profit": 114.739990234375,
+        "total_loss": 62.94000244140631,
+        "signals_generated": 3,
+        "signals_filtered": 2,
+        "filter_pass_rate_pct": 66.66666666666666,
+        "adx_rejections": 1
+      },
+      "transaction_costs": {
+        "total_costs_usd": 19.439811628273446,
+        "cost_impact_pct": 0.19439811628273448,
+        "cost_breakdown_usd": {
+          "commission": 1.7518000030517578,
+          "spread_cost": 8.759000015258788,
+          "slippage": 7.357560012817383,
+          "market_impact": 0.17518000030517578,
+          "timing_cost": 1.3962715968403419
+        },
+        "cost_per_trade": 9.719905814136723
+      },
+      "filter_analysis": {
+        "filter_type": "ADX Filter (ADX > 25)",
+        "signals_generated": 3,
+        "signals_passed_filter": 2,
+        "signals_rejected": 1,
+        "filter_pass_rate_pct": 66.66666666666666
+      }
+    },
+    "OKTA": {
+      "ticker": "OKTA",
+      "test_date": "2025-07-25 08:38:25",
+      "strategy": "Golden Cross + ADX Filter",
+      "universe": "Small/Mid-Cap Growth",
+      "data_period": "2018-01-02 to 2023-12-29",
+      "initial_cash": 10000,
+      "performance": {
+        "final_value": 9949.617721475828,
+        "total_return_pct": -0.5038227852417185,
+        "max_drawdown_pct": 0.5753522787014271,
+        "sharpe_ratio": -8.634119640421586
+      },
+      "trading": {
+        "total_trades": 2,
+        "winning_trades": 0,
+        "losing_trades": 2,
+        "win_rate_pct": 0.0,
+        "avg_profit": 0.0,
+        "avg_loss": 23.2655029296875,
+        "expectancy": -23.2655029296875,
+        "profit_factor": 0.0,
+        "total_profit": 0,
+        "total_loss": 46.531005859375,
+        "signals_generated": 5,
+        "signals_filtered": 2,
+        "filter_pass_rate_pct": 40.0,
+        "adx_rejections": 3
+      },
+      "transaction_costs": {
+        "total_costs_usd": 11.25553679578324,
+        "cost_impact_pct": 0.1125553679578324,
+        "cost_breakdown_usd": {
+          "commission": 0.9874040107727051,
+          "spread_cost": 4.937020053863526,
+          "slippage": 4.147096845245362,
+          "market_impact": 0.09874040107727051,
+          "timing_cost": 1.085275484824376
+        },
+        "cost_per_trade": 5.62776839789162
+      },
+      "filter_analysis": {
+        "filter_type": "ADX Filter (ADX > 25)",
+        "signals_generated": 5,
+        "signals_passed_filter": 2,
+        "signals_rejected": 3,
+        "filter_pass_rate_pct": 40.0
+      }
+    },
+    "ZS": {
+      "ticker": "ZS",
+      "test_date": "2025-07-25 08:38:25",
+      "strategy": "Golden Cross + ADX Filter",
+      "universe": "Small/Mid-Cap Growth",
+      "data_period": "2018-01-02 to 2023-12-29",
+      "initial_cash": 10000,
+      "performance": {
+        "final_value": 10000.0,
+        "total_return_pct": 0.0,
+        "max_drawdown_pct": 0.0,
+        "sharpe_ratio": null
+      },
+      "trading": {
+        "total_trades": 0,
+        "win_rate_pct": 0,
+        "avg_profit": 0,
+        "avg_loss": 0,
+        "expectancy": 0,
+        "profit_factor": 0,
+        "signals_generated": 2,
+        "signals_filtered": 0,
+        "filter_pass_rate_pct": 0,
+        "adx_rejections": 2
+      },
+      "transaction_costs": {
+        "total_costs_usd": 0,
+        "cost_impact_pct": 0.0,
+        "cost_breakdown_usd": {
+          "commission": 0,
+          "spread_cost": 0,
+          "slippage": 0,
+          "market_impact": 0,
+          "timing_cost": 0
+        },
+        "cost_per_trade": 0.0
+      },
+      "filter_analysis": {
+        "filter_type": "ADX Filter (ADX > 25)",
+        "signals_generated": 2,
+        "signals_passed_filter": 0,
+        "signals_rejected": 2,
+        "filter_pass_rate_pct": 0
+      }
+    }
+  },
+  "aggregate_metrics": {
+    "avg_sharpe_ratio": -4.7181696517234775,
+    "avg_total_return_pct": -0.004808611537395336,
+    "avg_max_drawdown_pct": 0.3095090592447282,
+    "avg_win_rate_pct": 5.0,
+    "avg_expectancy": 0.26344909667968464,
+    "total_trades_all_stocks": 4,
+    "aggregate_win_rate_pct": 25.0,
+    "aggregate_expectancy": 1.3172454833984233,
+    "total_signals_generated": 24,
+    "total_signals_filtered": 4,
+    "aggregate_filter_pass_rate_pct": 16.666666666666664,
+    "stocks_tested": 10,
+    "profitable_stocks": 1
+  }
+}

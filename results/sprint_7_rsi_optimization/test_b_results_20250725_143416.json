@@ -1,0 +1,120 @@
+{
+  "test": "Sprint #7 Test B - Exit Strategy Optimization",
+  "test_date": "2025-07-25 14:34:16",
+  "base_parameters": {
+    "rsi_period": 14,
+    "oversold_level": 35,
+    "overbought_level": 75
+  },
+  "exit_strategies_tested": [
+    "rsi",
+    "profit_target",
+    "trailing_stop"
+  ],
+  "test_stocks": [
+    "ZS",
+    "CRWD",
+    "U"
+  ],
+  "results": [
+    {
+      "ticker": "ZS",
+      "exit_strategy": "rsi",
+      "total_return_pct": 0.002962000274658203,
+      "sharpe_ratio": 0.03619408306677414,
+      "win_rate_pct": 14.285714285714285,
+      "total_trades": 35,
+      "final_value": 10029.620002746582,
+      "total_costs_usd": 1736.4179414908017,
+      "cost_impact_pct": 0.17364179414908018
+    },
+    {
+      "ticker": "ZS",
+      "exit_strategy": "profit_target",
+      "total_return_pct": 0.011680502319335937,
+      "sharpe_ratio": 0.23674866756142285,
+      "win_rate_pct": 52.94117647058824,
+      "total_trades": 51,
+      "final_value": 10116.80502319336,
+      "total_costs_usd": 2524.3139215284505,
+      "cost_impact_pct": 0.25243139215284505
+    },
+    {
+      "ticker": "ZS",
+      "exit_strategy": "trailing_stop",
+      "total_return_pct": 0.013379496383666992,
+      "sharpe_ratio": 0.21412141905432913,
+      "win_rate_pct": 45.83333333333333,
+      "total_trades": 48,
+      "final_value": 10133.79496383667,
+      "total_costs_usd": 2265.2314160680667,
+      "cost_impact_pct": 0.22652314160680667
+    },
+    {
+      "ticker": "CRWD",
+      "exit_strategy": "rsi",
+      "total_return_pct": 0.005755902481079101,
+      "sharpe_ratio": 0.05837490677001638,
+      "win_rate_pct": 12.5,
+      "total_trades": 32,
+      "final_value": 10057.559024810791,
+      "total_costs_usd": 1534.4799388651115,
+      "cost_impact_pct": 0.15344799388651115
+    },
+    {
+      "ticker": "CRWD",
+      "exit_strategy": "profit_target",
+      "total_return_pct": -0.0028105976104736328,
+      "sharpe_ratio": -0.07640021065034633,
+      "win_rate_pct": 51.162790697674424,
+      "total_trades": 43,
+      "final_value": 9971.894023895264,
+      "total_costs_usd": 2312.5878958972075,
+      "cost_impact_pct": 0.23125878958972076
+    },
+    {
+      "ticker": "CRWD",
+      "exit_strategy": "trailing_stop",
+      "total_return_pct": -0.0035292957305908205,
+      "sharpe_ratio": -0.09954022881699577,
+      "win_rate_pct": 43.58974358974359,
+      "total_trades": 39,
+      "final_value": 9964.707042694092,
+      "total_costs_usd": 1868.9571033667044,
+      "cost_impact_pct": 0.18689571033667043
+    },
+    {
+      "ticker": "U",
+      "exit_strategy": "rsi",
+      "total_return_pct": -0.010410499572753907,
+      "sharpe_ratio": -0.4405154369349032,
+      "win_rate_pct": 11.904761904761903,
+      "total_trades": 42,
+      "final_value": 9895.895004272461,
+      "total_costs_usd": 2259.2151083392328,
+      "cost_impact_pct": 0.22592151083392328
+    },
+    {
+      "ticker": "U",
+      "exit_strategy": "profit_target",
+      "total_return_pct": -0.004365500831604004,
+      "sharpe_ratio": -0.1424275959491071,
+      "win_rate_pct": 41.81818181818181,
+      "total_trades": 55,
+      "final_value": 9956.34499168396,
+      "total_costs_usd": 2555.311427348791,
+      "cost_impact_pct": 0.2555311427348791
+    },
+    {
+      "ticker": "U",
+      "exit_strategy": "trailing_stop",
+      "total_return_pct": -0.007406501579284668,
+      "sharpe_ratio": -0.2586653111393753,
+      "win_rate_pct": 31.48148148148148,
+      "total_trades": 54,
+      "final_value": 9925.934984207153,
+      "total_costs_usd": 2489.8039603303396,
+      "cost_impact_pct": 0.24898039603303396
+    }
+  ]
+}

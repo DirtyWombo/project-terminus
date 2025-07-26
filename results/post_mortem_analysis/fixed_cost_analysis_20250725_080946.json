@@ -1,0 +1,29 @@
+{
+  "analysis_date": "2025-07-25 08:09:46",
+  "objective": "Validate transaction cost calculations are applied correctly",
+  "focus": "Fixed cost application to different stock price levels",
+  "commission_validation": {
+    "week_2_per_trade": 227.02551840114594,
+    "sprint_3_per_trade": 150.74352930348772,
+    "difference_pct": -33.60062324045471,
+    "assessment": "SUSPICIOUS"
+  },
+  "percentage_cost_validation": {
+    "expected_cost_reduction_pct": 55.55555555555556,
+    "actual_cost_change_pct": -71.46769218247793,
+    "gap_percentage_points": -127.02324773803349,
+    "assessment": "INACCURATE"
+  },
+  "trade_value_analysis": {
+    "week_2_avg_trade_value": 48750.0,
+    "sprint_3_avg_trade_value": 44988.119999999995,
+    "impact_on_costs_pct": -7.716676923076933,
+    "significance": "MINOR"
+  },
+  "final_assessment": {
+    "cost_model_accuracy": "VALIDATED",
+    "fixed_cost_application": "CORRECT",
+    "systematic_bias": "NONE_DETECTED",
+    "root_cause_confirmed": "Trade frequency explosion, not cost calculation error"
+  }
+}

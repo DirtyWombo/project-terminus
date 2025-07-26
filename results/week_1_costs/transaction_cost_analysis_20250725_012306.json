@@ -1,0 +1,59 @@
+{
+  "test_date": "2025-07-25 01:23:06",
+  "cost_tier": "mid_cap",
+  "value_portfolio_results": {},
+  "bollinger_bounce_results": {
+    "CRWD": {
+      "final_value": 9997.302618290702,
+      "total_return_pct": -0.026973817092984975,
+      "total_trades": 18,
+      "total_costs": 92.04379334486079,
+      "avg_cost_per_trade": 5.113544074714488,
+      "cost_impact_pct": 0.9204379334486078,
+      "trade_count": 18
+    },
+    "DDOG": {
+      "final_value": 10092.490006028096,
+      "total_return_pct": 0.924900060280961,
+      "total_trades": 20,
+      "total_costs": 59.617785136246354,
+      "avg_cost_per_trade": 2.9808892568123175,
+      "cost_impact_pct": 0.5961778513624635,
+      "trade_count": 20
+    },
+    "MDB": {
+      "final_value": 10218.088031524616,
+      "total_return_pct": 2.1808803152461587,
+      "total_trades": 23,
+      "total_costs": 170.57451802606946,
+      "avg_cost_per_trade": 7.416283392437802,
+      "cost_impact_pct": 1.7057451802606944,
+      "trade_count": 23
+    },
+    "OKTA": {
+      "final_value": 10020.597542154655,
+      "total_return_pct": 0.20597542154655457,
+      "total_trades": 24,
+      "total_costs": 108.10449107258283,
+      "avg_cost_per_trade": 4.504353794690951,
+      "cost_impact_pct": 1.0810449107258284,
+      "trade_count": 24
+    },
+    "ZS": {
+      "final_value": 10053.487969684546,
+      "total_return_pct": 0.5348796968454553,
+      "total_trades": 19,
+      "total_costs": 89.76030159379359,
+      "avg_cost_per_trade": 4.724226399673347,
+      "cost_impact_pct": 0.8976030159379358,
+      "trade_count": 19
+    }
+  },
+  "cost_model_parameters": {
+    "base_commission": 0.0005,
+    "bid_ask_spread": 0.0025,
+    "slippage_factor": 0.0015,
+    "market_impact_factor": 5e-05,
+    "liquidity_threshold": 100000
+  }
+}

@@ -1,120 +1,82 @@
-It's 11:25 AM on Tuesday. Let's get to work.
+Operation Badger: Sprint #11 Plan - The Validated QVM Test
+DOCUMENT STATUS: FINAL - OFFICIAL SPRINT #11 DIRECTIVE
+DATE: 2025-07-25
+TO: Operation Badger Development Team
+FROM: Lead Quant
 
-"Breaking even" is one of the most promising yet frustrating stages in quantitative trading. It is often a sign that you have found a genuine alpha signal, but its profitability is being systematically eroded by execution costs and suboptimal parameters. This is a data problem, and it is entirely solvable.
+1. Mission Assessment & Mandate
+Sprint #10 Outcome: The infrastructure sprint was a complete success. We have successfully researched, selected, and integrated a professional-grade, point-in-time (PIT) fundamental data provider (Nasdaq Data Link / Sharadar). The critical lookahead bias flaw identified in Sprint #9 has been solved at its source.
 
-You are correct to suspect your alpha is on the right track. Now, we shift our focus from strategy design to performance analysis. You will conduct a "Profitability Audit" to find the "leaks" in your system. You need to stop looking at the final P&L and start dissecting the anatomy of every single trade.
+New Mandate: Our mission for Sprint #11 is to re-run the Composite QVM strategy, this time with our new, valid, point-in-time data source. This will be our first backtest that is free from lookahead bias and represents a true, scientifically valid test of a multi-factor model.
 
-Here is the data you need to log for every trade and the analysis to perform to turn breakeven into growth.
+2. Sprint #11 Objective: The First Valid Multi-Factor Test
+Hypothesis: A portfolio constructed by ranking stocks on a composite QVM score—calculated using true, historical point-in-time data from our new Sharadar database—will produce superior and statistically valid risk-adjusted returns.
 
-The Profitability Audit: A 4-Point Diagnostic
-You must enhance your trade logging to include not just entry/exit prices, but the following data points for every single executed trade.
+Why This Is Our Most Important Test Yet:
 
-1. Transaction Cost Analysis (The "Hidden Tax")
-Purpose: To determine if you are simply paying your profits away in fees and slippage.
+Scientific Validity: For the first time, the backtest will accurately simulate real-world conditions where only past information is available.
 
-Data You Must Log Per Trade:
+True Alpha Test: This will reveal if the QVM logic itself has a genuine predictive edge, now that the data is clean.
 
-Intended_Entry_Price: The market price at the exact moment your order was created.
+Foundation for the Future: A successful result here would give us our first deployable, institutional-grade strategy.
 
-Actual_Execution_Price: The average price you actually paid.
+3. Execution Plan: Step-by-Step Instructions
+This sprint focuses on refactoring our QVM backtest to use the new data source.
 
-Exchange_Fees: The fee charged by the exchange, in dollars.
+Task 1: Integrate the New Data Provider
+What: Refactor our data loading and feature engineering logic to use the nasdaqdatalink library instead of yfinance for fundamental data.
 
-Gas_Fees: The network fee for any on-chain DEX trade, in dollars.
+Why: To feed our backtest with valid, point-in-time data.
 
-Analysis:
+How-To:
 
-Calculate Slippage: For every trade, calculate Slippage_Cost = (Actual_Execution_Price - Intended_Entry_Price) * Position_Size. (Note: for buys, a positive result is bad; for sells, a negative result is bad).
+Acquire API Key: The Lead Quant will provide the API key for the team's Nasdaq Data Link subscription.
 
-Calculate Total Cost: For every trade, Total_Cost = Slippage_Cost + Exchange_Fees + Gas_Fees.
+Refactor features/qvm_factors.py: You will need to rewrite the calculation functions to work with the data structure of the Sharadar SF1 table. The nasdaqdatalink library documentation will be your guide. You will be fetching specific indicators (like ROE, EBIT, EVE) for a given ticker and date.
 
-The Critical Question: After 100 trades, look at your data. Is your Average_Profit_Per_Winning_Trade greater than your Average_Total_Cost_Per_Trade? If your average win is $10 but your average cost is $12, you have no mathematical path to profitability.
+Create a PIT Data Cache: To avoid repeatedly hitting the API during a backtest (which is slow and costly), create a simple caching mechanism. The first time you fetch fundamentals for a ticker on a specific date, save the result to a local file (e.g., in a cache/ directory). In subsequent runs, the code should check the cache first before making an API call.
 
-Actionable Adjustments:
+Conceptual Code for PIT Data Fetching:
 
-If Slippage is High: Your position size may be too large for the asset's liquidity. You need to either trade smaller sizes or focus on more liquid assets. You can also experiment with using limit orders instead of market orders (with a "time-in-force" cancelation so the order doesn't sit forever).
+import nasdaqdatalink
+import pandas as pd
 
-If Fees are High: You may need to factor exchange fee tiers or more accurate gas fee estimations into your pre-trade Economic Viability Filter.
+# Configure with your API key
+nasdaqdatalink.api_config.api_key = "YOUR_API_KEY"
 
-2. Exit Efficiency Analysis (The Art of Letting Go)
-Purpose: To determine if your stop-loss and take-profit levels are systematically hurting you by cutting winners too early or stopping out on random noise.
+def get_point_in_time_fundamentals(ticker, date):
+    """
+    Fetches Sharadar Core Fundamentals (SF1) for a ticker as of a specific date.
+    This is the core of our lookahead bias fix.
+    """
+    # Sharadar data is reported quarterly. We need to find the most recent
+    # report that was public knowledge as of the given 'date'.
+    data = nasdaqdatalink.get_table(
+        'SHARADAR/SF1', 
+        ticker=ticker,
+        dimension='ARQ', # As-Reported Quarterly
+        calendardate={'lte': date} # Get all reports up to this date
+    )
+    
+    # The most recent report is the last row
+    if not data.empty:
+        return data.iloc[-1]
+    return None
 
-Data You Must Log Per Trade:
+Task 2: Re-Run the Composite QVM Backtest
+What: Execute the composite_qvm_backtest.py script from Sprint #9, now refactored to use the new PIT data functions.
 
-Maximum_Favorable_Excursion (MFE): During the life of the trade, what was the peak P&L it reached in your favor?
+How: The core logic of the strategy (ranking, composite score) remains the same. The only change is the source of the fundamental data used in the rebalancing loop.
 
-Maximum_Adverse_Excursion (MAE): During the life of the trade, what was the worst P&L it reached against you?
+Action: Run the full backtest on our small/mid-cap universe and generate the final performance report.
 
-Analysis:
+4. Sprint #11 Success Criteria
+The success criteria are the same as our original, stringent targets for a multi-factor model. This is the real test. The strategy must meet the following to be considered for deployment:
 
-For Your Winning Trades: Create a scatter plot of Actual_Profit vs. MFE. Are all the dots clustered near the y=x line, or are they far below it? If your average Actual_Profit is $50, but the average MFE is $150, it's a huge red flag that your take-profit targets are far too tight. You are systematically leaving money on the table.
+✅ Post-Cost Annualized Return > 15%
 
-For Your Losing Trades: Analyze the MAE. Is your -30% stop-loss getting hit frequently, but the MAE for your winning trades is often -25%? This suggests your stop is placed right in the "noise zone" and is too tight. A slightly wider stop (e.g., -35%) might allow trades the breathing room they need to become profitable.
+✅ Post-Cost Sharpe Ratio > 1.0
 
-Actionable Adjustments:
+✅ Max Drawdown < 25%
 
-If MFE >> Actual Profit: Systematically test wider profit targets or implement a trailing stop-loss to let winners run.
-
-If Stop-Loss is hit too frequently on noise: Systematically test a wider stop-loss, balanced against the impact on your risk/reward ratio.
-
-3. Signal Quality & Sizing Analysis (The Conviction Engine)
-Purpose: To validate our "Confidence Scaling" hypothesis. Do higher-conviction scores actually lead to better trades?
-
-Analysis:
-
-Group all executed trades into buckets based on their Final_Trade_Score at the time of entry (e.g., Bucket A: 0.7-0.8, Bucket B: 0.8-0.9, Bucket C: >0.9).
-
-For each bucket, calculate the aggregate performance: Win Rate, Average P&L, and Sharpe Ratio.
-
-The Critical Question: Is there a clear, positive correlation? Does Bucket C significantly outperform Bucket A?
-
-Actionable Adjustments:
-
-If Yes (strong correlation exists): You have a green light to become more aggressive. You can increase the risk sizing for the highest-conviction trades (e.g., move the >0.9 bucket from 0.75% risk to 1.25% risk). This is a primary lever for growth.
-
-If No (no correlation exists): Your Final_Trade_Score formula is flawed. The weights you've assigned to the different signals (technicals, narrative velocity, etc.) are wrong. You must go back and re-weight the formula or re-evaluate the signals themselves. Do not increase risk until this correlation is proven.
-
-4. Regime Filter Effectiveness
-Purpose: To ensure you are not losing money by running a strategy in the wrong market environment.
-
-Analysis:
-
-Filter your entire trade history by the market Regime that was active at the time of entry.
-
-The Critical Question: What is the total P&L for the "Narrative Surfer" strategy only during "Neutral/Chop" regimes? What is the P&L for the "Mean Reversion" strategy only during "Bull" regimes?
-
-Actionable Adjustments:
-
-If you discover that a specific strategy is consistently losing money in a regime it's not designed for, you need to tighten the rules in your top-level "Portfolio Manager." Be more aggressive about deactivating strategies that are out of sync with the market.
-
-Your Action Plan:
-
-Your team's focus must shift from building to analyzing.
-
-Instrument Everything: Upgrade your logging to capture all the data points listed above for every trade.
-
-Collect Data: Let the bot run and collect at least 100-200 trades to build a statistically significant dataset.
-
-Perform the Audit: Systematically go through these four areas of analysis.
-
-Breaking even means you're on the one-yard line. Rigorous data analysis is the final push that gets you into the end zone. Stop watching the overall P&L and start dissecting the performance of every single trade.
-
-
-
-
-
-
-
-
-
-
-
-
-Video
-
-Deep Research
-
-Canvas
-
-Image
-
+The results of this sprint will be the most meaningful we have produced to date. This will tell us if we have finally found a genuine, tradeable alpha signal. I look forward to seeing the valid results.

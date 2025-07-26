@@ -1,0 +1,158 @@
+{
+  "Baseline (No Risk Controls)": {
+    "strategy_params": {
+      "num_positions": 2,
+      "rebalance_freq": "quarterly",
+      "position_sizing": "risk_parity",
+      "portfolio_stop_loss": 1.0,
+      "max_position_weight": 1.0
+    },
+    "cost_tier": "mid_cap",
+    "initial_cash": 100000,
+    "performance": {
+      "total_return_pct": 39.95796558599093,
+      "annualized_return_pct": 5.774580707037669,
+      "max_drawdown_pct": 45.25984744277027,
+      "final_value": 139957.96558599093,
+      "initial_value": 100000.0,
+      "total_costs": 0,
+      "cost_impact_pct": 0.0,
+      "rebalance_count": 72,
+      "portfolio_stopped_out": false,
+      "stop_loss_date": null,
+      "equity_curve_length": 1509
+    },
+    "drawdown_analysis": {
+      "max_drawdown_pct": 45.25984744277027,
+      "max_drawdown_period": 800
+    },
+    "trade_analysis": {
+      "total_trades": 21,
+      "winning_trades": 12,
+      "losing_trades": 8,
+      "win_rate_pct": 57.14285714285714
+    },
+    "risk_controls": {
+      "portfolio_stop_loss_triggered": false,
+      "stop_loss_date": null,
+      "max_position_weight": 1.0
+    }
+  },
+  "Portfolio Stop-Loss Only (25%)": {
+    "strategy_params": {
+      "num_positions": 2,
+      "rebalance_freq": "quarterly",
+      "position_sizing": "risk_parity",
+      "portfolio_stop_loss": 0.25,
+      "max_position_weight": 1.0
+    },
+    "cost_tier": "mid_cap",
+    "initial_cash": 100000,
+    "performance": {
+      "total_return_pct": 5.789548224633938,
+      "annualized_return_pct": 0.9443213792516669,
+      "max_drawdown_pct": 28.048594910578867,
+      "final_value": 105789.54822463394,
+      "initial_value": 100000.0,
+      "total_costs": 0,
+      "cost_impact_pct": 0.0,
+      "rebalance_count": 53,
+      "portfolio_stopped_out": true,
+      "stop_loss_date": "2022-05-06",
+      "equity_curve_length": 1509
+    },
+    "drawdown_analysis": {
+      "max_drawdown_pct": 28.048594910578867,
+      "max_drawdown_period": 800
+    },
+    "trade_analysis": {
+      "total_trades": 9,
+      "winning_trades": 6,
+      "losing_trades": 3,
+      "win_rate_pct": 66.66666666666666
+    },
+    "risk_controls": {
+      "portfolio_stop_loss_triggered": true,
+      "stop_loss_date": "2022-05-06",
+      "max_position_weight": 1.0
+    }
+  },
+  "Concentration Limits Only (30%)": {
+    "strategy_params": {
+      "num_positions": 2,
+      "rebalance_freq": "quarterly",
+      "position_sizing": "risk_parity",
+      "portfolio_stop_loss": 1.0,
+      "max_position_weight": 0.3
+    },
+    "cost_tier": "mid_cap",
+    "initial_cash": 100000,
+    "performance": {
+      "total_return_pct": 47.55409524298905,
+      "annualized_return_pct": 6.712311132614146,
+      "max_drawdown_pct": 42.5739387284412,
+      "final_value": 147554.09524298905,
+      "initial_value": 100000.0,
+      "total_costs": 0,
+      "cost_impact_pct": 0.0,
+      "rebalance_count": 72,
+      "portfolio_stopped_out": false,
+      "stop_loss_date": null,
+      "equity_curve_length": 1509
+    },
+    "drawdown_analysis": {
+      "max_drawdown_pct": 42.57393872844119,
+      "max_drawdown_period": 800
+    },
+    "trade_analysis": {
+      "total_trades": 20,
+      "winning_trades": 12,
+      "losing_trades": 7,
+      "win_rate_pct": 60.0
+    },
+    "risk_controls": {
+      "portfolio_stop_loss_triggered": false,
+      "stop_loss_date": null,
+      "max_position_weight": 0.3
+    }
+  },
+  "Full Risk Controls (25% Stop + 30% Max)": {
+    "strategy_params": {
+      "num_positions": 2,
+      "rebalance_freq": "quarterly",
+      "position_sizing": "risk_parity",
+      "portfolio_stop_loss": 0.25,
+      "max_position_weight": 0.3
+    },
+    "cost_tier": "mid_cap",
+    "initial_cash": 100000,
+    "performance": {
+      "total_return_pct": 5.039351075494851,
+      "annualized_return_pct": 0.8244232952860475,
+      "max_drawdown_pct": 27.933281615616355,
+      "final_value": 105039.35107549485,
+      "initial_value": 100000.0,
+      "total_costs": 0,
+      "cost_impact_pct": 0.0,
+      "rebalance_count": 53,
+      "portfolio_stopped_out": true,
+      "stop_loss_date": "2022-05-06",
+      "equity_curve_length": 1509
+    },
+    "drawdown_analysis": {
+      "max_drawdown_pct": 27.93328161561636,
+      "max_drawdown_period": 800
+    },
+    "trade_analysis": {
+      "total_trades": 9,
+      "winning_trades": 6,
+      "losing_trades": 3,
+      "win_rate_pct": 66.66666666666666
+    },
+    "risk_controls": {
+      "portfolio_stop_loss_triggered": true,
+      "stop_loss_date": "2022-05-06",
+      "max_position_weight": 0.3
+    }
+  }
+}

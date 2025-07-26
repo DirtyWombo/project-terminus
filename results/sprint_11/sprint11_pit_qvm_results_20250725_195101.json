@@ -1,0 +1,34 @@
+{
+  "test": "Sprint 11 - PIT Composite QVM Multi-Factor Strategy",
+  "test_date": "2025-07-25 19:51:01",
+  "universe": [
+    "CRWD",
+    "SNOW",
+    "PLTR",
+    "U",
+    "RBLX",
+    "NET",
+    "DDOG",
+    "MDB",
+    "OKTA",
+    "ZS"
+  ],
+  "methodology": "Point-in-Time Sharadar SF1 Data",
+  "initial_value": 100000.0,
+  "final_value": 177831.69833809664,
+  "total_return_pct": 77.83169833809664,
+  "annualized_return_pct": 10.069804732049011,
+  "sharpe_ratio": 0.39574069952097735,
+  "max_drawdown_pct": 67.41300421273137,
+  "total_trades": 3,
+  "win_rate_pct": 0.0,
+  "rebalances": 72,
+  "backtest_duration_seconds": 474.463101,
+  "success_criteria": {
+    "return_target_met": false,
+    "sharpe_target_met": false,
+    "drawdown_target_met": false,
+    "overall_success": false
+  },
+  "significance": "First scientifically valid multi-factor backtest with zero lookahead bias"
+}

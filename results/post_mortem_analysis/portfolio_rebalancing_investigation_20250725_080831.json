@@ -1,0 +1,35 @@
+{
+  "investigation_date": "2025-07-25 08:08:31",
+  "objective": "Understand why DJIA rebalancing creates 4.4x more portfolio churn",
+  "key_findings": {},
+  "hypotheses_tested": {},
+  "technical_discoveries": {},
+  "business_implications": {
+    "root_cause_confirmed": "Volatility compression in large-cap universe",
+    "cost_model_accuracy": "Transaction cost model is working correctly",
+    "strategy_weakness": "Value scoring method unsuitable for similar-volatility stocks",
+    "fix_required": "Need different value identification method for large-cap stocks",
+    "deployment_impact": "Any strategy using inverse volatility will fail on DJIA"
+  },
+  "volatility_compression_analysis": {
+    "growth_vol_range": 0.03,
+    "djia_vol_range": 0.008,
+    "growth_score_range": 0.027742457519361996,
+    "djia_score_range": 0.007689468503937036,
+    "djia_compression_vs_growth": 72.28266998851703,
+    "conclusion": "DJIA volatility compression causes ranking instability"
+  },
+  "musical_chairs_analysis": {
+    "growth_ranking_stable": true,
+    "djia_ranking_stable": false,
+    "djia_more_sensitive": true,
+    "conclusion": "DJIA rankings more sensitive to small market changes"
+  },
+  "universe_size_analysis": {
+    "growth_universe_size": 10,
+    "djia_universe_size": 30,
+    "selection_ratio_difference": 0.13333333333333336,
+    "additional_alternatives": 20,
+    "conclusion": "Larger universe provides more swap opportunities"
+  }
+}

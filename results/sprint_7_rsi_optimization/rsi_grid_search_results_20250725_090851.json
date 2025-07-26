@@ -1,0 +1,5788 @@
+{
+  "test": "Sprint #7 Test A - RSI Parameter Grid Search",
+  "test_date": "2025-07-25 09:08:51",
+  "parameter_grid": {
+    "rsi_periods": [
+      10,
+      14,
+      21
+    ],
+    "oversold_levels": [
+      20,
+      25,
+      30
+    ],
+    "overbought_levels": [
+      70,
+      75,
+      80
+    ],
+    "total_combinations": 27
+  },
+  "universe": [
+    "CRWD",
+    "SNOW",
+    "PLTR",
+    "U",
+    "RBLX",
+    "NET",
+    "DDOG",
+    "MDB",
+    "OKTA",
+    "ZS"
+  ],
+  "individual_stock_results": {
+    "CRWD": {
+      "all_combinations": [
+        {
+          "ticker": "CRWD",
+          "parameters": {
+            "rsi_period": 10,
+            "oversold_level": 20,
+            "overbought_level": 70
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "CRWD",
+          "parameters": {
+            "rsi_period": 10,
+            "oversold_level": 20,
+            "overbought_level": 75
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "CRWD",
+          "parameters": {
+            "rsi_period": 10,
+            "oversold_level": 20,
+            "overbought_level": 80
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "CRWD",
+          "parameters": {
+            "rsi_period": 10,
+            "oversold_level": 25,
+            "overbought_level": 70
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "CRWD",
+          "parameters": {
+            "rsi_period": 10,
+            "oversold_level": 25,
+            "overbought_level": 75
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "CRWD",
+          "parameters": {
+            "rsi_period": 10,
+            "oversold_level": 25,
+            "overbought_level": 80
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "CRWD",
+          "parameters": {
+            "rsi_period": 10,
+            "oversold_level": 30,
+            "overbought_level": 70
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "CRWD",
+          "parameters": {
+            "rsi_period": 10,
+            "oversold_level": 30,
+            "overbought_level": 75
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "CRWD",
+          "parameters": {
+            "rsi_period": 10,
+            "oversold_level": 30,
+            "overbought_level": 80
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "CRWD",
+          "parameters": {
+            "rsi_period": 14,
+            "oversold_level": 20,
+            "overbought_level": 70
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "CRWD",
+          "parameters": {
+            "rsi_period": 14,
+            "oversold_level": 20,
+            "overbought_level": 75
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "CRWD",
+          "parameters": {
+            "rsi_period": 14,
+            "oversold_level": 20,
+            "overbought_level": 80
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "CRWD",
+          "parameters": {
+            "rsi_period": 14,
+            "oversold_level": 25,
+            "overbought_level": 70
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "CRWD",
+          "parameters": {
+            "rsi_period": 14,
+            "oversold_level": 25,
+            "overbought_level": 75
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "CRWD",
+          "parameters": {
+            "rsi_period": 14,
+            "oversold_level": 25,
+            "overbought_level": 80
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "CRWD",
+          "parameters": {
+            "rsi_period": 14,
+            "oversold_level": 30,
+            "overbought_level": 70
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "CRWD",
+          "parameters": {
+            "rsi_period": 14,
+            "oversold_level": 30,
+            "overbought_level": 75
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "CRWD",
+          "parameters": {
+            "rsi_period": 14,
+            "oversold_level": 30,
+            "overbought_level": 80
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "CRWD",
+          "parameters": {
+            "rsi_period": 21,
+            "oversold_level": 20,
+            "overbought_level": 70
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "CRWD",
+          "parameters": {
+            "rsi_period": 21,
+            "oversold_level": 20,
+            "overbought_level": 75
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "CRWD",
+          "parameters": {
+            "rsi_period": 21,
+            "oversold_level": 20,
+            "overbought_level": 80
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "CRWD",
+          "parameters": {
+            "rsi_period": 21,
+            "oversold_level": 25,
+            "overbought_level": 70
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "CRWD",
+          "parameters": {
+            "rsi_period": 21,
+            "oversold_level": 25,
+            "overbought_level": 75
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "CRWD",
+          "parameters": {
+            "rsi_period": 21,
+            "oversold_level": 25,
+            "overbought_level": 80
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "CRWD",
+          "parameters": {
+            "rsi_period": 21,
+            "oversold_level": 30,
+            "overbought_level": 70
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "CRWD",
+          "parameters": {
+            "rsi_period": 21,
+            "oversold_level": 30,
+            "overbought_level": 75
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "CRWD",
+          "parameters": {
+            "rsi_period": 21,
+            "oversold_level": 30,
+            "overbought_level": 80
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        }
+      ],
+      "best_parameters": [
+        10,
+        20,
+        70
+      ],
+      "best_result": {
+        "ticker": "CRWD",
+        "parameters": {
+          "rsi_period": 10,
+          "oversold_level": 20,
+          "overbought_level": 70
+        },
+        "performance": {
+          "total_return_pct": 0.0,
+          "sharpe_ratio": 0,
+          "max_drawdown_pct": 0.0,
+          "win_rate_pct": 0,
+          "expectancy": 0,
+          "total_trades": 0
+        },
+        "transaction_costs": {
+          "total_costs_usd": 0,
+          "cost_impact_pct": 0.0
+        }
+      },
+      "best_sharpe": 0
+    },
+    "SNOW": {
+      "all_combinations": [
+        {
+          "ticker": "SNOW",
+          "parameters": {
+            "rsi_period": 10,
+            "oversold_level": 20,
+            "overbought_level": 70
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "SNOW",
+          "parameters": {
+            "rsi_period": 10,
+            "oversold_level": 20,
+            "overbought_level": 75
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "SNOW",
+          "parameters": {
+            "rsi_period": 10,
+            "oversold_level": 20,
+            "overbought_level": 80
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "SNOW",
+          "parameters": {
+            "rsi_period": 10,
+            "oversold_level": 25,
+            "overbought_level": 70
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "SNOW",
+          "parameters": {
+            "rsi_period": 10,
+            "oversold_level": 25,
+            "overbought_level": 75
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "SNOW",
+          "parameters": {
+            "rsi_period": 10,
+            "oversold_level": 25,
+            "overbought_level": 80
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "SNOW",
+          "parameters": {
+            "rsi_period": 10,
+            "oversold_level": 30,
+            "overbought_level": 70
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "SNOW",
+          "parameters": {
+            "rsi_period": 10,
+            "oversold_level": 30,
+            "overbought_level": 75
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "SNOW",
+          "parameters": {
+            "rsi_period": 10,
+            "oversold_level": 30,
+            "overbought_level": 80
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "SNOW",
+          "parameters": {
+            "rsi_period": 14,
+            "oversold_level": 20,
+            "overbought_level": 70
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "SNOW",
+          "parameters": {
+            "rsi_period": 14,
+            "oversold_level": 20,
+            "overbought_level": 75
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "SNOW",
+          "parameters": {
+            "rsi_period": 14,
+            "oversold_level": 20,
+            "overbought_level": 80
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "SNOW",
+          "parameters": {
+            "rsi_period": 14,
+            "oversold_level": 25,
+            "overbought_level": 70
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "SNOW",
+          "parameters": {
+            "rsi_period": 14,
+            "oversold_level": 25,
+            "overbought_level": 75
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "SNOW",
+          "parameters": {
+            "rsi_period": 14,
+            "oversold_level": 25,
+            "overbought_level": 80
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "SNOW",
+          "parameters": {
+            "rsi_period": 14,
+            "oversold_level": 30,
+            "overbought_level": 70
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "SNOW",
+          "parameters": {
+            "rsi_period": 14,
+            "oversold_level": 30,
+            "overbought_level": 75
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "SNOW",
+          "parameters": {
+            "rsi_period": 14,
+            "oversold_level": 30,
+            "overbought_level": 80
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "SNOW",
+          "parameters": {
+            "rsi_period": 21,
+            "oversold_level": 20,
+            "overbought_level": 70
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "SNOW",
+          "parameters": {
+            "rsi_period": 21,
+            "oversold_level": 20,
+            "overbought_level": 75
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "SNOW",
+          "parameters": {
+            "rsi_period": 21,
+            "oversold_level": 20,
+            "overbought_level": 80
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "SNOW",
+          "parameters": {
+            "rsi_period": 21,
+            "oversold_level": 25,
+            "overbought_level": 70
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "SNOW",
+          "parameters": {
+            "rsi_period": 21,
+            "oversold_level": 25,
+            "overbought_level": 75
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "SNOW",
+          "parameters": {
+            "rsi_period": 21,
+            "oversold_level": 25,
+            "overbought_level": 80
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "SNOW",
+          "parameters": {
+            "rsi_period": 21,
+            "oversold_level": 30,
+            "overbought_level": 70
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "SNOW",
+          "parameters": {
+            "rsi_period": 21,
+            "oversold_level": 30,
+            "overbought_level": 75
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "SNOW",
+          "parameters": {
+            "rsi_period": 21,
+            "oversold_level": 30,
+            "overbought_level": 80
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        }
+      ],
+      "best_parameters": [
+        10,
+        20,
+        70
+      ],
+      "best_result": {
+        "ticker": "SNOW",
+        "parameters": {
+          "rsi_period": 10,
+          "oversold_level": 20,
+          "overbought_level": 70
+        },
+        "performance": {
+          "total_return_pct": 0.0,
+          "sharpe_ratio": 0,
+          "max_drawdown_pct": 0.0,
+          "win_rate_pct": 0,
+          "expectancy": 0,
+          "total_trades": 0
+        },
+        "transaction_costs": {
+          "total_costs_usd": 0,
+          "cost_impact_pct": 0.0
+        }
+      },
+      "best_sharpe": 0
+    },
+    "PLTR": {
+      "all_combinations": [
+        {
+          "ticker": "PLTR",
+          "parameters": {
+            "rsi_period": 10,
+            "oversold_level": 20,
+            "overbought_level": 70
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "PLTR",
+          "parameters": {
+            "rsi_period": 10,
+            "oversold_level": 20,
+            "overbought_level": 75
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "PLTR",
+          "parameters": {
+            "rsi_period": 10,
+            "oversold_level": 20,
+            "overbought_level": 80
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "PLTR",
+          "parameters": {
+            "rsi_period": 10,
+            "oversold_level": 25,
+            "overbought_level": 70
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "PLTR",
+          "parameters": {
+            "rsi_period": 10,
+            "oversold_level": 25,
+            "overbought_level": 75
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "PLTR",
+          "parameters": {
+            "rsi_period": 10,
+            "oversold_level": 25,
+            "overbought_level": 80
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "PLTR",
+          "parameters": {
+            "rsi_period": 10,
+            "oversold_level": 30,
+            "overbought_level": 70
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "PLTR",
+          "parameters": {
+            "rsi_period": 10,
+            "oversold_level": 30,
+            "overbought_level": 75
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "PLTR",
+          "parameters": {
+            "rsi_period": 10,
+            "oversold_level": 30,
+            "overbought_level": 80
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "PLTR",
+          "parameters": {
+            "rsi_period": 14,
+            "oversold_level": 20,
+            "overbought_level": 70
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "PLTR",
+          "parameters": {
+            "rsi_period": 14,
+            "oversold_level": 20,
+            "overbought_level": 75
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "PLTR",
+          "parameters": {
+            "rsi_period": 14,
+            "oversold_level": 20,
+            "overbought_level": 80
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "PLTR",
+          "parameters": {
+            "rsi_period": 14,
+            "oversold_level": 25,
+            "overbought_level": 70
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "PLTR",
+          "parameters": {
+            "rsi_period": 14,
+            "oversold_level": 25,
+            "overbought_level": 75
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "PLTR",
+          "parameters": {
+            "rsi_period": 14,
+            "oversold_level": 25,
+            "overbought_level": 80
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "PLTR",
+          "parameters": {
+            "rsi_period": 14,
+            "oversold_level": 30,
+            "overbought_level": 70
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "PLTR",
+          "parameters": {
+            "rsi_period": 14,
+            "oversold_level": 30,
+            "overbought_level": 75
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "PLTR",
+          "parameters": {
+            "rsi_period": 14,
+            "oversold_level": 30,
+            "overbought_level": 80
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "PLTR",
+          "parameters": {
+            "rsi_period": 21,
+            "oversold_level": 20,
+            "overbought_level": 70
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "PLTR",
+          "parameters": {
+            "rsi_period": 21,
+            "oversold_level": 20,
+            "overbought_level": 75
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "PLTR",
+          "parameters": {
+            "rsi_period": 21,
+            "oversold_level": 20,
+            "overbought_level": 80
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "PLTR",
+          "parameters": {
+            "rsi_period": 21,
+            "oversold_level": 25,
+            "overbought_level": 70
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "PLTR",
+          "parameters": {
+            "rsi_period": 21,
+            "oversold_level": 25,
+            "overbought_level": 75
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "PLTR",
+          "parameters": {
+            "rsi_period": 21,
+            "oversold_level": 25,
+            "overbought_level": 80
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "PLTR",
+          "parameters": {
+            "rsi_period": 21,
+            "oversold_level": 30,
+            "overbought_level": 70
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "PLTR",
+          "parameters": {
+            "rsi_period": 21,
+            "oversold_level": 30,
+            "overbought_level": 75
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "PLTR",
+          "parameters": {
+            "rsi_period": 21,
+            "oversold_level": 30,
+            "overbought_level": 80
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        }
+      ],
+      "best_parameters": [
+        10,
+        20,
+        70
+      ],
+      "best_result": {
+        "ticker": "PLTR",
+        "parameters": {
+          "rsi_period": 10,
+          "oversold_level": 20,
+          "overbought_level": 70
+        },
+        "performance": {
+          "total_return_pct": 0.0,
+          "sharpe_ratio": 0,
+          "max_drawdown_pct": 0.0,
+          "win_rate_pct": 0,
+          "expectancy": 0,
+          "total_trades": 0
+        },
+        "transaction_costs": {
+          "total_costs_usd": 0,
+          "cost_impact_pct": 0.0
+        }
+      },
+      "best_sharpe": 0
+    },
+    "U": {
+      "all_combinations": [
+        {
+          "ticker": "U",
+          "parameters": {
+            "rsi_period": 10,
+            "oversold_level": 20,
+            "overbought_level": 70
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "U",
+          "parameters": {
+            "rsi_period": 10,
+            "oversold_level": 20,
+            "overbought_level": 75
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "U",
+          "parameters": {
+            "rsi_period": 10,
+            "oversold_level": 20,
+            "overbought_level": 80
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "U",
+          "parameters": {
+            "rsi_period": 10,
+            "oversold_level": 25,
+            "overbought_level": 70
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "U",
+          "parameters": {
+            "rsi_period": 10,
+            "oversold_level": 25,
+            "overbought_level": 75
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "U",
+          "parameters": {
+            "rsi_period": 10,
+            "oversold_level": 25,
+            "overbought_level": 80
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "U",
+          "parameters": {
+            "rsi_period": 10,
+            "oversold_level": 30,
+            "overbought_level": 70
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "U",
+          "parameters": {
+            "rsi_period": 10,
+            "oversold_level": 30,
+            "overbought_level": 75
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "U",
+          "parameters": {
+            "rsi_period": 10,
+            "oversold_level": 30,
+            "overbought_level": 80
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "U",
+          "parameters": {
+            "rsi_period": 14,
+            "oversold_level": 20,
+            "overbought_level": 70
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "U",
+          "parameters": {
+            "rsi_period": 14,
+            "oversold_level": 20,
+            "overbought_level": 75
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "U",
+          "parameters": {
+            "rsi_period": 14,
+            "oversold_level": 20,
+            "overbought_level": 80
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "U",
+          "parameters": {
+            "rsi_period": 14,
+            "oversold_level": 25,
+            "overbought_level": 70
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "U",
+          "parameters": {
+            "rsi_period": 14,
+            "oversold_level": 25,
+            "overbought_level": 75
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "U",
+          "parameters": {
+            "rsi_period": 14,
+            "oversold_level": 25,
+            "overbought_level": 80
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "U",
+          "parameters": {
+            "rsi_period": 14,
+            "oversold_level": 30,
+            "overbought_level": 70
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "U",
+          "parameters": {
+            "rsi_period": 14,
+            "oversold_level": 30,
+            "overbought_level": 75
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "U",
+          "parameters": {
+            "rsi_period": 14,
+            "oversold_level": 30,
+            "overbought_level": 80
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "U",
+          "parameters": {
+            "rsi_period": 21,
+            "oversold_level": 20,
+            "overbought_level": 70
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "U",
+          "parameters": {
+            "rsi_period": 21,
+            "oversold_level": 20,
+            "overbought_level": 75
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "U",
+          "parameters": {
+            "rsi_period": 21,
+            "oversold_level": 20,
+            "overbought_level": 80
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "U",
+          "parameters": {
+            "rsi_period": 21,
+            "oversold_level": 25,
+            "overbought_level": 70
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "U",
+          "parameters": {
+            "rsi_period": 21,
+            "oversold_level": 25,
+            "overbought_level": 75
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "U",
+          "parameters": {
+            "rsi_period": 21,
+            "oversold_level": 25,
+            "overbought_level": 80
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "U",
+          "parameters": {
+            "rsi_period": 21,
+            "oversold_level": 30,
+            "overbought_level": 70
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "U",
+          "parameters": {
+            "rsi_period": 21,
+            "oversold_level": 30,
+            "overbought_level": 75
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "U",
+          "parameters": {
+            "rsi_period": 21,
+            "oversold_level": 30,
+            "overbought_level": 80
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        }
+      ],
+      "best_parameters": [
+        10,
+        20,
+        70
+      ],
+      "best_result": {
+        "ticker": "U",
+        "parameters": {
+          "rsi_period": 10,
+          "oversold_level": 20,
+          "overbought_level": 70
+        },
+        "performance": {
+          "total_return_pct": 0.0,
+          "sharpe_ratio": 0,
+          "max_drawdown_pct": 0.0,
+          "win_rate_pct": 0,
+          "expectancy": 0,
+          "total_trades": 0
+        },
+        "transaction_costs": {
+          "total_costs_usd": 0,
+          "cost_impact_pct": 0.0
+        }
+      },
+      "best_sharpe": 0
+    },
+    "RBLX": {
+      "all_combinations": [
+        {
+          "ticker": "RBLX",
+          "parameters": {
+            "rsi_period": 10,
+            "oversold_level": 20,
+            "overbought_level": 70
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "RBLX",
+          "parameters": {
+            "rsi_period": 10,
+            "oversold_level": 20,
+            "overbought_level": 75
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "RBLX",
+          "parameters": {
+            "rsi_period": 10,
+            "oversold_level": 20,
+            "overbought_level": 80
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "RBLX",
+          "parameters": {
+            "rsi_period": 10,
+            "oversold_level": 25,
+            "overbought_level": 70
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "RBLX",
+          "parameters": {
+            "rsi_period": 10,
+            "oversold_level": 25,
+            "overbought_level": 75
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "RBLX",
+          "parameters": {
+            "rsi_period": 10,
+            "oversold_level": 25,
+            "overbought_level": 80
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "RBLX",
+          "parameters": {
+            "rsi_period": 10,
+            "oversold_level": 30,
+            "overbought_level": 70
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "RBLX",
+          "parameters": {
+            "rsi_period": 10,
+            "oversold_level": 30,
+            "overbought_level": 75
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "RBLX",
+          "parameters": {
+            "rsi_period": 10,
+            "oversold_level": 30,
+            "overbought_level": 80
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "RBLX",
+          "parameters": {
+            "rsi_period": 14,
+            "oversold_level": 20,
+            "overbought_level": 70
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "RBLX",
+          "parameters": {
+            "rsi_period": 14,
+            "oversold_level": 20,
+            "overbought_level": 75
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "RBLX",
+          "parameters": {
+            "rsi_period": 14,
+            "oversold_level": 20,
+            "overbought_level": 80
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "RBLX",
+          "parameters": {
+            "rsi_period": 14,
+            "oversold_level": 25,
+            "overbought_level": 70
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "RBLX",
+          "parameters": {
+            "rsi_period": 14,
+            "oversold_level": 25,
+            "overbought_level": 75
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "RBLX",
+          "parameters": {
+            "rsi_period": 14,
+            "oversold_level": 25,
+            "overbought_level": 80
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "RBLX",
+          "parameters": {
+            "rsi_period": 14,
+            "oversold_level": 30,
+            "overbought_level": 70
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "RBLX",
+          "parameters": {
+            "rsi_period": 14,
+            "oversold_level": 30,
+            "overbought_level": 75
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "RBLX",
+          "parameters": {
+            "rsi_period": 14,
+            "oversold_level": 30,
+            "overbought_level": 80
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "RBLX",
+          "parameters": {
+            "rsi_period": 21,
+            "oversold_level": 20,
+            "overbought_level": 70
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "RBLX",
+          "parameters": {
+            "rsi_period": 21,
+            "oversold_level": 20,
+            "overbought_level": 75
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "RBLX",
+          "parameters": {
+            "rsi_period": 21,
+            "oversold_level": 20,
+            "overbought_level": 80
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "RBLX",
+          "parameters": {
+            "rsi_period": 21,
+            "oversold_level": 25,
+            "overbought_level": 70
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "RBLX",
+          "parameters": {
+            "rsi_period": 21,
+            "oversold_level": 25,
+            "overbought_level": 75
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "RBLX",
+          "parameters": {
+            "rsi_period": 21,
+            "oversold_level": 25,
+            "overbought_level": 80
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "RBLX",
+          "parameters": {
+            "rsi_period": 21,
+            "oversold_level": 30,
+            "overbought_level": 70
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "RBLX",
+          "parameters": {
+            "rsi_period": 21,
+            "oversold_level": 30,
+            "overbought_level": 75
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "RBLX",
+          "parameters": {
+            "rsi_period": 21,
+            "oversold_level": 30,
+            "overbought_level": 80
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        }
+      ],
+      "best_parameters": [
+        10,
+        20,
+        70
+      ],
+      "best_result": {
+        "ticker": "RBLX",
+        "parameters": {
+          "rsi_period": 10,
+          "oversold_level": 20,
+          "overbought_level": 70
+        },
+        "performance": {
+          "total_return_pct": 0.0,
+          "sharpe_ratio": 0,
+          "max_drawdown_pct": 0.0,
+          "win_rate_pct": 0,
+          "expectancy": 0,
+          "total_trades": 0
+        },
+        "transaction_costs": {
+          "total_costs_usd": 0,
+          "cost_impact_pct": 0.0
+        }
+      },
+      "best_sharpe": 0
+    },
+    "NET": {
+      "all_combinations": [
+        {
+          "ticker": "NET",
+          "parameters": {
+            "rsi_period": 10,
+            "oversold_level": 20,
+            "overbought_level": 70
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "NET",
+          "parameters": {
+            "rsi_period": 10,
+            "oversold_level": 20,
+            "overbought_level": 75
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "NET",
+          "parameters": {
+            "rsi_period": 10,
+            "oversold_level": 20,
+            "overbought_level": 80
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "NET",
+          "parameters": {
+            "rsi_period": 10,
+            "oversold_level": 25,
+            "overbought_level": 70
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "NET",
+          "parameters": {
+            "rsi_period": 10,
+            "oversold_level": 25,
+            "overbought_level": 75
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "NET",
+          "parameters": {
+            "rsi_period": 10,
+            "oversold_level": 25,
+            "overbought_level": 80
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "NET",
+          "parameters": {
+            "rsi_period": 10,
+            "oversold_level": 30,
+            "overbought_level": 70
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "NET",
+          "parameters": {
+            "rsi_period": 10,
+            "oversold_level": 30,
+            "overbought_level": 75
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "NET",
+          "parameters": {
+            "rsi_period": 10,
+            "oversold_level": 30,
+            "overbought_level": 80
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "NET",
+          "parameters": {
+            "rsi_period": 14,
+            "oversold_level": 20,
+            "overbought_level": 70
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "NET",
+          "parameters": {
+            "rsi_period": 14,
+            "oversold_level": 20,
+            "overbought_level": 75
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "NET",
+          "parameters": {
+            "rsi_period": 14,
+            "oversold_level": 20,
+            "overbought_level": 80
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "NET",
+          "parameters": {
+            "rsi_period": 14,
+            "oversold_level": 25,
+            "overbought_level": 70
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "NET",
+          "parameters": {
+            "rsi_period": 14,
+            "oversold_level": 25,
+            "overbought_level": 75
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "NET",
+          "parameters": {
+            "rsi_period": 14,
+            "oversold_level": 25,
+            "overbought_level": 80
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "NET",
+          "parameters": {
+            "rsi_period": 14,
+            "oversold_level": 30,
+            "overbought_level": 70
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "NET",
+          "parameters": {
+            "rsi_period": 14,
+            "oversold_level": 30,
+            "overbought_level": 75
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "NET",
+          "parameters": {
+            "rsi_period": 14,
+            "oversold_level": 30,
+            "overbought_level": 80
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "NET",
+          "parameters": {
+            "rsi_period": 21,
+            "oversold_level": 20,
+            "overbought_level": 70
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "NET",
+          "parameters": {
+            "rsi_period": 21,
+            "oversold_level": 20,
+            "overbought_level": 75
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "NET",
+          "parameters": {
+            "rsi_period": 21,
+            "oversold_level": 20,
+            "overbought_level": 80
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "NET",
+          "parameters": {
+            "rsi_period": 21,
+            "oversold_level": 25,
+            "overbought_level": 70
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "NET",
+          "parameters": {
+            "rsi_period": 21,
+            "oversold_level": 25,
+            "overbought_level": 75
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "NET",
+          "parameters": {
+            "rsi_period": 21,
+            "oversold_level": 25,
+            "overbought_level": 80
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "NET",
+          "parameters": {
+            "rsi_period": 21,
+            "oversold_level": 30,
+            "overbought_level": 70
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "NET",
+          "parameters": {
+            "rsi_period": 21,
+            "oversold_level": 30,
+            "overbought_level": 75
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "NET",
+          "parameters": {
+            "rsi_period": 21,
+            "oversold_level": 30,
+            "overbought_level": 80
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        }
+      ],
+      "best_parameters": [
+        10,
+        20,
+        70
+      ],
+      "best_result": {
+        "ticker": "NET",
+        "parameters": {
+          "rsi_period": 10,
+          "oversold_level": 20,
+          "overbought_level": 70
+        },
+        "performance": {
+          "total_return_pct": 0.0,
+          "sharpe_ratio": 0,
+          "max_drawdown_pct": 0.0,
+          "win_rate_pct": 0,
+          "expectancy": 0,
+          "total_trades": 0
+        },
+        "transaction_costs": {
+          "total_costs_usd": 0,
+          "cost_impact_pct": 0.0
+        }
+      },
+      "best_sharpe": 0
+    },
+    "DDOG": {
+      "all_combinations": [
+        {
+          "ticker": "DDOG",
+          "parameters": {
+            "rsi_period": 10,
+            "oversold_level": 20,
+            "overbought_level": 70
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "DDOG",
+          "parameters": {
+            "rsi_period": 10,
+            "oversold_level": 20,
+            "overbought_level": 75
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "DDOG",
+          "parameters": {
+            "rsi_period": 10,
+            "oversold_level": 20,
+            "overbought_level": 80
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "DDOG",
+          "parameters": {
+            "rsi_period": 10,
+            "oversold_level": 25,
+            "overbought_level": 70
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "DDOG",
+          "parameters": {
+            "rsi_period": 10,
+            "oversold_level": 25,
+            "overbought_level": 75
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "DDOG",
+          "parameters": {
+            "rsi_period": 10,
+            "oversold_level": 25,
+            "overbought_level": 80
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "DDOG",
+          "parameters": {
+            "rsi_period": 10,
+            "oversold_level": 30,
+            "overbought_level": 70
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "DDOG",
+          "parameters": {
+            "rsi_period": 10,
+            "oversold_level": 30,
+            "overbought_level": 75
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "DDOG",
+          "parameters": {
+            "rsi_period": 10,
+            "oversold_level": 30,
+            "overbought_level": 80
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "DDOG",
+          "parameters": {
+            "rsi_period": 14,
+            "oversold_level": 20,
+            "overbought_level": 70
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "DDOG",
+          "parameters": {
+            "rsi_period": 14,
+            "oversold_level": 20,
+            "overbought_level": 75
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "DDOG",
+          "parameters": {
+            "rsi_period": 14,
+            "oversold_level": 20,
+            "overbought_level": 80
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "DDOG",
+          "parameters": {
+            "rsi_period": 14,
+            "oversold_level": 25,
+            "overbought_level": 70
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "DDOG",
+          "parameters": {
+            "rsi_period": 14,
+            "oversold_level": 25,
+            "overbought_level": 75
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "DDOG",
+          "parameters": {
+            "rsi_period": 14,
+            "oversold_level": 25,
+            "overbought_level": 80
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "DDOG",
+          "parameters": {
+            "rsi_period": 14,
+            "oversold_level": 30,
+            "overbought_level": 70
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "DDOG",
+          "parameters": {
+            "rsi_period": 14,
+            "oversold_level": 30,
+            "overbought_level": 75
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "DDOG",
+          "parameters": {
+            "rsi_period": 14,
+            "oversold_level": 30,
+            "overbought_level": 80
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "DDOG",
+          "parameters": {
+            "rsi_period": 21,
+            "oversold_level": 20,
+            "overbought_level": 70
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "DDOG",
+          "parameters": {
+            "rsi_period": 21,
+            "oversold_level": 20,
+            "overbought_level": 75
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "DDOG",
+          "parameters": {
+            "rsi_period": 21,
+            "oversold_level": 20,
+            "overbought_level": 80
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "DDOG",
+          "parameters": {
+            "rsi_period": 21,
+            "oversold_level": 25,
+            "overbought_level": 70
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "DDOG",
+          "parameters": {
+            "rsi_period": 21,
+            "oversold_level": 25,
+            "overbought_level": 75
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "DDOG",
+          "parameters": {
+            "rsi_period": 21,
+            "oversold_level": 25,
+            "overbought_level": 80
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "DDOG",
+          "parameters": {
+            "rsi_period": 21,
+            "oversold_level": 30,
+            "overbought_level": 70
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "DDOG",
+          "parameters": {
+            "rsi_period": 21,
+            "oversold_level": 30,
+            "overbought_level": 75
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "DDOG",
+          "parameters": {
+            "rsi_period": 21,
+            "oversold_level": 30,
+            "overbought_level": 80
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        }
+      ],
+      "best_parameters": [
+        10,
+        20,
+        70
+      ],
+      "best_result": {
+        "ticker": "DDOG",
+        "parameters": {
+          "rsi_period": 10,
+          "oversold_level": 20,
+          "overbought_level": 70
+        },
+        "performance": {
+          "total_return_pct": 0.0,
+          "sharpe_ratio": 0,
+          "max_drawdown_pct": 0.0,
+          "win_rate_pct": 0,
+          "expectancy": 0,
+          "total_trades": 0
+        },
+        "transaction_costs": {
+          "total_costs_usd": 0,
+          "cost_impact_pct": 0.0
+        }
+      },
+      "best_sharpe": 0
+    },
+    "MDB": {
+      "all_combinations": [
+        {
+          "ticker": "MDB",
+          "parameters": {
+            "rsi_period": 10,
+            "oversold_level": 20,
+            "overbought_level": 70
+          },
+          "performance": {
+            "total_return_pct": 0.325813581468592,
+            "sharpe_ratio": -11.697072945936295,
+            "max_drawdown_pct": 0.18907645002757592,
+            "win_rate_pct": 100.0,
+            "expectancy": 33.4199981689453,
+            "total_trades": 1
+          },
+          "transaction_costs": {
+            "total_costs_usd": 2.6141281119544217,
+            "cost_impact_pct": 0.026141281119544217
+          }
+        },
+        {
+          "ticker": "MDB",
+          "parameters": {
+            "rsi_period": 10,
+            "oversold_level": 20,
+            "overbought_level": 75
+          },
+          "performance": {
+            "total_return_pct": 0.4356624778694822,
+            "sharpe_ratio": -9.025660414597011,
+            "max_drawdown_pct": 0.1890763328956927,
+            "win_rate_pct": 100.0,
+            "expectancy": 44.55000305175783,
+            "total_trades": 1
+          },
+          "transaction_costs": {
+            "total_costs_usd": 2.824841930783424,
+            "cost_impact_pct": 0.028248419307834238
+          }
+        },
+        {
+          "ticker": "MDB",
+          "parameters": {
+            "rsi_period": 10,
+            "oversold_level": 20,
+            "overbought_level": 80
+          },
+          "performance": {
+            "total_return_pct": 0.43605927141803474,
+            "sharpe_ratio": -9.01593901886619,
+            "max_drawdown_pct": 0.18907651562415023,
+            "win_rate_pct": 100.0,
+            "expectancy": 44.52999877929686,
+            "total_trades": 1
+          },
+          "transaction_costs": {
+            "total_costs_usd": 2.8170940321942184,
+            "cost_impact_pct": 0.028170940321942183
+          }
+        },
+        {
+          "ticker": "MDB",
+          "parameters": {
+            "rsi_period": 10,
+            "oversold_level": 25,
+            "overbought_level": 70
+          },
+          "performance": {
+            "total_return_pct": 1.6016628937753556,
+            "sharpe_ratio": -2.045350506239713,
+            "max_drawdown_pct": 1.4306313013982632,
+            "win_rate_pct": 46.666666666666664,
+            "expectancy": 13.022402064005533,
+            "total_trades": 15
+          },
+          "transaction_costs": {
+            "total_costs_usd": 104.8312606167095,
+            "cost_impact_pct": 1.048312606167095
+          }
+        },
+        {
+          "ticker": "MDB",
+          "parameters": {
+            "rsi_period": 10,
+            "oversold_level": 25,
+            "overbought_level": 75
+          },
+          "performance": {
+            "total_return_pct": 1.1850291895647025,
+            "sharpe_ratio": -0.8232790296299859,
+            "max_drawdown_pct": 2.9069468332147212,
+            "win_rate_pct": 40.0,
+            "expectancy": 10.199067560831706,
+            "total_trades": 15
+          },
+          "transaction_costs": {
+            "total_costs_usd": 104.2914059007678,
+            "cost_impact_pct": 1.042914059007678
+          }
+        },
+        {
+          "ticker": "MDB",
+          "parameters": {
+            "rsi_period": 10,
+            "oversold_level": 25,
+            "overbought_level": 80
+          },
+          "performance": {
+            "total_return_pct": 1.1924302582140627,
+            "sharpe_ratio": -0.8493683330846815,
+            "max_drawdown_pct": 2.901752079345941,
+            "win_rate_pct": 35.714285714285715,
+            "expectancy": 4.901856422424318,
+            "total_trades": 14
+          },
+          "transaction_costs": {
+            "total_costs_usd": 96.42769767278116,
+            "cost_impact_pct": 0.9642769767278117
+          }
+        },
+        {
+          "ticker": "MDB",
+          "parameters": {
+            "rsi_period": 10,
+            "oversold_level": 30,
+            "overbought_level": 70
+          },
+          "performance": {
+            "total_return_pct": 0.5208242068260915,
+            "sharpe_ratio": -1.6352240560230504,
+            "max_drawdown_pct": 2.5028076027104045,
+            "win_rate_pct": 37.5,
+            "expectancy": 4.626829067866005,
+            "total_trades": 24
+          },
+          "transaction_costs": {
+            "total_costs_usd": 178.95909655263793,
+            "cost_impact_pct": 1.7895909655263793
+          }
+        },
+        {
+          "ticker": "MDB",
+          "parameters": {
+            "rsi_period": 10,
+            "oversold_level": 30,
+            "overbought_level": 75
+          },
+          "performance": {
+            "total_return_pct": 0.06745559865426913,
+            "sharpe_ratio": -0.7228775544112652,
+            "max_drawdown_pct": 3.706462066312383,
+            "win_rate_pct": 34.78260869565217,
+            "expectancy": 2.744517533675481,
+            "total_trades": 23
+          },
+          "transaction_costs": {
+            "total_costs_usd": 169.53130992494366,
+            "cost_impact_pct": 1.6953130992494365
+          }
+        },
+        {
+          "ticker": "MDB",
+          "parameters": {
+            "rsi_period": 10,
+            "oversold_level": 30,
+            "overbought_level": 80
+          },
+          "performance": {
+            "total_return_pct": 0.9041604258077133,
+            "sharpe_ratio": -0.6011593160431346,
+            "max_drawdown_pct": 3.6693076240331832,
+            "win_rate_pct": 31.818181818181817,
+            "expectancy": 2.7310843901200705,
+            "total_trades": 22
+          },
+          "transaction_costs": {
+            "total_costs_usd": 162.50359420143053,
+            "cost_impact_pct": 1.6250359420143055
+          }
+        },
+        {
+          "ticker": "MDB",
+          "parameters": {
+            "rsi_period": 14,
+            "oversold_level": 20,
+            "overbought_level": 70
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "MDB",
+          "parameters": {
+            "rsi_period": 14,
+            "oversold_level": 20,
+            "overbought_level": 75
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "MDB",
+          "parameters": {
+            "rsi_period": 14,
+            "oversold_level": 20,
+            "overbought_level": 80
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "MDB",
+          "parameters": {
+            "rsi_period": 14,
+            "oversold_level": 25,
+            "overbought_level": 70
+          },
+          "performance": {
+            "total_return_pct": 0.9044721651827785,
+            "sharpe_ratio": -2.7016313223615183,
+            "max_drawdown_pct": 0.16006806443483515,
+            "win_rate_pct": 100.0,
+            "expectancy": 46.15499973297119,
+            "total_trades": 2
+          },
+          "transaction_costs": {
+            "total_costs_usd": 5.845503942723594,
+            "cost_impact_pct": 0.05845503942723594
+          }
+        },
+        {
+          "ticker": "MDB",
+          "parameters": {
+            "rsi_period": 14,
+            "oversold_level": 25,
+            "overbought_level": 75
+          },
+          "performance": {
+            "total_return_pct": 1.0122487759494287,
+            "sharpe_ratio": -2.489211135695928,
+            "max_drawdown_pct": 0.1599907432737676,
+            "win_rate_pct": 100.0,
+            "expectancy": 51.58000087738037,
+            "total_trades": 2
+          },
+          "transaction_costs": {
+            "total_costs_usd": 5.710348315328212,
+            "cost_impact_pct": 0.05710348315328212
+          }
+        },
+        {
+          "ticker": "MDB",
+          "parameters": {
+            "rsi_period": 14,
+            "oversold_level": 25,
+            "overbought_level": 80
+          },
+          "performance": {
+            "total_return_pct": 1.3870124873099121,
+            "sharpe_ratio": -1.9531064059416023,
+            "max_drawdown_pct": 0.15965839192505618,
+            "win_rate_pct": 100.0,
+            "expectancy": 70.41999912261963,
+            "total_trades": 2
+          },
+          "transaction_costs": {
+            "total_costs_usd": 6.645717325291015,
+            "cost_impact_pct": 0.06645717325291015
+          }
+        },
+        {
+          "ticker": "MDB",
+          "parameters": {
+            "rsi_period": 14,
+            "oversold_level": 30,
+            "overbought_level": 70
+          },
+          "performance": {
+            "total_return_pct": -0.2696970729336135,
+            "sharpe_ratio": -1.4013737635114971,
+            "max_drawdown_pct": 3.003823877431732,
+            "win_rate_pct": 35.714285714285715,
+            "expectancy": 0.3978586196899414,
+            "total_trades": 14
+          },
+          "transaction_costs": {
+            "total_costs_usd": 98.23129387304074,
+            "cost_impact_pct": 0.9823129387304074
+          }
+        },
+        {
+          "ticker": "MDB",
+          "parameters": {
+            "rsi_period": 14,
+            "oversold_level": 30,
+            "overbought_level": 75
+          },
+          "performance": {
+            "total_return_pct": 1.3440969989170115,
+            "sharpe_ratio": -0.7653336276168798,
+            "max_drawdown_pct": 2.9913858076051896,
+            "win_rate_pct": 35.714285714285715,
+            "expectancy": 11.9864285332816,
+            "total_trades": 14
+          },
+          "transaction_costs": {
+            "total_costs_usd": 98.71407688340983,
+            "cost_impact_pct": 0.9871407688340984
+          }
+        },
+        {
+          "ticker": "MDB",
+          "parameters": {
+            "rsi_period": 14,
+            "oversold_level": 30,
+            "overbought_level": 80
+          },
+          "performance": {
+            "total_return_pct": 3.0898190964986494,
+            "sharpe_ratio": -0.4104700190392341,
+            "max_drawdown_pct": 2.9364031157017823,
+            "win_rate_pct": 35.714285714285715,
+            "expectancy": 24.50357096535819,
+            "total_trades": 14
+          },
+          "transaction_costs": {
+            "total_costs_usd": 103.00324574076559,
+            "cost_impact_pct": 1.0300324574076558
+          }
+        },
+        {
+          "ticker": "MDB",
+          "parameters": {
+            "rsi_period": 21,
+            "oversold_level": 20,
+            "overbought_level": 70
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "MDB",
+          "parameters": {
+            "rsi_period": 21,
+            "oversold_level": 20,
+            "overbought_level": 75
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "MDB",
+          "parameters": {
+            "rsi_period": 21,
+            "oversold_level": 20,
+            "overbought_level": 80
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "MDB",
+          "parameters": {
+            "rsi_period": 21,
+            "oversold_level": 25,
+            "overbought_level": 70
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "MDB",
+          "parameters": {
+            "rsi_period": 21,
+            "oversold_level": 25,
+            "overbought_level": 75
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "MDB",
+          "parameters": {
+            "rsi_period": 21,
+            "oversold_level": 25,
+            "overbought_level": 80
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "MDB",
+          "parameters": {
+            "rsi_period": 21,
+            "oversold_level": 30,
+            "overbought_level": 70
+          },
+          "performance": {
+            "total_return_pct": 1.062749361966562,
+            "sharpe_ratio": -2.3224428026989847,
+            "max_drawdown_pct": 0.15999740382329436,
+            "win_rate_pct": 100.0,
+            "expectancy": 54.15500068664551,
+            "total_trades": 2
+          },
+          "transaction_costs": {
+            "total_costs_usd": 5.8774613464207315,
+            "cost_impact_pct": 0.05877461346420732
+          }
+        },
+        {
+          "ticker": "MDB",
+          "parameters": {
+            "rsi_period": 21,
+            "oversold_level": 30,
+            "overbought_level": 75
+          },
+          "performance": {
+            "total_return_pct": 1.5037605613149025,
+            "sharpe_ratio": -1.7167062735463,
+            "max_drawdown_pct": 0.15966492925775053,
+            "win_rate_pct": 100.0,
+            "expectancy": 76.30499649047852,
+            "total_trades": 2
+          },
+          "transaction_costs": {
+            "total_costs_usd": 6.785765483472382,
+            "cost_impact_pct": 0.06785765483472381
+          }
+        },
+        {
+          "ticker": "MDB",
+          "parameters": {
+            "rsi_period": 21,
+            "oversold_level": 30,
+            "overbought_level": 80
+          },
+          "performance": {
+            "total_return_pct": 3.503321212845694,
+            "sharpe_ratio": -0.39389675849763844,
+            "max_drawdown_pct": 0.4581313610472577,
+            "win_rate_pct": 100.0,
+            "expectancy": 176.79499435424805,
+            "total_trades": 2
+          },
+          "transaction_costs": {
+            "total_costs_usd": 10.048938776518801,
+            "cost_impact_pct": 0.10048938776518802
+          }
+        }
+      ],
+      "best_parameters": [
+        14,
+        20,
+        70
+      ],
+      "best_result": {
+        "ticker": "MDB",
+        "parameters": {
+          "rsi_period": 14,
+          "oversold_level": 20,
+          "overbought_level": 70
+        },
+        "performance": {
+          "total_return_pct": 0.0,
+          "sharpe_ratio": 0,
+          "max_drawdown_pct": 0.0,
+          "win_rate_pct": 0,
+          "expectancy": 0,
+          "total_trades": 0
+        },
+        "transaction_costs": {
+          "total_costs_usd": 0,
+          "cost_impact_pct": 0.0
+        }
+      },
+      "best_sharpe": 0
+    },
+    "OKTA": {
+      "all_combinations": [
+        {
+          "ticker": "OKTA",
+          "parameters": {
+            "rsi_period": 10,
+            "oversold_level": 20,
+            "overbought_level": 70
+          },
+          "performance": {
+            "total_return_pct": 0.10563581292653908,
+            "sharpe_ratio": -5.114879978397025,
+            "max_drawdown_pct": 0.4253815605372267,
+            "win_rate_pct": 25.0,
+            "expectancy": 3.9049987792968537,
+            "total_trades": 4
+          },
+          "transaction_costs": {
+            "total_costs_usd": 15.187430613054282,
+            "cost_impact_pct": 0.1518743061305428
+          }
+        },
+        {
+          "ticker": "OKTA",
+          "parameters": {
+            "rsi_period": 10,
+            "oversold_level": 20,
+            "overbought_level": 75
+          },
+          "performance": {
+            "total_return_pct": 0.29728407951657576,
+            "sharpe_ratio": -3.6340421525377655,
+            "max_drawdown_pct": 0.4260797541729171,
+            "win_rate_pct": 25.0,
+            "expectancy": 8.70249938964843,
+            "total_trades": 4
+          },
+          "transaction_costs": {
+            "total_costs_usd": 15.25492363103374,
+            "cost_impact_pct": 0.1525492363103374
+          }
+        },
+        {
+          "ticker": "OKTA",
+          "parameters": {
+            "rsi_period": 10,
+            "oversold_level": 20,
+            "overbought_level": 80
+          },
+          "performance": {
+            "total_return_pct": -0.7228691304554012,
+            "sharpe_ratio": -5.897861913013999,
+            "max_drawdown_pct": 1.1291858491524627,
+            "win_rate_pct": 0.0,
+            "expectancy": -16.892501831054695,
+            "total_trades": 4
+          },
+          "transaction_costs": {
+            "total_costs_usd": 13.661021915552391,
+            "cost_impact_pct": 0.1366102191555239
+          }
+        },
+        {
+          "ticker": "OKTA",
+          "parameters": {
+            "rsi_period": 10,
+            "oversold_level": 25,
+            "overbought_level": 70
+          },
+          "performance": {
+            "total_return_pct": 0.592492436608427,
+            "sharpe_ratio": -4.00788580587669,
+            "max_drawdown_pct": 0.38177467254355985,
+            "win_rate_pct": 50.0,
+            "expectancy": 7.122999954223619,
+            "total_trades": 10
+          },
+          "transaction_costs": {
+            "total_costs_usd": 35.43070278498078,
+            "cost_impact_pct": 0.35430702784980783
+          }
+        },
+        {
+          "ticker": "OKTA",
+          "parameters": {
+            "rsi_period": 10,
+            "oversold_level": 25,
+            "overbought_level": 75
+          },
+          "performance": {
+            "total_return_pct": 0.9260771291418859,
+            "sharpe_ratio": -2.9575560760438298,
+            "max_drawdown_pct": 0.38029472412726384,
+            "win_rate_pct": 50.0,
+            "expectancy": 10.481000137329094,
+            "total_trades": 10
+          },
+          "transaction_costs": {
+            "total_costs_usd": 36.0527914102036,
+            "cost_impact_pct": 0.360527914102036
+          }
+        },
+        {
+          "ticker": "OKTA",
+          "parameters": {
+            "rsi_period": 10,
+            "oversold_level": 25,
+            "overbought_level": 80
+          },
+          "performance": {
+            "total_return_pct": 0.48314124650021767,
+            "sharpe_ratio": -2.853671061116816,
+            "max_drawdown_pct": 0.9900868020907903,
+            "win_rate_pct": 25.0,
+            "expectancy": 7.123751163482661,
+            "total_trades": 8
+          },
+          "transaction_costs": {
+            "total_costs_usd": 25.69842540009914,
+            "cost_impact_pct": 0.2569842540009914
+          }
+        },
+        {
+          "ticker": "OKTA",
+          "parameters": {
+            "rsi_period": 10,
+            "oversold_level": 30,
+            "overbought_level": 70
+          },
+          "performance": {
+            "total_return_pct": 0.42105386642269876,
+            "sharpe_ratio": -2.50383835981338,
+            "max_drawdown_pct": 1.003064922123519,
+            "win_rate_pct": 35.0,
+            "expectancy": 3.597449684143066,
+            "total_trades": 20
+          },
+          "transaction_costs": {
+            "total_costs_usd": 89.6902994010822,
+            "cost_impact_pct": 0.8969029940108221
+          }
+        },
+        {
+          "ticker": "OKTA",
+          "parameters": {
+            "rsi_period": 10,
+            "oversold_level": 30,
+            "overbought_level": 75
+          },
+          "performance": {
+            "total_return_pct": 0.3405193714360939,
+            "sharpe_ratio": -2.5068453010582674,
+            "max_drawdown_pct": 1.4955890764529505,
+            "win_rate_pct": 30.0,
+            "expectancy": 3.180999565124516,
+            "total_trades": 20
+          },
+          "transaction_costs": {
+            "total_costs_usd": 89.08123091354567,
+            "cost_impact_pct": 0.8908123091354567
+          }
+        },
+        {
+          "ticker": "OKTA",
+          "parameters": {
+            "rsi_period": 10,
+            "oversold_level": 30,
+            "overbought_level": 80
+          },
+          "performance": {
+            "total_return_pct": 0.16321905116599736,
+            "sharpe_ratio": -1.6388328881826955,
+            "max_drawdown_pct": 1.7123925955320565,
+            "win_rate_pct": 25.0,
+            "expectancy": 2.44083245595297,
+            "total_trades": 12
+          },
+          "transaction_costs": {
+            "total_costs_usd": 38.59848306438548,
+            "cost_impact_pct": 0.38598483064385486
+          }
+        },
+        {
+          "ticker": "OKTA",
+          "parameters": {
+            "rsi_period": 14,
+            "oversold_level": 20,
+            "overbought_level": 70
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "OKTA",
+          "parameters": {
+            "rsi_period": 14,
+            "oversold_level": 20,
+            "overbought_level": 75
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "OKTA",
+          "parameters": {
+            "rsi_period": 14,
+            "oversold_level": 20,
+            "overbought_level": 80
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "OKTA",
+          "parameters": {
+            "rsi_period": 14,
+            "oversold_level": 25,
+            "overbought_level": 70
+          },
+          "performance": {
+            "total_return_pct": 0.7704597759529497,
+            "sharpe_ratio": -3.4756690328141997,
+            "max_drawdown_pct": 0.3003094497304991,
+            "win_rate_pct": 50.0,
+            "expectancy": 20.574998855590813,
+            "total_trades": 4
+          },
+          "transaction_costs": {
+            "total_costs_usd": 15.675220961310218,
+            "cost_impact_pct": 0.15675220961310218
+          }
+        },
+        {
+          "ticker": "OKTA",
+          "parameters": {
+            "rsi_period": 14,
+            "oversold_level": 25,
+            "overbought_level": 75
+          },
+          "performance": {
+            "total_return_pct": 0.20494375652420788,
+            "sharpe_ratio": -2.8961841205599996,
+            "max_drawdown_pct": 1.1728403586041503,
+            "win_rate_pct": 25.0,
+            "expectancy": 6.357496261596673,
+            "total_trades": 4
+          },
+          "transaction_costs": {
+            "total_costs_usd": 14.905140467907097,
+            "cost_impact_pct": 0.149051404679071
+          }
+        },
+        {
+          "ticker": "OKTA",
+          "parameters": {
+            "rsi_period": 14,
+            "oversold_level": 25,
+            "overbought_level": 80
+          },
+          "performance": {
+            "total_return_pct": 0.4201301238201631,
+            "sharpe_ratio": -2.349875340024755,
+            "max_drawdown_pct": 1.1696895298485934,
+            "win_rate_pct": 25.0,
+            "expectancy": 11.74999809265136,
+            "total_trades": 4
+          },
+          "transaction_costs": {
+            "total_costs_usd": 15.104449348726229,
+            "cost_impact_pct": 0.1510444934872623
+          }
+        },
+        {
+          "ticker": "OKTA",
+          "parameters": {
+            "rsi_period": 14,
+            "oversold_level": 30,
+            "overbought_level": 70
+          },
+          "performance": {
+            "total_return_pct": 1.1887254101666622,
+            "sharpe_ratio": -3.000999947504786,
+            "max_drawdown_pct": 0.4172925540152324,
+            "win_rate_pct": 50.0,
+            "expectancy": 11.082500139872234,
+            "total_trades": 12
+          },
+          "transaction_costs": {
+            "total_costs_usd": 42.489971525676,
+            "cost_impact_pct": 0.42489971525676
+          }
+        },
+        {
+          "ticker": "OKTA",
+          "parameters": {
+            "rsi_period": 14,
+            "oversold_level": 30,
+            "overbought_level": 75
+          },
+          "performance": {
+            "total_return_pct": 0.4348938200894008,
+            "sharpe_ratio": -3.6377252604902335,
+            "max_drawdown_pct": 1.0289048159393857,
+            "win_rate_pct": 22.22222222222222,
+            "expectancy": 5.88666661580404,
+            "total_trades": 9
+          },
+          "transaction_costs": {
+            "total_costs_usd": 28.7965878580667,
+            "cost_impact_pct": 0.287965878580667
+          }
+        },
+        {
+          "ticker": "OKTA",
+          "parameters": {
+            "rsi_period": 14,
+            "oversold_level": 30,
+            "overbought_level": 80
+          },
+          "performance": {
+            "total_return_pct": 0.7048869342912804,
+            "sharpe_ratio": -2.6637912678550135,
+            "max_drawdown_pct": 1.027052748932106,
+            "win_rate_pct": 12.5,
+            "expectancy": 4.631250858306888,
+            "total_trades": 8
+          },
+          "transaction_costs": {
+            "total_costs_usd": 27.772207950334245,
+            "cost_impact_pct": 0.27772207950334243
+          }
+        },
+        {
+          "ticker": "OKTA",
+          "parameters": {
+            "rsi_period": 21,
+            "oversold_level": 20,
+            "overbought_level": 70
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "OKTA",
+          "parameters": {
+            "rsi_period": 21,
+            "oversold_level": 20,
+            "overbought_level": 75
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "OKTA",
+          "parameters": {
+            "rsi_period": 21,
+            "oversold_level": 20,
+            "overbought_level": 80
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "OKTA",
+          "parameters": {
+            "rsi_period": 21,
+            "oversold_level": 25,
+            "overbought_level": 70
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "OKTA",
+          "parameters": {
+            "rsi_period": 21,
+            "oversold_level": 25,
+            "overbought_level": 75
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "OKTA",
+          "parameters": {
+            "rsi_period": 21,
+            "oversold_level": 25,
+            "overbought_level": 80
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "OKTA",
+          "parameters": {
+            "rsi_period": 21,
+            "oversold_level": 30,
+            "overbought_level": 70
+          },
+          "performance": {
+            "total_return_pct": -0.2674521264611576,
+            "sharpe_ratio": -10.479968273894643,
+            "max_drawdown_pct": 0.33368389199845006,
+            "win_rate_pct": 0.0,
+            "expectancy": -8.199999491373703,
+            "total_trades": 3
+          },
+          "transaction_costs": {
+            "total_costs_usd": 6.456119593501167,
+            "cost_impact_pct": 0.06456119593501167
+          }
+        },
+        {
+          "ticker": "OKTA",
+          "parameters": {
+            "rsi_period": 21,
+            "oversold_level": 30,
+            "overbought_level": 75
+          },
+          "performance": {
+            "total_return_pct": -0.26830930231120875,
+            "sharpe_ratio": -10.447916328823151,
+            "max_drawdown_pct": 0.33435868946096087,
+            "win_rate_pct": 0.0,
+            "expectancy": -8.199999491373703,
+            "total_trades": 3
+          },
+          "transaction_costs": {
+            "total_costs_usd": 6.575396724351099,
+            "cost_impact_pct": 0.06575396724351099
+          }
+        },
+        {
+          "ticker": "OKTA",
+          "parameters": {
+            "rsi_period": 21,
+            "oversold_level": 30,
+            "overbought_level": 80
+          },
+          "performance": {
+            "total_return_pct": -0.26708140695247495,
+            "sharpe_ratio": -10.493894132409173,
+            "max_drawdown_pct": 0.33361005722485815,
+            "win_rate_pct": 0.0,
+            "expectancy": -8.199999491373703,
+            "total_trades": 3
+          },
+          "transaction_costs": {
+            "total_costs_usd": 6.415879417027642,
+            "cost_impact_pct": 0.06415879417027641
+          }
+        }
+      ],
+      "best_parameters": [
+        14,
+        20,
+        70
+      ],
+      "best_result": {
+        "ticker": "OKTA",
+        "parameters": {
+          "rsi_period": 14,
+          "oversold_level": 20,
+          "overbought_level": 70
+        },
+        "performance": {
+          "total_return_pct": 0.0,
+          "sharpe_ratio": 0,
+          "max_drawdown_pct": 0.0,
+          "win_rate_pct": 0,
+          "expectancy": 0,
+          "total_trades": 0
+        },
+        "transaction_costs": {
+          "total_costs_usd": 0,
+          "cost_impact_pct": 0.0
+        }
+      },
+      "best_sharpe": 0
+    },
+    "ZS": {
+      "all_combinations": [
+        {
+          "ticker": "ZS",
+          "parameters": {
+            "rsi_period": 10,
+            "oversold_level": 20,
+            "overbought_level": 70
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "ZS",
+          "parameters": {
+            "rsi_period": 10,
+            "oversold_level": 20,
+            "overbought_level": 75
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "ZS",
+          "parameters": {
+            "rsi_period": 10,
+            "oversold_level": 20,
+            "overbought_level": 80
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "ZS",
+          "parameters": {
+            "rsi_period": 10,
+            "oversold_level": 25,
+            "overbought_level": 70
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "ZS",
+          "parameters": {
+            "rsi_period": 10,
+            "oversold_level": 25,
+            "overbought_level": 75
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "ZS",
+          "parameters": {
+            "rsi_period": 10,
+            "oversold_level": 25,
+            "overbought_level": 80
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "ZS",
+          "parameters": {
+            "rsi_period": 10,
+            "oversold_level": 30,
+            "overbought_level": 70
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "ZS",
+          "parameters": {
+            "rsi_period": 10,
+            "oversold_level": 30,
+            "overbought_level": 75
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "ZS",
+          "parameters": {
+            "rsi_period": 10,
+            "oversold_level": 30,
+            "overbought_level": 80
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "ZS",
+          "parameters": {
+            "rsi_period": 14,
+            "oversold_level": 20,
+            "overbought_level": 70
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "ZS",
+          "parameters": {
+            "rsi_period": 14,
+            "oversold_level": 20,
+            "overbought_level": 75
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "ZS",
+          "parameters": {
+            "rsi_period": 14,
+            "oversold_level": 20,
+            "overbought_level": 80
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "ZS",
+          "parameters": {
+            "rsi_period": 14,
+            "oversold_level": 25,
+            "overbought_level": 70
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "ZS",
+          "parameters": {
+            "rsi_period": 14,
+            "oversold_level": 25,
+            "overbought_level": 75
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "ZS",
+          "parameters": {
+            "rsi_period": 14,
+            "oversold_level": 25,
+            "overbought_level": 80
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "ZS",
+          "parameters": {
+            "rsi_period": 14,
+            "oversold_level": 30,
+            "overbought_level": 70
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "ZS",
+          "parameters": {
+            "rsi_period": 14,
+            "oversold_level": 30,
+            "overbought_level": 75
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "ZS",
+          "parameters": {
+            "rsi_period": 14,
+            "oversold_level": 30,
+            "overbought_level": 80
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "ZS",
+          "parameters": {
+            "rsi_period": 21,
+            "oversold_level": 20,
+            "overbought_level": 70
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "ZS",
+          "parameters": {
+            "rsi_period": 21,
+            "oversold_level": 20,
+            "overbought_level": 75
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "ZS",
+          "parameters": {
+            "rsi_period": 21,
+            "oversold_level": 20,
+            "overbought_level": 80
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "ZS",
+          "parameters": {
+            "rsi_period": 21,
+            "oversold_level": 25,
+            "overbought_level": 70
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "ZS",
+          "parameters": {
+            "rsi_period": 21,
+            "oversold_level": 25,
+            "overbought_level": 75
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "ZS",
+          "parameters": {
+            "rsi_period": 21,
+            "oversold_level": 25,
+            "overbought_level": 80
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "ZS",
+          "parameters": {
+            "rsi_period": 21,
+            "oversold_level": 30,
+            "overbought_level": 70
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "ZS",
+          "parameters": {
+            "rsi_period": 21,
+            "oversold_level": 30,
+            "overbought_level": 75
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        },
+        {
+          "ticker": "ZS",
+          "parameters": {
+            "rsi_period": 21,
+            "oversold_level": 30,
+            "overbought_level": 80
+          },
+          "performance": {
+            "total_return_pct": 0.0,
+            "sharpe_ratio": 0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0,
+            "expectancy": 0,
+            "total_trades": 0
+          },
+          "transaction_costs": {
+            "total_costs_usd": 0,
+            "cost_impact_pct": 0.0
+          }
+        }
+      ],
+      "best_parameters": [
+        10,
+        20,
+        70
+      ],
+      "best_result": {
+        "ticker": "ZS",
+        "parameters": {
+          "rsi_period": 10,
+          "oversold_level": 20,
+          "overbought_level": 70
+        },
+        "performance": {
+          "total_return_pct": 0.0,
+          "sharpe_ratio": 0,
+          "max_drawdown_pct": 0.0,
+          "win_rate_pct": 0,
+          "expectancy": 0,
+          "total_trades": 0
+        },
+        "transaction_costs": {
+          "total_costs_usd": 0,
+          "cost_impact_pct": 0.0
+        }
+      },
+      "best_sharpe": 0
+    }
+  },
+  "optimization_summary": {
+    "stocks_optimized": 10,
+    "most_common_best_params": {
+      "rsi_period": 10,
+      "oversold_level": 20,
+      "overbought_level": 70,
+      "frequency": 8,
+      "avg_sharpe": 0.0,
+      "avg_win_rate": 0.0,
+      "successful_stocks": [
+        "CRWD",
+        "SNOW",
+        "PLTR",
+        "U",
+        "RBLX",
+        "NET",
+        "DDOG",
+        "ZS"
+      ]
+    },
+    "overall_averages": {
+      "avg_best_sharpe": 0.0,
+      "avg_best_win_rate": 0.0,
+      "sharpe_improvement_potential": 0.0
+    },
+    "parameter_distribution": {
+      "(10, 20, 70)": {
+        "count": 8,
+        "total_sharpe": 0,
+        "total_win_rate": 0,
+        "stocks": [
+          "CRWD",
+          "SNOW",
+          "PLTR",
+          "U",
+          "RBLX",
+          "NET",
+          "DDOG",
+          "ZS"
+        ]
+      },
+      "(14, 20, 70)": {
+        "count": 2,
+        "total_sharpe": 0,
+        "total_win_rate": 0,
+        "stocks": [
+          "MDB",
+          "OKTA"
+        ]
+      }
+    }
+  }
+}

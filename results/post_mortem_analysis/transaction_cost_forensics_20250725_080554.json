@@ -1,0 +1,140 @@
+{
+  "investigation_date": "2025-07-25 08:05:54",
+  "objective": "Determine root cause of 71% higher transaction costs in DJIA vs growth stocks",
+  "week_2_summary": {
+    "universe": "Growth stocks (CRWD, SNOW, PLTR, U, RBLX, NET, DDOG, MDB, OKTA, ZS)",
+    "total_costs": 21631.391984765945,
+    "cost_impact_pct": 21.631391984765948,
+    "total_trades": 9,
+    "rebalance_count": 53,
+    "cost_tier": "mid_cap",
+    "strategy_stopped_out": true,
+    "final_value": 105191.59706329857
+  },
+  "sprint_3_summary": {
+    "universe": "DJIA large-cap (30 stocks)",
+    "total_costs": 37031.612077849306,
+    "cost_impact_pct": 37.03161207784931,
+    "total_trades": 54,
+    "rebalance_count": 72,
+    "cost_tier": "large_cap",
+    "strategy_stopped_out": false,
+    "final_value": 79952.47737848706
+  },
+  "key_findings": {
+    "cost_increase": {
+      "week_2_total_costs": 21631.391984765945,
+      "sprint_3_total_costs": 37031.612077849306,
+      "absolute_increase": 15400.22009308336,
+      "percentage_increase": 71.19384690513246,
+      "expected_decrease": -60,
+      "actual_vs_expected_gap": 131.19384690513246
+    },
+    "trade_frequency_analysis": {
+      "week_2_trades": 9,
+      "sprint_3_trades": 54,
+      "trade_increase_pct": 500.0,
+      "week_2_trades_per_rebalance": 0.16981132075471697,
+      "sprint_3_trades_per_rebalance": 0.75,
+      "trades_per_rebalance_increase": 341.6666666666667
+    },
+    "rebalancing_frequency": {
+      "week_2_rebalances": 53,
+      "sprint_3_rebalances": 72,
+      "rebalance_increase_pct": 35.84905660377358,
+      "week_2_strategy_stopped_early": true,
+      "sprint_3_ran_full_period": true
+    }
+  },
+  "cost_model_comparison": {
+    "week_2_params": {
+      "base_commission": 0.0005,
+      "bid_ask_spread": 0.0025,
+      "slippage_factor": 0.0015,
+      "market_impact_factor": 5e-05,
+      "liquidity_threshold": 100000
+    },
+    "sprint_3_params": {
+      "base_commission": 0.0005,
+      "bid_ask_spread": 0.001,
+      "slippage_factor": 0.0005,
+      "market_impact_factor": 1e-05,
+      "liquidity_threshold": 1000000
+    },
+    "parameter_differences": {
+      "bid_ask_spread": {
+        "week_2": 0.0025,
+        "sprint_3": 0.001,
+        "reduction_pct": -60.0
+      },
+      "slippage_factor": {
+        "week_2": 0.0015,
+        "sprint_3": 0.0005,
+        "reduction_pct": -66.66666666666666
+      },
+      "market_impact_factor": {
+        "week_2": 5e-05,
+        "sprint_3": 1e-05,
+        "reduction_pct": -80.0
+      }
+    }
+  },
+  "cost_breakdown_comparison": {
+    "week_2_breakdown": {
+      "commission": 2043.2296656103135,
+      "spread_cost": 10216.148328051568,
+      "slippage": 7662.111246038676,
+      "market_impact": 408.6459331220627,
+      "timing_cost": 1301.2568119433251
+    },
+    "sprint_3_breakdown": {
+      "commission": 8140.150582388336,
+      "spread_cost": 16280.301164776673,
+      "slippage": 8140.150582388336,
+      "market_impact": 325.53814636149605,
+      "timing_cost": 4145.471601934465
+    },
+    "component_analysis": {
+      "commission": {
+        "week_2_amount": 2043.2296656103135,
+        "sprint_3_amount": 8140.150582388336,
+        "absolute_increase": 6096.920916778023,
+        "percentage_increase": 298.3962605572717,
+        "week_2_pct_of_total": 9.44566890123979,
+        "sprint_3_pct_of_total": 21.981626306939575
+      },
+      "spread_cost": {
+        "week_2_amount": 10216.148328051568,
+        "sprint_3_amount": 16280.301164776673,
+        "absolute_increase": 6064.152836725105,
+        "percentage_increase": 59.35850422290868,
+        "week_2_pct_of_total": 47.22834450619895,
+        "sprint_3_pct_of_total": 43.96325261387915
+      },
+      "slippage": {
+        "week_2_amount": 7662.111246038676,
+        "sprint_3_amount": 8140.150582388336,
+        "absolute_increase": 478.0393363496605,
+        "percentage_increase": 6.239002815272457,
+        "week_2_pct_of_total": 35.42125837964921,
+        "sprint_3_pct_of_total": 21.981626306939575
+      },
+      "market_impact": {
+        "week_2_amount": 408.6459331220627,
+        "sprint_3_amount": 325.53814636149605,
+        "absolute_increase": -83.10778676056663,
+        "percentage_increase": -20.337358095214984,
+        "week_2_pct_of_total": 1.889133780247958,
+        "sprint_3_pct_of_total": 0.8790817577078119
+      },
+      "timing_cost": {
+        "week_2_amount": 1301.2568119433251,
+        "sprint_3_amount": 4145.471601934465,
+        "absolute_increase": 2844.2147899911397,
+        "percentage_increase": 218.57444002491158,
+        "week_2_pct_of_total": 6.015594432664084,
+        "sprint_3_pct_of_total": 11.194413014533886
+      }
+    }
+  }
+}

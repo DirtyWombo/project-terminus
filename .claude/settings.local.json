@@ -8,7 +8,17 @@
       "Bash(find:*)",
       "Bash(rm:*)",
       "Bash(git init:*)",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git remote add:*)",
+      "Bash(git push:*)",
+      "Bash(git checkout:*)",
+      "Bash(git pull:*)",
+      "Bash(badger_env\\Scripts\\activate:*)",
+      "Bash(mkdir:*)",
+      "Bash(ls:*)",
+      "Bash(cp:*)",
+      "Bash(rd:*)"
     ],
     "deny": []
   }

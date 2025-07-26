@@ -1,0 +1,31 @@
+{
+  "test": "Sprint 9 - Composite QVM Portfolio Strategy",
+  "test_date": "2025-07-25 15:17:05",
+  "universe": [
+    "CRWD",
+    "SNOW",
+    "PLTR",
+    "U",
+    "RBLX",
+    "NET",
+    "DDOG",
+    "MDB",
+    "OKTA",
+    "ZS"
+  ],
+  "initial_value": 100000.0,
+  "final_value": 429817.2735699863,
+  "total_return_pct": 329.8172735699863,
+  "annualized_return_pct": 27.510899921034838,
+  "sharpe_ratio": 0.6011057231929403,
+  "max_drawdown_pct": 66.4190915982024,
+  "total_trades": 3,
+  "win_rate_pct": 0.0,
+  "rebalances": 72,
+  "success_criteria": {
+    "return_target_met": true,
+    "sharpe_target_met": false,
+    "drawdown_target_met": false,
+    "overall_success": false
+  }
+}

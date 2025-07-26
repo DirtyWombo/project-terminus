@@ -1,0 +1,547 @@
+{
+  "test": "Sprint #6 Test B - Bollinger Band Mean Reversion",
+  "test_date": "2025-07-25 08:58:37",
+  "strategy": "Bollinger Band Mean Reversion (Lower band entry, Upper band exit, 8% stop)",
+  "universe": [
+    "CRWD",
+    "SNOW",
+    "PLTR",
+    "U",
+    "RBLX",
+    "NET",
+    "DDOG",
+    "MDB",
+    "OKTA",
+    "ZS"
+  ],
+  "successful_tests": 10,
+  "individual_results": {
+    "CRWD": {
+      "ticker": "CRWD",
+      "test_date": "2025-07-25 08:58:36",
+      "strategy": "Bollinger Band Mean Reversion",
+      "universe": "Small/Mid-Cap Growth",
+      "data_period": "2018-01-02 to 2023-12-29",
+      "initial_cash": 10000,
+      "performance": {
+        "final_value": 9922.663713227792,
+        "total_return_pct": -0.7733628677220804,
+        "max_drawdown_pct": 2.00082960138483,
+        "sharpe_ratio": NaN
+      },
+      "trading": {
+        "total_trades": 20,
+        "winning_trades": 7,
+        "losing_trades": 13,
+        "win_rate_pct": 35.0,
+        "avg_profit": 23.909287043980182,
+        "avg_loss": 16.246076730581436,
+        "expectancy": -2.1916994094848707,
+        "profit_factor": 0.7924517222663233,
+        "total_profit": 167.36500930786127,
+        "total_loss": 211.19899749755865,
+        "lower_band_signals": 20,
+        "trades_from_lower_band": 20,
+        "signal_conversion_rate_pct": 100.0,
+        "stop_loss_exits": 14,
+        "upper_band_exits": 6
+      },
+      "transaction_costs": {
+        "total_costs_usd": 100.24806466483278,
+        "cost_impact_pct": 1.0024806466483278,
+        "cost_breakdown_usd": {
+          "commission": 8.98413402748108,
+          "spread_cost": 44.920670137405395,
+          "slippage": 37.733362915420535,
+          "market_impact": 0.898413402748108,
+          "timing_cost": 7.711484181777664
+        },
+        "cost_per_trade": 5.012403233241639
+      },
+      "bollinger_analysis": {
+        "strategy_type": "Bollinger Band Mean Reversion (Lower band entry, Upper band exit)",
+        "lower_band_signals": 20,
+        "trades_executed": 20,
+        "signal_conversion_rate_pct": 100.0,
+        "stop_loss_exits": 14,
+        "upper_band_exits": 6
+      }
+    },
+    "SNOW": {
+      "ticker": "SNOW",
+      "test_date": "2025-07-25 08:58:36",
+      "strategy": "Bollinger Band Mean Reversion",
+      "universe": "Small/Mid-Cap Growth",
+      "data_period": "2018-01-02 to 2023-12-29",
+      "initial_cash": 10000,
+      "performance": {
+        "final_value": 9921.250277539095,
+        "total_return_pct": -0.787497224609051,
+        "max_drawdown_pct": 1.9065036769075525,
+        "sharpe_ratio": NaN
+      },
+      "trading": {
+        "total_trades": 16,
+        "winning_trades": 7,
+        "losing_trades": 9,
+        "win_rate_pct": 43.75,
+        "avg_profit": 33.99428449358259,
+        "avg_loss": 31.39444308810764,
+        "expectancy": -2.786874771118164,
+        "profit_factor": 0.8421872296431921,
+        "total_profit": 237.95999145507812,
+        "total_loss": 282.54998779296875,
+        "lower_band_signals": 16,
+        "trades_from_lower_band": 16,
+        "signal_conversion_rate_pct": 100.0,
+        "stop_loss_exits": 9,
+        "upper_band_exits": 7
+      },
+      "transaction_costs": {
+        "total_costs_usd": 101.72769661310195,
+        "cost_impact_pct": 1.0172769661310195,
+        "cost_breakdown_usd": {
+          "commission": 9.175580001831054,
+          "spread_cost": 45.877900009155276,
+          "slippage": 38.53743600769043,
+          "market_impact": 0.9175580001831055,
+          "timing_cost": 7.219222594242089
+        },
+        "cost_per_trade": 6.357981038318872
+      },
+      "bollinger_analysis": {
+        "strategy_type": "Bollinger Band Mean Reversion (Lower band entry, Upper band exit)",
+        "lower_band_signals": 16,
+        "trades_executed": 16,
+        "signal_conversion_rate_pct": 100.0,
+        "stop_loss_exits": 9,
+        "upper_band_exits": 7
+      }
+    },
+    "PLTR": {
+      "ticker": "PLTR",
+      "test_date": "2025-07-25 08:58:37",
+      "strategy": "Bollinger Band Mean Reversion",
+      "universe": "Small/Mid-Cap Growth",
+      "data_period": "2018-01-02 to 2023-12-29",
+      "initial_cash": 10000,
+      "performance": {
+        "final_value": 10002.428314439103,
+        "total_return_pct": 0.024283144391029056,
+        "max_drawdown_pct": 0.08238736120644863,
+        "sharpe_ratio": NaN
+      },
+      "trading": {
+        "total_trades": 18,
+        "winning_trades": 8,
+        "losing_trades": 10,
+        "win_rate_pct": 44.44444444444444,
+        "avg_profit": 2.438749849796296,
+        "avg_loss": 1.401000595092773,
+        "expectancy": 0.30555515819125756,
+        "profit_factor": 1.3925760536224778,
+        "total_profit": 19.50999879837037,
+        "total_loss": 14.01000595092773,
+        "lower_band_signals": 19,
+        "trades_from_lower_band": 19,
+        "signal_conversion_rate_pct": 100.0,
+        "stop_loss_exits": 10,
+        "upper_band_exits": 8
+      },
+      "transaction_costs": {
+        "total_costs_usd": 9.070788485347096,
+        "cost_impact_pct": 0.09070788485347096,
+        "cost_breakdown_usd": {
+          "commission": 0.813904999256134,
+          "spread_cost": 4.069524996280671,
+          "slippage": 3.4184009968757634,
+          "market_impact": 0.08139049992561341,
+          "timing_cost": 0.687566993008914
+        },
+        "cost_per_trade": 0.5039326936303943
+      },
+      "bollinger_analysis": {
+        "strategy_type": "Bollinger Band Mean Reversion (Lower band entry, Upper band exit)",
+        "lower_band_signals": 19,
+        "trades_executed": 19,
+        "signal_conversion_rate_pct": 100.0,
+        "stop_loss_exits": 10,
+        "upper_band_exits": 8
+      }
+    },
+    "U": {
+      "ticker": "U",
+      "test_date": "2025-07-25 08:58:37",
+      "strategy": "Bollinger Band Mean Reversion",
+      "universe": "Small/Mid-Cap Growth",
+      "data_period": "2018-01-02 to 2023-12-29",
+      "initial_cash": 10000,
+      "performance": {
+        "final_value": 9941.624690372924,
+        "total_return_pct": -0.583753096270757,
+        "max_drawdown_pct": 0.7718862689548592,
+        "sharpe_ratio": NaN
+      },
+      "trading": {
+        "total_trades": 18,
+        "winning_trades": 4,
+        "losing_trades": 14,
+        "win_rate_pct": 22.22222222222222,
+        "avg_profit": 19.279998779296875,
+        "avg_loss": 8.80142879486084,
+        "expectancy": -2.5611115561591244,
+        "profit_factor": 0.6258723677927799,
+        "total_profit": 77.1199951171875,
+        "total_loss": 123.22000312805176,
+        "lower_band_signals": 18,
+        "trades_from_lower_band": 18,
+        "signal_conversion_rate_pct": 100.0,
+        "stop_loss_exits": 14,
+        "upper_band_exits": 4
+      },
+      "transaction_costs": {
+        "total_costs_usd": 37.38406961516641,
+        "cost_impact_pct": 0.3738406961516641,
+        "cost_breakdown_usd": {
+          "commission": 3.351709994316101,
+          "spread_cost": 16.758549971580507,
+          "slippage": 14.077181976127626,
+          "market_impact": 0.3351709994316101,
+          "timing_cost": 2.8614566737105664
+        },
+        "cost_per_trade": 2.076892756398134
+      },
+      "bollinger_analysis": {
+        "strategy_type": "Bollinger Band Mean Reversion (Lower band entry, Upper band exit)",
+        "lower_band_signals": 18,
+        "trades_executed": 18,
+        "signal_conversion_rate_pct": 100.0,
+        "stop_loss_exits": 14,
+        "upper_band_exits": 4
+      }
+    },
+    "RBLX": {
+      "ticker": "RBLX",
+      "test_date": "2025-07-25 08:58:37",
+      "strategy": "Bollinger Band Mean Reversion",
+      "universe": "Small/Mid-Cap Growth",
+      "data_period": "2018-01-02 to 2023-12-29",
+      "initial_cash": 10000,
+      "performance": {
+        "final_value": 9984.612015757644,
+        "total_return_pct": -0.15387984242355743,
+        "max_drawdown_pct": 0.5425063176614693,
+        "sharpe_ratio": NaN
+      },
+      "trading": {
+        "total_trades": 14,
+        "winning_trades": 5,
+        "losing_trades": 9,
+        "win_rate_pct": 35.714285714285715,
+        "avg_profit": 9.836000061035156,
+        "avg_loss": 6.282777786254882,
+        "expectancy": -0.5260714122227248,
+        "profit_factor": 0.8697497610543664,
+        "total_profit": 49.18000030517578,
+        "total_loss": 56.54500007629394,
+        "lower_band_signals": 14,
+        "trades_from_lower_band": 14,
+        "signal_conversion_rate_pct": 100.0,
+        "stop_loss_exits": 9,
+        "upper_band_exits": 5
+      },
+      "transaction_costs": {
+        "total_costs_usd": 24.091786181547974,
+        "cost_impact_pct": 0.24091786181547975,
+        "cost_breakdown_usd": {
+          "commission": 2.171169984817505,
+          "spread_cost": 10.855849924087524,
+          "slippage": 9.118913936233522,
+          "market_impact": 0.2171169984817505,
+          "timing_cost": 1.7287353379276722
+        },
+        "cost_per_trade": 1.7208418701105697
+      },
+      "bollinger_analysis": {
+        "strategy_type": "Bollinger Band Mean Reversion (Lower band entry, Upper band exit)",
+        "lower_band_signals": 14,
+        "trades_executed": 14,
+        "signal_conversion_rate_pct": 100.0,
+        "stop_loss_exits": 9,
+        "upper_band_exits": 5
+      }
+    },
+    "NET": {
+      "ticker": "NET",
+      "test_date": "2025-07-25 08:58:37",
+      "strategy": "Bollinger Band Mean Reversion",
+      "universe": "Small/Mid-Cap Growth",
+      "data_period": "2018-01-02 to 2023-12-29",
+      "initial_cash": 10000,
+      "performance": {
+        "final_value": 10035.797191951444,
+        "total_return_pct": 0.3579719195144389,
+        "max_drawdown_pct": 0.4539518632748505,
+        "sharpe_ratio": NaN
+      },
+      "trading": {
+        "total_trades": 19,
+        "winning_trades": 7,
+        "losing_trades": 12,
+        "win_rate_pct": 36.84210526315789,
+        "avg_profit": 16.174286433628627,
+        "avg_loss": 5.334167480468747,
+        "expectancy": 2.589999751040811,
+        "profit_factor": 1.76878593598032,
+        "total_profit": 113.22000503540039,
+        "total_loss": 64.01000976562497,
+        "lower_band_signals": 19,
+        "trades_from_lower_band": 19,
+        "signal_conversion_rate_pct": 100.0,
+        "stop_loss_exits": 12,
+        "upper_band_exits": 7
+      },
+      "transaction_costs": {
+        "total_costs_usd": 40.707360575621436,
+        "cost_impact_pct": 0.4070736057562144,
+        "cost_breakdown_usd": {
+          "commission": 3.6615400199890136,
+          "spread_cost": 18.30770009994507,
+          "slippage": 15.378468083953859,
+          "market_impact": 0.3661540019989014,
+          "timing_cost": 2.9934983697345925
+        },
+        "cost_per_trade": 2.1424926618748126
+      },
+      "bollinger_analysis": {
+        "strategy_type": "Bollinger Band Mean Reversion (Lower band entry, Upper band exit)",
+        "lower_band_signals": 19,
+        "trades_executed": 19,
+        "signal_conversion_rate_pct": 100.0,
+        "stop_loss_exits": 12,
+        "upper_band_exits": 7
+      }
+    },
+    "DDOG": {
+      "ticker": "DDOG",
+      "test_date": "2025-07-25 08:58:37",
+      "strategy": "Bollinger Band Mean Reversion",
+      "universe": "Small/Mid-Cap Growth",
+      "data_period": "2018-01-02 to 2023-12-29",
+      "initial_cash": 10000,
+      "performance": {
+        "final_value": 9975.492842567593,
+        "total_return_pct": -0.24507157432406532,
+        "max_drawdown_pct": 1.330357373178422,
+        "sharpe_ratio": NaN
+      },
+      "trading": {
+        "total_trades": 19,
+        "winning_trades": 9,
+        "losing_trades": 10,
+        "win_rate_pct": 47.368421052631575,
+        "avg_profit": 11.594999101426865,
+        "avg_loss": 11.001599693298338,
+        "expectancy": -0.29794763263903246,
+        "profit_factor": 0.9485438011020341,
+        "total_profit": 104.35499191284178,
+        "total_loss": 110.01599693298338,
+        "lower_band_signals": 19,
+        "trades_from_lower_band": 19,
+        "signal_conversion_rate_pct": 100.0,
+        "stop_loss_exits": 11,
+        "upper_band_exits": 8
+      },
+      "transaction_costs": {
+        "total_costs_usd": 56.297672090009925,
+        "cost_impact_pct": 0.5629767209000993,
+        "cost_breakdown_usd": {
+          "commission": 5.089388981819153,
+          "spread_cost": 25.446944909095766,
+          "slippage": 21.375433723640445,
+          "market_impact": 0.5089388981819153,
+          "timing_cost": 3.876965577272649
+        },
+        "cost_per_trade": 2.963035373158417
+      },
+      "bollinger_analysis": {
+        "strategy_type": "Bollinger Band Mean Reversion (Lower band entry, Upper band exit)",
+        "lower_band_signals": 19,
+        "trades_executed": 19,
+        "signal_conversion_rate_pct": 100.0,
+        "stop_loss_exits": 11,
+        "upper_band_exits": 8
+      }
+    },
+    "MDB": {
+      "ticker": "MDB",
+      "test_date": "2025-07-25 08:58:37",
+      "strategy": "Bollinger Band Mean Reversion",
+      "universe": "Small/Mid-Cap Growth",
+      "data_period": "2018-01-02 to 2023-12-29",
+      "initial_cash": 10000,
+      "performance": {
+        "final_value": 10249.374147937931,
+        "total_return_pct": 2.493741479379314,
+        "max_drawdown_pct": 3.362243135280943,
+        "sharpe_ratio": -0.41701273481823714
+      },
+      "trading": {
+        "total_trades": 29,
+        "winning_trades": 17,
+        "losing_trades": 12,
+        "win_rate_pct": 58.620689655172406,
+        "avg_profit": 39.985296473783606,
+        "avg_loss": 30.149669647216797,
+        "expectancy": 10.963931182335159,
+        "profit_factor": 1.8788211391371774,
+        "total_profit": 679.7500400543213,
+        "total_loss": 361.79603576660156,
+        "lower_band_signals": 29,
+        "trades_from_lower_band": 29,
+        "signal_conversion_rate_pct": 100.0,
+        "stop_loss_exits": 13,
+        "upper_band_exits": 16
+      },
+      "transaction_costs": {
+        "total_costs_usd": 207.65216502476991,
+        "cost_impact_pct": 2.076521650247699,
+        "cost_breakdown_usd": {
+          "commission": 18.60141397190094,
+          "spread_cost": 93.0070698595047,
+          "slippage": 78.12593868198395,
+          "market_impact": 1.8698502413843228,
+          "timing_cost": 16.047892269995994
+        },
+        "cost_per_trade": 7.160419483612755
+      },
+      "bollinger_analysis": {
+        "strategy_type": "Bollinger Band Mean Reversion (Lower band entry, Upper band exit)",
+        "lower_band_signals": 29,
+        "trades_executed": 29,
+        "signal_conversion_rate_pct": 100.0,
+        "stop_loss_exits": 13,
+        "upper_band_exits": 16
+      }
+    },
+    "OKTA": {
+      "ticker": "OKTA",
+      "test_date": "2025-07-25 08:58:37",
+      "strategy": "Bollinger Band Mean Reversion",
+      "universe": "Small/Mid-Cap Growth",
+      "data_period": "2018-01-02 to 2023-12-29",
+      "initial_cash": 10000,
+      "performance": {
+        "final_value": 9926.805557997632,
+        "total_return_pct": -0.731944420023683,
+        "max_drawdown_pct": 1.69957277325489,
+        "sharpe_ratio": -1.9459456853978112
+      },
+      "trading": {
+        "total_trades": 26,
+        "winning_trades": 9,
+        "losing_trades": 17,
+        "win_rate_pct": 34.61538461538461,
+        "avg_profit": 26.827668084038628,
+        "avg_loss": 16.137646619011374,
+        "expectancy": -1.2650376833402195,
+        "profit_factor": 0.8801086948193854,
+        "total_profit": 241.44901275634766,
+        "total_loss": 274.33999252319336,
+        "lower_band_signals": 26,
+        "trades_from_lower_band": 26,
+        "signal_conversion_rate_pct": 100.0,
+        "stop_loss_exits": 17,
+        "upper_band_exits": 9
+      },
+      "transaction_costs": {
+        "total_costs_usd": 118.52711575785337,
+        "cost_impact_pct": 1.1852711575785335,
+        "cost_breakdown_usd": {
+          "commission": 10.70915900039673,
+          "spread_cost": 53.54579500198364,
+          "slippage": 44.97846780166626,
+          "market_impact": 1.0709159000396729,
+          "timing_cost": 8.22277805376705
+        },
+        "cost_per_trade": 4.5587352214558985
+      },
+      "bollinger_analysis": {
+        "strategy_type": "Bollinger Band Mean Reversion (Lower band entry, Upper band exit)",
+        "lower_band_signals": 26,
+        "trades_executed": 26,
+        "signal_conversion_rate_pct": 100.0,
+        "stop_loss_exits": 17,
+        "upper_band_exits": 9
+      }
+    },
+    "ZS": {
+      "ticker": "ZS",
+      "test_date": "2025-07-25 08:58:37",
+      "strategy": "Bollinger Band Mean Reversion",
+      "universe": "Small/Mid-Cap Growth",
+      "data_period": "2018-01-02 to 2023-12-29",
+      "initial_cash": 10000,
+      "performance": {
+        "final_value": 9881.219405019585,
+        "total_return_pct": -1.1878059498041513,
+        "max_drawdown_pct": 1.8687111150420332,
+        "sharpe_ratio": -4.559029503938177
+      },
+      "trading": {
+        "total_trades": 27,
+        "winning_trades": 9,
+        "losing_trades": 18,
+        "win_rate_pct": 33.33333333333333,
+        "avg_profit": 21.128334045410156,
+        "avg_loss": 14.870001898871529,
+        "expectancy": -2.87055658411097,
+        "profit_factor": 0.7104348132939232,
+        "total_profit": 190.1550064086914,
+        "total_loss": 267.6600341796875,
+        "lower_band_signals": 27,
+        "trades_from_lower_band": 27,
+        "signal_conversion_rate_pct": 100.0,
+        "stop_loss_exits": 18,
+        "upper_band_exits": 9
+      },
+      "transaction_costs": {
+        "total_costs_usd": 122.56336821265607,
+        "cost_impact_pct": 1.2256336821265608,
+        "cost_breakdown_usd": {
+          "commission": 10.996140015602112,
+          "spread_cost": 54.98070007801056,
+          "slippage": 46.18378806552887,
+          "market_impact": 1.0996140015602112,
+          "timing_cost": 9.30312605195431
+        },
+        "cost_per_trade": 4.5393840078761505
+      },
+      "bollinger_analysis": {
+        "strategy_type": "Bollinger Band Mean Reversion (Lower band entry, Upper band exit)",
+        "lower_band_signals": 27,
+        "trades_executed": 27,
+        "signal_conversion_rate_pct": 100.0,
+        "stop_loss_exits": 18,
+        "upper_band_exits": 9
+      }
+    }
+  },
+  "aggregate_metrics": {
+    "avg_sharpe_ratio": -2.3073293080514086,
+    "avg_total_return_pct": -0.15873184318925637,
+    "avg_max_drawdown_pct": 1.40189494861463,
+    "avg_win_rate_pct": 39.19108863006322,
+    "avg_expectancy": 0.13601870424921217,
+    "total_trades_all_stocks": 206,
+    "aggregate_win_rate_pct": 39.80582524271845,
+    "aggregate_expectancy": 0.5568834346474953,
+    "total_lower_band_signals": 207,
+    "total_trades_from_lower_band": 207,
+    "aggregate_signal_conversion_pct": 100.0,
+    "total_stop_loss_exits": 127,
+    "total_upper_band_exits": 79,
+    "stocks_tested": 10,
+    "profitable_stocks": 3
+  }
+}
