@@ -107,6 +107,60 @@ Co-Authored-By: Claude <noreply@anthropic.com>"""
             print(f"Error pushing changes: {e}")
             return False
     
+    def create_repository_if_needed(self):
+        """Create GitHub repository if it doesn't exist"""
+        repo_name = "cyberjackal-stocks"
+        
+        try:
+            # Try to create repository using GitHub API
+            import requests
+            
+            url = "https://api.github.com/user/repos"
+            headers = {
+                "Authorization": f"token {self.token}",
+                "Accept": "application/vnd.github.v3+json"
+            }
+            data = {
+                "name": repo_name,
+                "description": "Operation Badger - Quantitative Trading System",
+                "private": False,
+                "auto_init": False
+            }
+            
+            response = requests.post(url, headers=headers, json=data)
+            
+            if response.status_code == 201:
+                print(f"SUCCESS: Repository {repo_name} created on GitHub")
+                return True
+            elif response.status_code == 422:
+                print(f"Repository {repo_name} already exists")
+                return True
+            else:
+                print(f"Error creating repository: {response.status_code} - {response.text}")
+                return False
+                
+        except Exception as e:
+            print(f"Error creating repository: {e}")
+            return False
+
+    def pull_latest_changes(self, branch='main'):
+        """Pull latest changes from remote repository"""
+        try:
+            print("Pulling latest changes from remote...")
+            result = subprocess.run(['git', 'pull', 'origin', branch], 
+                                  capture_output=True, text=True, check=True)
+            print("SUCCESS: Latest changes pulled from remote")
+            if result.stdout.strip():
+                print(result.stdout)
+            return True
+        except subprocess.CalledProcessError as e:
+            if "couldn't find remote ref" in str(e.stderr):
+                print("Remote branch doesn't exist yet - this is normal for new repositories")
+                return True
+            print(f"Error pulling changes: {e}")
+            print(f"stderr: {e.stderr}")
+            return False
+
     def create_and_push_commit(self, commit_message=None):
         """Full workflow: stage, commit, and push all changes"""
         print("=" * 80)
@@ -127,9 +181,15 @@ Co-Authored-By: Claude <noreply@anthropic.com>"""
         if not self.commit_changes(commit_message):
             return False
         
-        # Push to remote
+        # Try to push, create repo if needed
         if not self.push_changes():
-            return False
+            print("Push failed - attempting to create repository...")
+            if self.create_repository_if_needed():
+                print("Retrying push...")
+                if not self.push_changes():
+                    return False
+            else:
+                return False
         
         print("=" * 80)
         print("SUCCESS: All changes committed and pushed to GitHub")
@@ -151,18 +211,50 @@ Co-Authored-By: Claude <noreply@anthropic.com>"""
     
     def sync_repository(self):
         """Pull latest changes from remote and push local changes"""
-        print("Synchronizing repository with remote...")
+        print("=" * 80)
+        print("REPOSITORY SYNCHRONIZATION")
+        print("=" * 80)
+        
+        # Step 1: Pull latest changes from remote
+        if not self.pull_latest_changes():
+            print("Warning: Failed to pull remote changes, continuing with local changes...")
+        
+        # Step 2: Check if there are local changes to push
+        changes = self.get_status()
+        if changes:
+            print("Local changes detected - committing and pushing...")
+            return self.create_and_push_commit("Sync repository - automated update")
+        else:
+            print("Repository is up to date - no local changes to push")
+            return True
+
+    def force_sync(self):
+        """Force sync by handling merge conflicts automatically"""
+        print("=" * 80)
+        print("FORCE REPOSITORY SYNCHRONIZATION")
+        print("=" * 80)
         
         try:
-            # Pull latest changes
-            subprocess.run(['git', 'pull', 'origin', 'main'], check=True)
-            print("SUCCESS: Repository synchronized with remote")
+            # Add all changes first
+            self.add_all_changes()
             
-            # Push any local changes
-            return self.create_and_push_commit("Sync repository - automated update")
+            # Try to pull with auto-merge
+            result = subprocess.run(['git', 'pull', '--rebase', 'origin', 'main'], 
+                                  capture_output=True, text=True)
+            
+            if result.returncode == 0:
+                print("SUCCESS: Repository synchronized with rebase")
+            else:
+                print("Rebase failed, trying merge strategy...")
+                subprocess.run(['git', 'pull', '--no-rebase', 'origin', 'main'], check=True)
+                print("SUCCESS: Repository synchronized with merge")
+            
+            # Push any remaining changes
+            return self.push_changes()
             
         except subprocess.CalledProcessError as e:
-            print(f"Error synchronizing repository: {e}")
+            print(f"Force sync failed: {e}")
+            print("Manual intervention may be required")
             return False
     
     def create_release_tag(self, version, description):
@@ -205,11 +297,13 @@ def main():
         
         if len(sys.argv) < 2:
             print("GitHub Automation Commands:")
-            print("  status     - Show repository status")
-            print("  commit     - Stage, commit, and push all changes")
-            print("  sync       - Pull remote changes and push local changes")
-            print("  history    - Show recent commit history")
-            print("  sprint <N> - Create sprint completion commit")
+            print("  status      - Show repository status")
+            print("  commit      - Stage, commit, and push all changes")
+            print("  pull        - Pull latest changes from remote")
+            print("  sync        - Pull remote changes and push local changes") 
+            print("  force-sync  - Force sync with automatic conflict resolution")
+            print("  history     - Show recent commit history")
+            print("  sprint <N>  - Create sprint completion commit")
             print("  tag <ver> <desc> - Create release tag")
             return
         
@@ -222,8 +316,14 @@ def main():
             message = sys.argv[2] if len(sys.argv) > 2 else None
             gh.create_and_push_commit(message)
             
+        elif command == 'pull':
+            gh.pull_latest_changes()
+            
         elif command == 'sync':
             gh.sync_repository()
+            
+        elif command == 'force-sync':
+            gh.force_sync()
             
         elif command == 'history':
             count = int(sys.argv[2]) if len(sys.argv) > 2 else 10
