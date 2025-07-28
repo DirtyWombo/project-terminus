@@ -20,7 +20,13 @@
       "Bash(cp:*)",
       "Bash(rd:*)",
       "Bash(move github_automation.py git_helper.py)",
-      "Bash(mv:*)"
+      "Bash(mv:*)",
+      "Bash(gsutil mb:*)",
+      "Bash(docker push:*)",
+      "Bash(gcloud auth configure-docker:*)",
+      "Bash(gcloud auth:*)",
+      "Bash(gcloud config get-value:*)",
+      "Bash(gcloud artifacts repositories list:*)"
     ],
     "deny": []
   }

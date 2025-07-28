@@ -40,6 +40,14 @@ pandas-market-calendars>=4.3.0
 # Backtesting Framework
 backtrader>=1.9.78
 
+# Point-in-Time Data
+nasdaq-data-link>=1.0.4
+lxml>=4.9.3
+
+# Google Cloud Platform
+google-cloud-storage>=2.10.0
+google-cloud-compute>=1.14.1
+
 # Security & Authentication
 cryptography>=41.0.0
 pyjwt>=2.8.0
