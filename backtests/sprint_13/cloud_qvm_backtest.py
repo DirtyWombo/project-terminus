@@ -68,38 +68,51 @@ class CloudQVMStrategy(bt.Strategy):
         
         self.rebalance_count += 1
         
-        # Reduce verbosity for cloud execution
-        if self.rebalance_count % 10 == 1:
-            print(f'Rebalancing #{self.rebalance_count} on {current_date}')
+        print(f'[DEBUG] Starting rebalance #{self.rebalance_count} on {current_date}')
         
         scores = {}
         valid_tickers = 0
         
         # Initialize scores
+        print(f'[DEBUG] Initializing scores for {len(self.universe)} stocks')
         for ticker in self.universe:
             scores[ticker] = {'quality': -float('inf'), 'value': -float('inf'), 'momentum': -float('inf'), 'composite': 999}
 
         # Calculate QVM factors
-        for ticker in self.universe:
+        print(f'[DEBUG] Starting factor calculations...')
+        for i, ticker in enumerate(self.universe):
+            print(f'[DEBUG] Processing {ticker} ({i+1}/{len(self.universe)})')
             try:
+                print(f'[DEBUG]   Calculating quality factor for {ticker}...')
                 quality_score = calculate_quality_factor_pit(ticker, date_str, self.pit_manager)
                 scores[ticker]['quality'] = quality_score
+                print(f'[DEBUG]   Quality score: {quality_score}')
                 
+                print(f'[DEBUG]   Calculating value factor for {ticker}...')
                 value_score = calculate_value_factor_pit(ticker, date_str, self.pit_manager)
                 scores[ticker]['value'] = value_score
+                print(f'[DEBUG]   Value score: {value_score}')
                 
+                print(f'[DEBUG]   Calculating momentum factor for {ticker}...')
                 data_feed = self.getdatabyname(ticker)
                 if data_feed is not None:
                     df = data_feed.get_df()
                     momentum_score = calculate_momentum_factor_pit(df)
                     scores[ticker]['momentum'] = momentum_score
+                    print(f'[DEBUG]   Momentum score: {momentum_score}')
+                else:
+                    print(f'[DEBUG]   No data feed found for {ticker}')
                 
                 if (quality_score != -float('inf') and 
                     value_score != -float('inf') and 
                     momentum_score != -float('inf')):
                     valid_tickers += 1
+                    print(f'[DEBUG]   {ticker} has valid scores')
+                else:
+                    print(f'[DEBUG]   {ticker} has invalid scores')
                 
-            except Exception:
+            except Exception as e:
+                print(f'[DEBUG] ERROR processing {ticker}: {e}')
                 pass  # Silent fail for cloud execution
 
         # Rank and select portfolio
@@ -170,17 +183,21 @@ def run_cloud_backtest(universe_subset, rebalance_freq, worker_id, bucket_name):
     """
     Run backtest on a subset of the universe for cloud parallel execution
     """
-    print(f"Worker {worker_id}: Starting backtest with {len(universe_subset)} stocks")
-    print(f"Stocks: {universe_subset}")
-    print(f"Rebalancing: {rebalance_freq}")
+    print(f"[DEBUG] Worker {worker_id}: Starting backtest with {len(universe_subset)} stocks")
+    print(f"[DEBUG] Stocks: {universe_subset}")
+    print(f"[DEBUG] Rebalancing: {rebalance_freq}")
     
     # API key
     api_key = "zVj71CrDyYzfcyxrWkQ4"
+    print(f"[DEBUG] Using API key: {api_key[:10]}...")
     
     # Extend bt.DataBase
+    print("[DEBUG] Extending backtrader data feeds...")
     bt.feeds.PandasData.get_df = lambda self: self.p.dataname.loc[self.p.fromdate:self.p.todate]
     
+    print("[DEBUG] Initializing Cerebro...")
     cerebro = bt.Cerebro(stdstats=False)
+    print("[DEBUG] Adding strategy...")
     cerebro.addstrategy(CloudQVMStrategy, 
                        universe=universe_subset, 
                        api_key=api_key,
@@ -190,19 +207,28 @@ def run_cloud_backtest(universe_subset, rebalance_freq, worker_id, bucket_name):
     price_data_dir = 'data/sprint_12'
     loaded_count = 0
     
-    for ticker in universe_subset:
+    print(f"[DEBUG] Loading price data from {price_data_dir}...")
+    for i, ticker in enumerate(universe_subset):
+        print(f"[DEBUG] Loading data for {ticker} ({i+1}/{len(universe_subset)})")
         data_path = os.path.join(price_data_dir, f'{ticker}.csv')
+        print(f"[DEBUG] Looking for file: {data_path}")
+        
         if os.path.exists(data_path):
+            print(f"[DEBUG] File exists, reading CSV...")
             try:
                 df = pd.read_csv(data_path, index_col=0, parse_dates=True, skiprows=[1,2])
                 df.columns = ['Close', 'High', 'Low', 'Open', 'Volume']
                 df = df[['Open', 'High', 'Low', 'Close', 'Volume']]
+                print(f"[DEBUG] Data shape: {df.shape}, date range: {df.index[0]} to {df.index[-1]}")
                 cerebro.adddata(bt.feeds.PandasData(dataname=df, name=ticker))
                 loaded_count += 1
+                print(f"[DEBUG] Successfully added {ticker} to cerebro")
             except Exception as e:
-                print(f"Error loading {ticker}: {str(e)[:50]}")
+                print(f"[DEBUG] ERROR loading {ticker}: {str(e)}")
+        else:
+            print(f"[DEBUG] WARNING: File not found for {ticker}")
 
-    print(f"Loaded {loaded_count}/{len(universe_subset)} stocks")
+    print(f"[DEBUG] Loaded {loaded_count}/{len(universe_subset)} stocks")
 
     # Set capital and commission
     cerebro.broker.setcash(100000.0)
@@ -280,6 +306,8 @@ def run_cloud_backtest(universe_subset, rebalance_freq, worker_id, bucket_name):
     return results_data
 
 def main():
+    print("[DEBUG] Starting main function...")
+    
     parser = argparse.ArgumentParser(description='Cloud QVM Backtest Worker')
     parser.add_argument('--start-idx', type=int, required=True, help='Start index for universe subset')
     parser.add_argument('--end-idx', type=int, required=True, help='End index for universe subset')
@@ -291,17 +319,23 @@ def main():
                        default='data/sprint_12/curated_sp500_universe.txt',
                        help='Path to universe file')
     
+    print("[DEBUG] Parsing arguments...")
     args = parser.parse_args()
+    print(f"[DEBUG] Arguments parsed: start_idx={args.start_idx}, end_idx={args.end_idx}, worker_id={args.worker_id}")
     
     # Load universe subset
+    print(f"[DEBUG] Loading universe subset from {args.universe_file}...")
     universe_subset = load_universe_subset(args.universe_file, args.start_idx, args.end_idx)
+    print(f"[DEBUG] Loaded {len(universe_subset)} stocks: {universe_subset}")
     
     if not universe_subset:
         print(f"No stocks found in range {args.start_idx}-{args.end_idx}")
         return
     
     # Run backtest
+    print("[DEBUG] Starting backtest...")
     run_cloud_backtest(universe_subset, args.rebalance_freq, args.worker_id, args.bucket)
+    print("[DEBUG] Backtest completed!")
 
 if __name__ == '__main__':
     main()
