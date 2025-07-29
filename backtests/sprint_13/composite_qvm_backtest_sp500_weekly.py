@@ -263,6 +263,6 @@ if __name__ == '__main__':
     # We now run the backtest for only the single ticker passed in from the command line
     run_portfolio_backtest(
         ticker=args.ticker,
-        price_data_dir='data/sprint_12_sp500', # Make sure your S&P 500 price data is in this folder
+        price_data_dir='data/sprint_12', # Make sure your S&P 500 price data is in this folder
         results_bucket_name='operation-badger-quant-results-bucket' # The unique bucket name we created
     )

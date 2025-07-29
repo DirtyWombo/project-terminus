@@ -33,17 +33,17 @@ class CloudOrchestrator:
         self.project_id = project_id
         self.zone = zone
         self.compute_client = compute_v1.InstancesClient()
-        self.storage_client = storage.Client()
+        self.storage_client = storage.Client(project=project_id)
         
         # Configuration
         self.vm_config = {
             'machine_type': 'n1-standard-2',  # 2 vCPUs, 7.5GB RAM
             'disk_size_gb': 20,
-            'image_family': 'ubuntu-2004-lts',
+            'image_family': 'ubuntu-2204-lts',
             'image_project': 'ubuntu-os-cloud'
         }
         
-        self.docker_image = f"gcr.io/{project_id}/operation-badger:latest"
+        self.docker_image = "us-central1-docker.pkg.dev/operation-badger-quant/badger-containers/backtester:latest"
         
     def create_startup_script(self, worker_id, start_idx, end_idx, bucket_name, rebalance_freq='biweekly'):
         """Generate startup script for VM instances"""
@@ -64,7 +64,7 @@ systemctl start docker
 systemctl enable docker
 
 # Authenticate with Google Container Registry
-gcloud auth configure-docker
+gcloud auth configure-docker us-central1-docker.pkg.dev
 
 # Pull the Operation Badger Docker image
 docker pull {self.docker_image}
@@ -72,10 +72,11 @@ docker pull {self.docker_image}
 # Create local results directory
 mkdir -p /tmp/results
 
-# Run the backtest container
+# Run the backtest container with GCS authentication via metadata server
 docker run --rm \\
     -v /tmp/results:/app/results \\
-    -e GOOGLE_APPLICATION_CREDENTIALS=/app/service-account.json \\
+    --network=host \\
+    -e GOOGLE_CLOUD_PROJECT={self.project_id} \\
     {self.docker_image} \\
     backtests/sprint_13/cloud_qvm_backtest.py \\
     --start-idx {start_idx} \\
@@ -243,19 +244,19 @@ shutdown -h now
                         
                         if blob.exists():
                             completed_workers.add(worker_id)
-                            print(f"✅ Worker {worker_id} completed")
+                            print(f"*** Worker {worker_id} completed")
                     except Exception:
                         pass  # Marker doesn't exist yet
             
             # Check timeout
             elapsed_minutes = (time.time() - start_time) / 60
             if elapsed_minutes > timeout_minutes:
-                print(f"⚠️  Timeout reached ({timeout_minutes} minutes)")
+                print(f"WARNING: Timeout reached ({timeout_minutes} minutes)")
                 break
             
             if len(completed_workers) < len(worker_ids):
                 remaining = len(worker_ids) - len(completed_workers)
-                print(f"⏳ Waiting for {remaining} workers... ({elapsed_minutes:.1f}min elapsed)")
+                print(f"*** Waiting for {remaining} workers... ({elapsed_minutes:.1f}min elapsed)")
                 time.sleep(30)
         
         return completed_workers
@@ -289,7 +290,7 @@ shutdown -h now
                     content = blob.download_as_text()
                     result = json.loads(content)
                     all_results.append(result)
-                    print(f"📥 Downloaded: {blob.name}")
+                    print(f"*** Downloaded: {blob.name}")
                 except Exception as e:
                     print(f"Failed to download {blob.name}: {e}")
         
@@ -309,7 +310,7 @@ shutdown -h now
             with open(results_file, 'w') as f:
                 json.dump(summary, f, indent=2)
             
-            print(f"📊 Aggregated results saved to: {results_file}")
+            print(f"*** Aggregated results saved to: {results_file}")
             return summary
         
         return None
@@ -356,7 +357,7 @@ def main():
     
     args = parser.parse_args()
     
-    print("🚀 Operation Badger - Cloud Orchestrator")
+    print("*** Operation Badger - Cloud Orchestrator ***")
     print("="*60)
     print(f"Project ID: {args.project_id}")
     print(f"Bucket: {args.bucket_name}")
@@ -375,20 +376,20 @@ def main():
     
     # Load and split universe
     universe = orchestrator.load_universe()
-    print(f"📈 Loaded universe: {len(universe)} stocks")
+    print(f"*** Loaded universe: {len(universe)} stocks")
     
     chunks = orchestrator.split_universe(universe, args.num_workers)
     
-    print(f"\n📋 Execution Plan:")
+    print(f"\n*** Execution Plan:")
     for chunk in chunks:
         print(f"  Worker {chunk['worker_id']}: {len(chunk['stocks'])} stocks ({chunk['start_idx']}-{chunk['end_idx']})")
     
     if args.dry_run:
-        print("\n🔍 Dry run mode - no VMs will be created")
+        print("\n*** Dry run mode - no VMs will be created")
         return
     
     # Create and launch VMs
-    print(f"\n🔧 Creating {len(chunks)} VM instances...")
+    print(f"\n*** Creating {len(chunks)} VM instances...")
     operations = []
     
     for chunk in chunks:
@@ -403,7 +404,7 @@ def main():
         time.sleep(5)  # Stagger VM creation
     
     # Wait for VMs to start
-    print("\n⏳ Waiting for VMs to start...")
+    print("\n*** Waiting for VMs to start...")
     for operation in operations:
         orchestrator.wait_for_operation(operation)
     
@@ -411,14 +412,14 @@ def main():
     worker_ids = [op['worker_id'] for op in operations]
     completed = orchestrator.monitor_completion(args.bucket_name, worker_ids)
     
-    print(f"\n✅ {len(completed)}/{len(worker_ids)} workers completed")
+    print(f"\n*** {len(completed)}/{len(worker_ids)} workers completed")
     
     # Aggregate results
     summary = orchestrator.aggregate_results(args.bucket_name)
     
     if summary:
         metrics = summary['aggregated_metrics']
-        print(f"\n📊 Sprint 13 Cloud Results Summary:")
+        print(f"\n*** Sprint 13 Cloud Results Summary:")
         print(f"  Universe: {metrics['total_universe_size']} stocks")
         print(f"  Data Coverage: {metrics['coverage_percentage']:.1f}%")
         print(f"  Total Trades: {metrics['total_trades']}")
@@ -430,7 +431,7 @@ def main():
     instance_names = [op['instance_name'] for op in operations]
     orchestrator.cleanup_vms(instance_names)
     
-    print("\n🎉 Cloud orchestration completed successfully!")
+    print("\n*** Cloud orchestration completed successfully!")
 
 if __name__ == '__main__':
     main()

@@ -52,7 +52,7 @@ def download_result(file_path, local_dir='cloud_results'):
 
 def aggregate_results(bucket_name):
     """Download and aggregate all results from the bucket"""
-    print(f"🔍 Monitoring results in gs://{bucket_name}/sprint13_results/")
+    print(f"*** Monitoring results in gs://{bucket_name}/sprint13_results/")
     
     # List all result files
     result_files = list_results(bucket_name)
