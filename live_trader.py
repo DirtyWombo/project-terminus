@@ -37,7 +37,7 @@ import traceback
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 
 # Import our validated strategy and OMS
-from bull_call_spread_strategy import BullCallSpreadStrategy, BullCallSpreadParameters, BullCallSpreadSignal
+from bull_call_spread_strategy import BullCallSpreadStrategy
 from order_management_system import OrderManagementSystem
 
 # Configure comprehensive logging
@@ -142,16 +142,8 @@ class LiveTradingEngine:
         self.load_configuration()
         
         # Initialize strategy
-        self.strategy_params = BullCallSpreadParameters(
-            target_dte=self.config.get('target_dte', 45),
-            long_call_delta=self.config.get('long_call_delta', 0.50),
-            short_call_delta=self.config.get('short_call_delta', 0.30),
-            profit_target=self.config.get('profit_target', 1.00),
-            stop_loss=self.config.get('stop_loss', 0.50),
-            max_positions=self.config.get('max_positions', 3)
-        )
-        
-        self.strategy = BullCallSpreadStrategy(parameters=self.strategy_params)
+        underlying_symbol = self.config.get('underlying_symbol', 'SPY')
+        self.strategy = BullCallSpreadStrategy(symbol=underlying_symbol)
         
         # Initialize Order Management System
         oms_config = {
@@ -182,7 +174,7 @@ class LiveTradingEngine:
         logger.info("Live Trading Engine initialized successfully")
         logger.info(f"Strategy: Bull Call Spread")
         logger.info(f"Initial Capital: ${self.paper_cash:,.2f}")
-        logger.info(f"Max Positions: {self.strategy_params.max_positions}")
+        logger.info(f"Max Positions: {self.config.get('max_positions', 3)}")
         
         self.state = TradingState.RUNNING
     
@@ -396,7 +388,7 @@ class LiveTradingEngine:
             
             # Don't exceed max positions
             open_positions = [p for p in self.positions if p.status == "OPEN"]
-            if len(open_positions) >= self.strategy_params.max_positions:
+            if len(open_positions) >= self.config.get('max_positions', 3):
                 logger.debug(f"Max positions reached ({len(open_positions)}) - no entry")
                 return False
             
@@ -435,7 +427,7 @@ class LiveTradingEngine:
             short_call_strike = round(underlying_price + otm_distance)
             
             # Estimate option prices (simplified model from backtest)
-            tte = self.strategy_params.target_dte / 365.0
+            tte = self.config.get('target_dte', 45) / 365.0
             iv = volatility if not pd.isna(volatility) else 0.20
             
             # Long call pricing
@@ -468,7 +460,7 @@ class LiveTradingEngine:
                 return
             
             # Create position
-            expiration_date = (datetime.now() + timedelta(days=self.strategy_params.target_dte)).strftime('%Y-%m-%d')
+            expiration_date = (datetime.now() + timedelta(days=self.config.get('target_dte', 45))).strftime('%Y-%m-%d')
             
             position = LivePosition(
                 symbol=self.config['underlying_symbol'],
@@ -538,7 +530,7 @@ class LiveTradingEngine:
         for position in open_positions:
             try:
                 days_held = (current_date.date() - position.entry_date.date()).days
-                dte_remaining = self.strategy_params.target_dte - days_held
+                dte_remaining = self.config.get('target_dte', 45) - days_held
                 
                 should_exit = False
                 exit_reason = ""
@@ -570,13 +562,13 @@ class LiveTradingEngine:
                     pnl_per_share = current_spread_value - position.net_debit_paid
                     
                     # Check profit target (80% of target to be conservative)
-                    profit_threshold = position.net_debit_paid * self.strategy_params.profit_target * 0.8
+                    profit_threshold = position.net_debit_paid * self.config.get('profit_target', 1.0) * 0.8
                     if pnl_per_share >= profit_threshold:
                         should_exit = True
                         exit_reason = "PROFIT_TARGET"
                     
                     # Check stop loss (120% of stop to be conservative) 
-                    stop_threshold = -position.net_debit_paid * self.strategy_params.stop_loss * 1.2
+                    stop_threshold = -position.net_debit_paid * self.config.get('stop_loss', 0.5) * 1.2
                     if pnl_per_share <= stop_threshold:
                         should_exit = True
                         exit_reason = "STOP_LOSS"
@@ -697,7 +689,7 @@ class LiveTradingEngine:
         logger.info(f"Strategy: Bull Call Spread")
         logger.info(f"Initial Capital: ${self.config['initial_capital']:,.2f}")
         logger.info(f"Current Equity: ${self.paper_equity:,.2f}")
-        logger.info(f"Max Positions: {self.strategy_params.max_positions}")
+        logger.info(f"Max Positions: {self.config.get('max_positions', 3)}")
         logger.info("=" * 80)
         
         # Schedule strategy checks
