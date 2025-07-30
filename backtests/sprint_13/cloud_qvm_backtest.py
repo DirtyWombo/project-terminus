@@ -1,17 +1,17 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 """
-Sprint 13 Cloud: Parallel QVM Backtest for Google Cloud Platform
+Sprint 15 Cloud: QVM with Risk Parity Overlay - Final Validation
 
-This script is designed to run in a cloud environment with parallel execution.
-Each instance processes a subset of the S&P 500 universe and uploads results
-to Google Cloud Storage.
+This script implements the final, most sophisticated version of the QVM strategy
+with institutional-grade risk management through Inverse Volatility Weighting.
 
 Key Features:
 - Command-line argument support for parallel execution
 - Google Cloud Storage integration for result collection
+- Weekly rebalancing for maximum trading opportunities
+- Risk Parity (Inverse Volatility Weighting) for drawdown control
 - Optimized for containerized execution
-- Supports both weekly and bi-weekly rebalancing
 """
 
 import argparse
@@ -133,18 +133,70 @@ class CloudQVMStrategy(bt.Strategy):
         
         final_portfolio = valid_ranked_stocks[:self.p.num_positions]
         
-        # Execute trades
-        target_weight = 1.0 / self.p.num_positions if final_portfolio else 0
+        # --- SPRINT 15: RISK PARITY (INVERSE VOLATILITY WEIGHTING) ---
+        print(f'[RISK PARITY] Calculating inverse volatility weights for {len(final_portfolio)} stocks')
+        
+        volatilities = {}
+        target_weights = {}
+        
+        if final_portfolio:
+            # Calculate 60-day historical volatility for each stock
+            for ticker in final_portfolio:
+                try:
+                    data_feed = self.getdatabyname(ticker)
+                    if data_feed is not None:
+                        df = data_feed.get_df()
+                        # Calculate daily returns and 60-day rolling volatility
+                        daily_returns = df['Close'].pct_change().dropna()
+                        if len(daily_returns) >= 60:
+                            volatility = daily_returns.tail(60).std()
+                            if volatility > 0:
+                                volatilities[ticker] = volatility
+                                print(f'[RISK PARITY] {ticker}: volatility = {volatility:.4f}')
+                            else:
+                                print(f'[RISK PARITY] {ticker}: zero volatility, excluding from portfolio')
+                        else:
+                            print(f'[RISK PARITY] {ticker}: insufficient data (<60 days), excluding')
+                    else:
+                        print(f'[RISK PARITY] {ticker}: no data feed found, excluding')
+                except Exception as e:
+                    print(f'[RISK PARITY] {ticker}: error calculating volatility: {e}')
+            
+            # Calculate inverse volatility weights
+            if volatilities:
+                inverse_volatilities = {ticker: 1.0 / vol for ticker, vol in volatilities.items()}
+                total_inverse_vol = sum(inverse_volatilities.values())
+                
+                if total_inverse_vol > 0:
+                    for ticker, inv_vol in inverse_volatilities.items():
+                        target_weights[ticker] = inv_vol / total_inverse_vol
+                    
+                    print(f'[RISK PARITY] Target weights calculated:')
+                    for ticker, weight in target_weights.items():
+                        print(f'[RISK PARITY]   {ticker}: {weight:.3f} ({weight*100:.1f}%)')
+                else:
+                    print(f'[RISK PARITY] ERROR: Total inverse volatility is zero')
+            else:
+                print(f'[RISK PARITY] ERROR: No valid volatilities calculated, falling back to equal weights')
+                # Fallback to equal weighting if risk calculation fails
+                target_weight = 1.0 / len(final_portfolio)
+                target_weights = {ticker: target_weight for ticker in final_portfolio}
+        
+        # --- EXECUTION ---
         current_holdings = [d._name for d in self.datas if self.getposition(d).size > 0]
         
+        # Sell stocks no longer in the portfolio
         for ticker in current_holdings:
             if ticker not in final_portfolio:
+                print(f'[RISK PARITY] Selling {ticker} (no longer in portfolio)')
                 self.close(data=self.getdatabyname(ticker))
-
-        for ticker in final_portfolio:
+        
+        # Buy stocks in the target portfolio with risk-adjusted weights
+        for ticker, weight in target_weights.items():
             data_feed = self.getdatabyname(ticker)
-            if data_feed:
-                self.order_target_percent(data=data_feed, target=target_weight)
+            if data_feed and weight > 0:
+                print(f'[RISK PARITY] Setting {ticker} to {weight:.3f} weight')
+                self.order_target_percent(data=data_feed, target=weight)
     
     def getdatabyname(self, name):
         for d in self.datas:
@@ -285,9 +337,12 @@ def run_cloud_backtest(universe_subset, rebalance_freq, worker_id, bucket_name):
         'backtest_duration_seconds': (end_time - start_time).total_seconds()
     }
     
-    # Save results locally
+    # Save results to mounted volume for VM access
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-    results_file = f'sprint13_cloud_worker_{worker_id}_{timestamp}.json'
+    results_file = f'results/sprint13_cloud_worker_{worker_id}_{timestamp}.json'
+    
+    # Ensure results directory exists
+    os.makedirs('results', exist_ok=True)
     
     with open(results_file, 'w') as f:
         json.dump(results_data, f, indent=2)
@@ -298,10 +353,24 @@ def run_cloud_backtest(universe_subset, rebalance_freq, worker_id, bucket_name):
     print(f"  Drawdown: {max_drawdown:.2f}%")
     print(f"  Trades: {total_trades}")
     
-    # Upload to cloud storage if bucket specified
+    # Try Python GCS upload directly
+    print(f"Results saved to {results_file}")
+    
+    # Upload to GCS using Python client
     if bucket_name:
-        gcs_path = f"sprint13_results/{results_file}"
-        upload_to_gcs(bucket_name, results_file, gcs_path)
+        try:
+            print(f"Attempting direct GCS upload to gs://{bucket_name}/sprint13_results/")
+            client = storage.Client()
+            bucket = client.bucket(bucket_name)
+            blob_name = f"sprint13_results/{os.path.basename(results_file)}"
+            blob = bucket.blob(blob_name)
+            blob.upload_from_filename(results_file)
+            print(f"✅ Results successfully uploaded to gs://{bucket_name}/{blob_name}")
+        except Exception as e:
+            print(f"❌ Failed to upload to GCS: {e}")
+            print(f"Results saved locally at {results_file}")
+    else:
+        print(f"No bucket specified, results saved locally at {results_file}")
     
     return results_data
 

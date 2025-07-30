@@ -50,7 +50,14 @@
       "Bash(docker save:*)",
       "Bash(cmd /c \"docker push us-central1-docker.pkg.dev/operation-badger-quant/badger-containers/backtester:latest\")",
       "Bash(gcloud services list:*)",
-      "Bash(gcloud projects get-iam-policy:*)"
+      "Bash(gcloud projects get-iam-policy:*)",
+      "Bash(gcloud logging read:*)",
+      "Bash(gcloud compute ssh:*)",
+      "Bash(gsutil cat:*)",
+      "Bash(PYTHONIOENCODING=utf-8 python cloud_orchestrator.py --project-id operation-badger-quant --bucket-name operation-badger-quant-results-bucket --num-workers 1)",
+      "Bash(PYTHONIOENCODING=utf-8 python cloud_orchestrator.py --project-id operation-badger-quant --bucket-name operation-badger-quant-results-bucket --num-workers 8)",
+      "Bash(gsutil cp:*)",
+      "Bash(gsutil rm:*)"
     ],
     "deny": []
   }

@@ -45,57 +45,105 @@ class CloudOrchestrator:
         
         self.docker_image = "us-central1-docker.pkg.dev/operation-badger-quant/badger-containers/backtester:latest"
         
-    def create_startup_script(self, worker_id, start_idx, end_idx, bucket_name, rebalance_freq='biweekly'):
+    def create_startup_script(self, worker_id, start_idx, end_idx, bucket_name, rebalance_freq='weekly'):
         """Generate startup script for VM instances"""
         
+        # DEBUG MODE: Enhanced logging and no auto-delete
+        LOG_FILE = f"/tmp/worker_{worker_id}_debug.log"
+        
         return f"""#!/bin/bash
-# Operation Badger Cloud Worker Startup Script
+# Operation Badger Cloud Worker DEBUG Startup Script
 # Worker ID: {worker_id}
 # Processing stocks {start_idx}-{end_idx}
 
+# Define log file and redirect all output
+LOG_FILE="{LOG_FILE}"
+
+# Redirect all output (both stdout and stderr) to the log file AND the console
+exec > >(tee -a $LOG_FILE) 2>&1
+
+echo "--- STARTING DEBUG WORKER {worker_id} AT $(date) ---"
+echo "Processing stocks from index {start_idx} to {end_idx}"
+
 set -e
 
-# Install Docker
+echo "Testing GCS authentication before starting..."
+echo "Current user: $(whoami)"
+echo "GCS access test..."
+gsutil ls gs://{bucket_name}/ || echo "GCS access failed initially"
+
+echo "Checking default service account..."
+curl -H "Metadata-Flavor: Google" http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/default/token || echo "Metadata service failed"
+
+echo "Installing Docker..."
 apt-get update
 apt-get install -y docker.io
 
-# Start Docker service
+echo "Starting Docker service..."
 systemctl start docker
 systemctl enable docker
 
-# Authenticate with Google Container Registry
+echo "Re-testing GCS after Docker install..."
+gsutil ls gs://{bucket_name}/ || echo "GCS access still failing after Docker"
+
+echo "Authenticating with Google Container Registry..."
 gcloud auth configure-docker us-central1-docker.pkg.dev
 
-# Pull the Operation Badger Docker image
+echo "Pulling Docker image: {self.docker_image}"
 docker pull {self.docker_image}
 
-# Create local results directory
+echo "Creating local results directory..."
 mkdir -p /tmp/results
 
-# Run the backtest container with GCS authentication via metadata server
+echo "Testing GCS write access..."
+echo "Test file from worker {worker_id}" > /tmp/test_file.txt
+gsutil cp /tmp/test_file.txt gs://{bucket_name}/debug/ || echo "GCS write test failed"
+
+echo "Running backtest container..."
 docker run --rm \\
     -v /tmp/results:/app/results \\
     --network=host \\
     -e GOOGLE_CLOUD_PROJECT={self.project_id} \\
     {self.docker_image} \\
-    backtests/sprint_13/cloud_qvm_backtest.py \\
-    --start-idx {start_idx} \\
-    --end-idx {end_idx} \\
-    --worker-id {worker_id} \\
-    --rebalance-freq {rebalance_freq} \\
-    --bucket {bucket_name}
+    backtests/sprint_13/cloud_qvm_backtest.py --start-idx {start_idx} --end-idx {end_idx} --worker-id {worker_id} --rebalance-freq {rebalance_freq} --bucket {bucket_name}
 
-# Signal completion
+echo "Container execution completed. Checking for results..."
+ls -la /tmp/results/
+
+echo "Final GCS test before upload..."
+gsutil ls gs://{bucket_name}/ || echo "GCS still failing before upload"
+
+echo "Copying results from container to VM..."
+if [ -f /tmp/results/sprint13_cloud_worker_*.json ]; then
+    cp /tmp/results/sprint13_cloud_worker_*.json ./
+    echo "Results files copied:"
+    ls -la sprint13_cloud_worker_*.json
+    
+    echo "Uploading results to GCS..."
+    gsutil -D cp sprint13_cloud_worker_*.json gs://{bucket_name}/sprint13_results/ || echo "GCS upload failed with debug info"
+    echo "Results upload attempted"
+else
+    echo "ERROR: No results file found to upload"
+    echo "Contents of /tmp/results/:"
+    ls -la /tmp/results/
+fi
+
+echo "Creating completion marker..."
 echo "Worker {worker_id} completed successfully" > /tmp/completion_marker.txt
 
-# Upload completion marker
+echo "Uploading completion marker..."
 gsutil cp /tmp/completion_marker.txt gs://{bucket_name}/completion_markers/worker_{worker_id}_complete.txt
 
-# Shutdown the VM after completion
-shutdown -h now
+echo "Uploading debug log to GCS..."
+gsutil cp $LOG_FILE gs://{bucket_name}/sprint13_logs/
+
+echo "--- WORKER {worker_id} FINISHED AT $(date) ---"
+
+# DEBUG: Auto-delete disabled for debugging
+# shutdown -h now
 """
 
-    def create_vm_instance(self, worker_id, start_idx, end_idx, bucket_name, rebalance_freq='biweekly'):
+    def create_vm_instance(self, worker_id, start_idx, end_idx, bucket_name, rebalance_freq='weekly'):
         """Create a new VM instance for parallel processing"""
         
         instance_name = f"badger-worker-{worker_id}"
@@ -262,19 +310,22 @@ shutdown -h now
         return completed_workers
 
     def cleanup_vms(self, instance_names):
-        """Clean up VM instances after completion"""
-        print("\nCleaning up VM instances...")
+        """Clean up VM instances after completion - DISABLED FOR DEBUG"""
+        print("\n*** DEBUG MODE: VM cleanup disabled ***")
+        print("VMs will remain running for log analysis")
+        print("Remember to manually delete VMs after debugging!")
         
-        for instance_name in instance_names:
-            try:
-                print(f"Deleting {instance_name}...")
-                self.compute_client.delete(
-                    project=self.project_id,
-                    zone=self.zone,
-                    instance=instance_name
-                )
-            except Exception as e:
-                print(f"Failed to delete {instance_name}: {e}")
+        # Cleanup disabled for debugging
+        # for instance_name in instance_names:
+        #     try:
+        #         print(f"Deleting {instance_name}...")
+        #         self.compute_client.delete(
+        #             project=self.project_id,
+        #             zone=self.zone,
+        #             instance=instance_name
+        #         )
+        #     except Exception as e:
+        #         print(f"Failed to delete {instance_name}: {e}")
 
     def aggregate_results(self, bucket_name):
         """Download and aggregate results from all workers"""
@@ -350,7 +401,7 @@ def main():
     parser.add_argument('--bucket-name', required=True, help='Google Cloud Storage bucket name')
     parser.add_argument('--zone', default='us-central1-a', help='GCP zone for VMs')
     parser.add_argument('--num-workers', type=int, default=8, help='Number of parallel workers')
-    parser.add_argument('--rebalance-freq', default='biweekly', choices=['weekly', 'biweekly', 'monthly'],
+    parser.add_argument('--rebalance-freq', default='weekly', choices=['weekly', 'biweekly', 'monthly'],
                        help='Rebalancing frequency')
     parser.add_argument('--dry-run', action='store_true', help='Show plan without executing')
     parser.add_argument('--cleanup-only', action='store_true', help='Only cleanup existing VMs')

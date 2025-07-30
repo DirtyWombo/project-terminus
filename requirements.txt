@@ -48,6 +48,9 @@ lxml>=4.9.3
 google-cloud-storage>=2.10.0
 google-cloud-compute>=1.14.1
 
+# Sprint 16: Options Trading Infrastructure
+# For volatility trading strategies and Iron Condor backtesting
+
 # Security & Authentication
 cryptography>=41.0.0
 pyjwt>=2.8.0

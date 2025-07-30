@@ -1,0 +1,15 @@
+{
+  "initial_capital": 100000.0,
+  "final_value": 5272.116245405014,
+  "total_return_pct": -94.72788375459498,
+  "annualized_return_pct": -45.33160409563871,
+  "sharpe_ratio": -1.189210611081054,
+  "max_drawdown_pct": -94.72788375459498,
+  "total_trades": 19,
+  "win_rate_pct": 0.0,
+  "profit_factor": 0.0,
+  "avg_days_held": 7.473684210526316,
+  "best_trade": -1854.8941572015876,
+  "worst_trade": -9129.372967579613,
+  "avg_trade_pnl": -4985.678092347104
+}
