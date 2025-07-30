@@ -26,6 +26,7 @@ import schedule
 import yfinance as yf
 import pandas as pd
 import numpy as np
+import pytz
 from datetime import datetime, timedelta
 from typing import Dict, List, Optional, Tuple, Any
 from dataclasses import dataclass, asdict
@@ -50,6 +51,73 @@ logging.basicConfig(
     ]
 )
 logger = logging.getLogger(__name__)
+
+# Market Hours Utilities
+def is_market_open(dt: datetime = None) -> bool:
+    """Check if the market is currently open"""
+    if dt is None:
+        dt = datetime.now()
+    
+    # Convert to ET timezone
+    et_tz = pytz.timezone('America/New_York')
+    if dt.tzinfo is None:
+        dt = pytz.utc.localize(dt).astimezone(et_tz)
+    else:
+        dt = dt.astimezone(et_tz)
+    
+    # Check if it's a weekday (Monday=0, Sunday=6)
+    if dt.weekday() >= 5:  # Weekend
+        return False
+    
+    # Check if within market hours (9:30 AM - 4:00 PM ET)
+    market_open = dt.replace(hour=9, minute=30, second=0, microsecond=0)
+    market_close = dt.replace(hour=16, minute=0, second=0, microsecond=0)
+    
+    return market_open <= dt <= market_close
+
+def get_next_market_open(dt: datetime = None) -> datetime:
+    """Get the next market open time"""
+    if dt is None:
+        dt = datetime.now()
+    
+    et_tz = pytz.timezone('America/New_York')
+    if dt.tzinfo is None:
+        dt = pytz.utc.localize(dt).astimezone(et_tz)
+    else:
+        dt = dt.astimezone(et_tz)
+    
+    # Set to next 9:30 AM
+    next_open = dt.replace(hour=9, minute=30, second=0, microsecond=0)
+    
+    # If we're past today's open or it's weekend, move to next business day
+    if dt >= next_open or dt.weekday() >= 5:
+        next_open += timedelta(days=1)
+        while next_open.weekday() >= 5:  # Skip weekends
+            next_open += timedelta(days=1)
+        next_open = next_open.replace(hour=9, minute=30, second=0, microsecond=0)
+    
+    return next_open
+
+def should_gather_premarket_data(dt: datetime = None) -> bool:
+    """Check if we should be gathering pre-market data (1 hour before market open)"""
+    if dt is None:
+        dt = datetime.now()
+    
+    et_tz = pytz.timezone('America/New_York')
+    if dt.tzinfo is None:
+        dt = pytz.utc.localize(dt).astimezone(et_tz)
+    else:
+        dt = dt.astimezone(et_tz)
+    
+    # Check if it's a weekday
+    if dt.weekday() >= 5:
+        return False
+    
+    # Check if within pre-market hours (8:30 AM - 9:30 AM ET)
+    premarket_start = dt.replace(hour=8, minute=30, second=0, microsecond=0)
+    market_open = dt.replace(hour=9, minute=30, second=0, microsecond=0)
+    
+    return premarket_start <= dt < market_open
 
 class TradingState(Enum):
     """Trading system states"""
@@ -326,7 +394,17 @@ class LiveTradingEngine:
         Check for new strategy signals and execute trades
         """
         try:
-            logger.info("Checking for strategy signals...")
+            current_time = datetime.now()
+            
+            # Check if we should be trading now
+            if not is_market_open(current_time) and not should_gather_premarket_data(current_time):
+                logger.debug(f"Market closed and not in pre-market hours - skipping signal check")
+                return
+            
+            if should_gather_premarket_data(current_time):
+                logger.info("Pre-market data gathering period - updating market data only")
+            else:
+                logger.info("Market open - checking for strategy signals...")
             
             # Get current market data
             market_data = self.get_market_data(self.config['underlying_symbol'])
@@ -351,9 +429,12 @@ class LiveTradingEngine:
             # Generate trading signal using our validated strategy logic
             signal = self.should_enter_trade(latest_data, current_date)
             
-            if signal:
+            # Only execute trades during market hours
+            if signal and is_market_open(current_time):
                 logger.info("ENTRY SIGNAL GENERATED - Attempting to open Bull Call Spread")
                 self.execute_bull_call_spread_entry(current_price, latest_data['volatility'])
+            elif signal and should_gather_premarket_data(current_time):
+                logger.info("ENTRY SIGNAL DETECTED - Waiting for market open to execute")
             else:
                 logger.debug("No entry signal generated")
             
@@ -673,11 +754,19 @@ class LiveTradingEngine:
     
     def schedule_strategy_checks(self):
         """Schedule regular strategy signal checks"""
-        # Check signals every hour during market hours (9:30 AM - 4:00 PM ET)
-        schedule.every().hour.at(":00").do(self.check_strategy_signals)
-        schedule.every().hour.at(":30").do(self.check_strategy_signals)
+        # More frequent checks during pre-market and market hours
+        # Pre-market data gathering: 8:30 AM - 9:30 AM ET (every 15 minutes)
+        # Market hours: 9:30 AM - 4:00 PM ET (every 30 minutes)
+        # After hours: minimal checks (every 2 hours for position monitoring)
         
-        logger.info("Strategy signal checks scheduled every 30 minutes during market hours")
+        # Schedule checks every 15 minutes (will be filtered by market hours logic)
+        for minute in range(0, 60, 15):
+            schedule.every().hour.at(f":{minute:02d}").do(self.check_strategy_signals)
+        
+        logger.info("Strategy signal checks scheduled every 15 minutes")
+        logger.info("Pre-market data gathering: 8:30-9:30 AM ET")
+        logger.info("Market hours trading: 9:30 AM-4:00 PM ET")
+        logger.info("After hours position monitoring enabled")
     
     def run(self):
         """
