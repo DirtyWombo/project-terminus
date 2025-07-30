@@ -1,0 +1,18 @@
+{
+  "timestamp": "2025-07-29T21:15:48.269040",
+  "positions": [],
+  "paper_cash": 100000.0,
+  "paper_equity": 100000.0,
+  "metrics": {
+    "total_trades": 0,
+    "winning_trades": 0,
+    "losing_trades": 0,
+    "total_pnl": 0.0,
+    "realized_pnl": 0.0,
+    "unrealized_pnl": 0.0,
+    "win_rate": 0.0,
+    "largest_winner": 0.0,
+    "largest_loser": 0.0,
+    "total_commissions": 0.0
+  }
+}

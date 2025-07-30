@@ -57,7 +57,10 @@
       "Bash(PYTHONIOENCODING=utf-8 python cloud_orchestrator.py --project-id operation-badger-quant --bucket-name operation-badger-quant-results-bucket --num-workers 1)",
       "Bash(PYTHONIOENCODING=utf-8 python cloud_orchestrator.py --project-id operation-badger-quant --bucket-name operation-badger-quant-results-bucket --num-workers 8)",
       "Bash(gsutil cp:*)",
-      "Bash(gsutil rm:*)"
+      "Bash(gsutil rm:*)",
+      "Bash(start python cardea_web_server.py)",
+      "Bash(start /B python:*)",
+      "Bash(curl:*)"
     ],
     "deny": []
   }

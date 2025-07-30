@@ -175,17 +175,17 @@ class Sprint19Launcher:
                 f"  Underlying: {config['underlying_symbol']}",
                 "",
                 "SYSTEM COMPONENTS:",
-                f"  ✓ Live Trading Engine",
-                f"  ✓ Order Management System",
-                f"  ✓ Bull Call Spread Strategy",
-                f"  ✓ Live Monitoring Dashboard",
-                f"  ✓ Comprehensive Logging",
+                f"  [OK] Live Trading Engine",
+                f"  [OK] Order Management System",
+                f"  [OK] Bull Call Spread Strategy",
+                f"  [OK] Live Monitoring Dashboard",
+                f"  [OK] Comprehensive Logging",
                 "",
                 "SUCCESS CRITERIA (30-Day Validation):",
-                f"  ✓ System Stability: No crashes/restarts",
-                f"  ✓ Execution Fidelity: >95% signal accuracy",
-                f"  ✓ Performance Tracking: <10% backtest deviation",
-                f"  ✓ Order Fill Rate: >90% successful fills",
+                f"  [TARGET] System Stability: No crashes/restarts",
+                f"  [TARGET] Execution Fidelity: >95% signal accuracy",
+                f"  [TARGET] Performance Tracking: <10% backtest deviation",
+                f"  [TARGET] Order Fill Rate: >90% successful fills",
                 "=" * 80
             ]
             
@@ -224,12 +224,12 @@ class Sprint19Launcher:
             
             # Check if it's still running
             if process.poll() is None:
-                logger.info(f"✓ {component['description']} started successfully (PID: {process.pid})")
+                logger.info(f"[SUCCESS] {component['description']} started successfully (PID: {process.pid})")
                 return True
             else:
                 # Process exited immediately
                 stdout, stderr = process.communicate()
-                logger.error(f"✗ {component['description']} failed to start")
+                logger.error(f"[FAILED] {component['description']} failed to start")
                 if stderr:
                     logger.error(f"Error output: {stderr}")
                 return False
@@ -259,13 +259,13 @@ class Sprint19Launcher:
             # Wait for termination
             try:
                 component['process'].wait(timeout=10)
-                logger.info(f"✓ {component['description']} stopped successfully")
+                logger.info(f"[SUCCESS] {component['description']} stopped successfully")
             except subprocess.TimeoutExpired:
                 # Force kill if it doesn't stop gracefully
                 logger.warning(f"Force killing {component['description']}...")
                 component['process'].kill()
                 component['process'].wait()
-                logger.info(f"✓ {component['description']} force stopped")
+                logger.info(f"[SUCCESS] {component['description']} force stopped")
             
             component['process'] = None
             return True

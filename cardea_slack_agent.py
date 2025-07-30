@@ -17,6 +17,8 @@ import json
 import time
 import logging
 import requests
+import schedule
+import pytz
 from datetime import datetime, timedelta
 from slack_bolt import App
 from slack_bolt.adapter.socket_mode import SocketModeHandler
@@ -42,6 +44,7 @@ logger = logging.getLogger(__name__)
 CARDEA_SLACK_BOT_TOKEN = os.environ.get("CARDEA_SLACK_BOT_TOKEN")
 CARDEA_SLACK_APP_TOKEN = os.environ.get("CARDEA_SLACK_APP_TOKEN")
 CARDEA_API_SECRET = os.environ.get("CARDEA_API_SECRET", "cardea-default-secret")
+CARDEA_REPORTING_CHANNEL_ID = os.environ.get("CARDEA_REPORTING_CHANNEL_ID")  # For automated reports
 
 if not CARDEA_SLACK_BOT_TOKEN:
     raise ValueError("CARDEA_SLACK_BOT_TOKEN environment variable not set!")
@@ -289,6 +292,197 @@ def get_market_data():
     except Exception as e:
         logger.error(f"Error getting market data: {e}")
         return {"success": False, "message": f"Market data error: {e}"}
+
+# Automated Reporting Functions
+
+def get_weekly_performance():
+    """Get weekly performance summary for automated reports"""
+    try:
+        perf_result = get_performance_metrics()
+        status_result = get_system_status()
+        
+        if not perf_result["success"] or not status_result["success"]:
+            return {
+                "weekly_pnl": 0.0,
+                "win_rate": 0.0,
+                "total_trades": 0,
+                "performance_deviation": 0.0
+            }
+        
+        perf_data = perf_result["data"]
+        status_data = status_result["data"]
+        
+        # Calculate weekly deviation from backtest (target 17.7% annualized)
+        current_return = status_data["portfolio"]["total_return_pct"]
+        # Estimate weekly target (rough approximation)
+        weekly_target = (17.7 / 52)  # ~0.34% per week
+        performance_deviation = current_return - weekly_target
+        
+        return {
+            "weekly_pnl": perf_data.get("total_pnl", 0.0),
+            "win_rate": perf_data.get("win_rate", 0.0),
+            "total_trades": perf_data.get("total_trades", 0),
+            "performance_deviation": performance_deviation
+        }
+        
+    except Exception as e:
+        logger.error(f"Error getting weekly performance: {e}")
+        return {
+            "weekly_pnl": 0.0,
+            "win_rate": 0.0,
+            "total_trades": 0,
+            "performance_deviation": 0.0
+        }
+
+def send_daily_morning_briefing():
+    """Send automated daily morning briefing to reporting channel"""
+    if not CARDEA_REPORTING_CHANNEL_ID:
+        logger.warning("CARDEA_REPORTING_CHANNEL_ID not set - skipping automated report")
+        return
+    
+    try:
+        logger.info("Generating daily morning briefing...")
+        
+        status_result = get_system_status()
+        market_result = get_market_data()
+        positions_result = get_positions_detail()
+        
+        # Get current date in ET timezone
+        et_tz = pytz.timezone('America/New_York')
+        current_date = datetime.now(et_tz).strftime('%Y-%m-%d')
+        
+        if not status_result["success"]:
+            briefing_text = f"☀️ **Cardea Daily Briefing - {current_date}**\n\n❌ System Error: {status_result['message']}"
+        else:
+            status_data = status_result["data"]
+            
+            # System status
+            status_emoji = "🟢" if status_data["system_running"] else "🔴"
+            system_status = "OPERATIONAL" if status_data["system_running"] else "OFFLINE"
+            
+            # Portfolio metrics
+            equity = status_data["portfolio"]["equity"]
+            total_return = status_data["portfolio"]["total_return_pct"]
+            return_emoji = "📈" if total_return >= 0 else "📉"
+            
+            # Position summary
+            open_positions = status_data["positions"]["open"]
+            max_positions = status_data["max_positions"]
+            
+            briefing_text = f"""☀️ **Cardea Daily Morning Briefing - {current_date}**
+*Bull Call Spread Strategy - Sprint 19 Validation*
+
+{status_emoji} **System Status:** {system_status}
+{return_emoji} **Portfolio Value:** ${equity:,.2f} ({total_return:+.2f}%)
+📍 **Open Positions:** {open_positions}/{max_positions}"""
+            
+            # Add market data if available
+            if market_result["success"]:
+                market_data = market_result["data"]
+                change_emoji = "📈" if market_data["change"] >= 0 else "📉"
+                briefing_text += f"""
+{change_emoji} **SPY Price:** ${market_data['current_price']:.2f} ({market_data['change_pct']:+.2f}%)"""
+            
+            # Add position details if available
+            if positions_result["success"] and positions_result["data"]["open_positions"]:
+                total_unrealized = sum(pos.get('unrealized_pnl', 0) for pos in positions_result["data"]["open_positions"])
+                pnl_emoji = "💰" if total_unrealized >= 0 else "⚠️"
+                briefing_text += f"""
+{pnl_emoji} **Unrealized P&L:** ${total_unrealized:+,.2f}"""
+        
+        app.client.chat_postMessage(
+            channel=CARDEA_REPORTING_CHANNEL_ID,
+            text=briefing_text
+        )
+        logger.info("Daily briefing sent successfully")
+        
+    except Exception as e:
+        logger.error(f"Failed to send daily briefing: {e}")
+
+def send_weekly_performance_review():
+    """Send automated weekly performance review"""
+    if not CARDEA_REPORTING_CHANNEL_ID:
+        logger.warning("CARDEA_REPORTING_CHANNEL_ID not set - skipping weekly report")
+        return
+    
+    try:
+        logger.info("Generating weekly performance review...")
+        
+        performance_data = get_weekly_performance()
+        status_result = get_system_status()
+        
+        # Get current date in ET timezone
+        et_tz = pytz.timezone('America/New_York')
+        current_date = datetime.now(et_tz).strftime('%Y-%m-%d')
+        
+        if status_result["success"]:
+            status_data = status_result["data"]
+            total_return = status_data["portfolio"]["total_return_pct"]
+            equity = status_data["portfolio"]["equity"]
+            
+            # Performance vs backtest analysis
+            deviation = performance_data["performance_deviation"]
+            deviation_emoji = "✅" if abs(deviation) < 2.0 else "⚠️"
+            
+            review_text = f"""📈 **Cardea Weekly Performance Review - Week Ending {current_date}**
+*Bull Call Spread Strategy Validation*
+
+**PORTFOLIO PERFORMANCE:**
+💰 **Current Equity:** ${equity:,.2f}
+📊 **Total Return:** {total_return:+.2f}%
+{deviation_emoji} **Performance vs Target:** {deviation:+.2f}% deviation
+
+**TRADING ACTIVITY:**
+📈 **Total Trades:** {performance_data['total_trades']}
+🎯 **Win Rate:** {performance_data['win_rate']:.1f}%
+💵 **Total P&L:** ${performance_data['weekly_pnl']:+,.2f}
+
+**VALIDATION PROGRESS:**
+🎯 **Target Win Rate:** >80% (Backtest: 84.6%)
+📊 **Target Return:** 17.7% annualized
+⏰ **Sprint 19 Status:** Day {((datetime.now() - datetime(2025, 7, 29)).days + 1)}/30"""
+            
+        else:
+            review_text = f"""📈 **Cardea Weekly Performance Review - Week Ending {current_date}**
+
+❌ **System Error:** Unable to generate report
+{status_result.get('message', 'Unknown error')}"""
+        
+        app.client.chat_postMessage(
+            channel=CARDEA_REPORTING_CHANNEL_ID,
+            text=review_text
+        )
+        logger.info("Weekly review sent successfully")
+        
+    except Exception as e:
+        logger.error(f"Failed to send weekly review: {e}")
+
+def run_scheduler():
+    """Run scheduled jobs in background thread"""
+    # Set timezone to Eastern Time (market time)
+    et_tz = pytz.timezone('America/New_York')
+    
+    # Schedule daily briefing at 8:00 AM ET on weekdays
+    schedule.every().monday.at("08:00").do(send_daily_morning_briefing)
+    schedule.every().tuesday.at("08:00").do(send_daily_morning_briefing)
+    schedule.every().wednesday.at("08:00").do(send_daily_morning_briefing)
+    schedule.every().thursday.at("08:00").do(send_daily_morning_briefing)
+    schedule.every().friday.at("08:00").do(send_daily_morning_briefing)
+    
+    # Schedule weekly review on Friday at 4:30 PM ET (after market close)
+    schedule.every().friday.at("16:30").do(send_weekly_performance_review)
+    
+    logger.info("Automated reporting scheduler started")
+    logger.info("Daily briefings: Weekdays at 8:00 AM ET")
+    logger.info("Weekly reviews: Fridays at 4:30 PM ET")
+    
+    while True:
+        try:
+            schedule.run_pending()
+            time.sleep(60)  # Check every minute
+        except Exception as e:
+            logger.error(f"Error in scheduler: {e}")
+            time.sleep(60)
 
 # Slack Command Handlers
 
@@ -602,6 +796,11 @@ def cardea_help_command(ack, respond):
 **EMERGENCY CONTROLS (1 command):**
 • `/cardea-emergency-stop` - 🚨 Liquidate all positions and halt system
 
+**AUTOMATED MONITORING:**
+• 📅 Daily briefings: Weekdays at 8:00 AM ET
+• 📊 Weekly reviews: Fridays at 4:30 PM ET  
+• 🚨 Real-time alerts: System issues & drawdown warnings
+
 **INFORMATION:**
 • `/cardea-help` - Show this command list
 
@@ -613,7 +812,7 @@ Named after the Roman goddess who protected thresholds and worked with Janus. Wh
 30-day paper trading validation of Bull Call Spread strategy
 Target: 17.7% annualized returns with <5% drawdown
 
-*Sister AI to Janus • Built for Sprint 19 Live Trading*
+*Sister AI to Janus • Built for Sprint 19 Live Trading with Automated Reporting*
 """
     
     respond(help_message)
@@ -661,18 +860,35 @@ def monitor_system_alerts():
 
 # Main execution
 def main():
-    """Start Cardea Slack agent"""
+    """Start Cardea Slack agent with automated reporting"""
     logger.info("Starting Cardea - AI Guardian for Bull Call Spread Trading")
+    
+    # Check if automated reporting is configured
+    if not CARDEA_REPORTING_CHANNEL_ID:
+        logger.warning("CARDEA_REPORTING_CHANNEL_ID not set - automated reports will be disabled")
+        logger.info("To enable automated reports, set CARDEA_REPORTING_CHANNEL_ID in your .env file")
+    else:
+        logger.info(f"Automated reporting enabled for channel: {CARDEA_REPORTING_CHANNEL_ID}")
     
     try:
         # Start alert monitoring in background
         alert_thread = Thread(target=monitor_system_alerts, daemon=True)
         alert_thread.start()
         
+        # Start automated reporting scheduler in background
+        scheduler_thread = Thread(target=run_scheduler, daemon=True)
+        scheduler_thread.start()
+        
         # Start Slack bot
         handler = SocketModeHandler(app, CARDEA_SLACK_APP_TOKEN)
         
-        logger.info("Cardea is online and monitoring your trades")
+        logger.info("Cardea is online with automated reporting and trade monitoring")
+        logger.info("Available features:")
+        logger.info("  • Real-time Slack commands (/cardea-help)")
+        logger.info("  • Background system alerts")
+        logger.info("  • Automated daily briefings (8:00 AM ET)")
+        logger.info("  • Automated weekly reports (Fridays 4:30 PM ET)")
+        
         handler.start()
         
     except KeyboardInterrupt:

@@ -1,4 +1,0 @@
-Strategy,Paradigm,Signal Logic,Sharpe Ratio,Total Return (%),Win Rate (%),Expectancy ($),Total Trades,Max Drawdown (%),Profitable Stocks
-Golden Cross (Momentum),Trend Following,50/200 MA crossover,-6.592743796162289,0.6019235349953632,31.25,14.324622035026547,16,1.0988201412536545,7/10
-RSI Mean Reversion,Mean Reversion,"RSI <30 entry, >70 exit",0.0,0.09128405133502929,42.30769230769231,5.329231629004846,26,0.3424183570278632,1/10
-Bollinger Band Mean Reversion,Mean Reversion,"Lower band entry, Upper band exit",-2.3073293080514086,-0.15873184318925637,39.80582524271845,0.5568834346474953,206,1.40189494861463,3/10
