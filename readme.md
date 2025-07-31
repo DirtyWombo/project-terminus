@@ -1,7 +1,7 @@
 # Project Terminus - Automated Futures Trading System
 
 **Status: Sprint 1 - Core Integration & Connectivity**  
-**Repository: https://github.com/DirtyWombo/cyberjackal-stocks**  
+**Repository: https://github.com/DirtyWombo/project-terminus**  
 **Mission: Pass Apex Trader Funding 25K Evaluation with Fully Automated Futures Trading**
 
 ---
