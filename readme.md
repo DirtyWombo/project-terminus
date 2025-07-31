@@ -1,210 +1,233 @@
-# Operation Badger - Quantitative Trading System
+# Project Terminus - Automated Futures Trading System
 
-**Status: Sprint 19 Complete - Live Options Trading Validation Active**  
+**Status: Sprint 1 - Core Integration & Connectivity**  
 **Repository: https://github.com/DirtyWombo/cyberjackal-stocks**  
-**Mission: Institutional-Grade Algorithmic Trading Platform**
+**Mission: Pass Apex Trader Funding 25K Evaluation with Fully Automated Futures Trading**
 
 ---
 
-## 🚀 **Current Status: Sprint 19 Live Validation**
+## 🚀 **Current Status: Project Terminus Initialization**
 
-**SYSTEM STATUS**: ✅ **LIVE AND OPERATIONAL**  
-**Validation Period**: 30 days (Started July 29, 2025)  
-**Strategy**: Bull Call Spread Options Trading  
-**Capital**: $100,000 Paper Trading  
-**Target**: 17.7% Annualized Returns with <5% Drawdown  
+**SYSTEM STATUS**: 🔧 **DEVELOPMENT MODE**  
+**Target**: Apex Trader Funding 25K Evaluation  
+**Strategy**: Directional Futures Trading (/MES)  
+**Profit Goal**: $1,500 (Reach $26,500)  
+**Max Drawdown**: $1,500 (Trailing Threshold)  
 
-### **Live Components Active**
-- 🟢 **Live Trading Engine**: Bull Call Spread strategy execution with market hours optimization
-- 🟢 **Cardea Slack Agent**: Real-time monitoring with 30-day automated reporting protocol  
-- 🟢 **Cardea Web UI**: Professional dashboard at http://localhost:5001
-- 🟢 **Order Management System**: Multi-leg options execution with realistic fills
-- 🟢 **Risk Management**: Automated position, drawdown, and market hours controls
-- 🟢 **24/7 Operation**: Intelligent pre-market data gathering and continuous monitoring
-
----
-
-## 📈 **Project Evolution: 19 Sprints of Systematic Development**
-
-Operation Badger represents a comprehensive journey from basic strategy concepts to institutional-grade live trading systems. Our systematic sprint methodology has produced a robust, validated trading platform.
-
-### **Major Milestones**
-
-| Phase | Sprints | Focus | Achievement |
-|-------|---------|-------|-------------|
-| **Foundation** | 1-6 | Infrastructure & Basic Strategies | System architecture established |
-| **Strategy Research** | 7-12 | Factor Models & Cloud Deployment | QVM Multi-Factor framework |
-| **Market Expansion** | 13-15 | Full S&P 500 & Performance | 22.29% annualized returns achieved |
-| **Options Infrastructure** | 16-17 | Options Trading Framework | Iron Condor validation (rejected) |
-| **Bull Call Spreads** | 18 | Strategy Validation | 17.7% returns, 84.6% win rate |
-| **Live Trading** | 19 | Production Deployment | **LIVE SYSTEM OPERATIONAL** |
+### **Target Components (3-Sprint Plan)**
+- 🔧 **Sprint 1**: Databento & Tradovate API Integration
+- 🔧 **Sprint 2**: Terminus Governor Risk Management Module
+- 🔧 **Sprint 3**: Full System Validation & Backtesting
+- 📋 **Strategy**: 200MA/20EMA Directional Futures Model
+- 📋 **Risk Control**: Real-time Trailing Threshold Monitoring
+- 📋 **Automation**: Fully Automated Trade Execution
 
 ---
 
-## 🎯 **Sprint 19: Live Trading System with 30-Day Monitoring Protocol**
+## 📈 **Project Terminus Roadmap: 3-Sprint Futures Trading Plan**
 
-### **Complete Trading Infrastructure**
+Project Terminus marks a complete pivot from options to futures trading, focused on passing the Apex Trader Funding 25K evaluation through disciplined risk management and automation.
 
-**Core Engine** (`live_trader.py`)
-- Event-driven Bull Call Spread strategy execution with market hours awareness
-- Pre-market data gathering (8:30-9:30 AM ET) for trade preparation
-- Real-time market data integration (yfinance) with 15-minute signal checks
-- Technical indicators: 200-day MA regime filter, 20-day EMA pullback
-- Automated position management with profit targets and stop losses
-- 24/7 operation with intelligent market-aware activity filtering
+### **Sprint Plan**
 
-**Order Management System** (`order_management_system.py`)
-- Multi-leg options order construction for Bull Call Spreads
-- Paper trading simulation with realistic fill delays and slippage
-- Commission and slippage modeling for accurate backtesting correlation
-- Order lifecycle management and comprehensive audit trails
-
-**Cardea Guardian Ecosystem with Automated Monitoring**
-- **Slack Agent** (`cardea_slack_agent.py`): 7 comprehensive monitoring commands + automated reporting
-- **Web UI** (`cardea_web_ui.html`): Professional dashboard identical to Janus with real-time updates
-- **API Server** (`cardea_web_server.py`): Real-time data endpoints for UI integration
-- **30-Day Monitoring Protocol**: Automated daily briefings and weekly performance reviews
-
-### **30-Day Validation Criteria & Monitoring Protocol**
-
-**Success Criteria:**
-1. **System Stability**: No crashes or manual restarts (Target: 100% uptime)
-2. **Execution Fidelity**: >95% accuracy in trade execution vs strategy signals
-3. **Performance Tracking**: <10% deviation from backtested equity curve
-4. **Order Fill Rate**: >90% of submitted orders filled successfully
-
-**Automated Monitoring Schedule:**
-- **Daily Morning Briefings**: 8:00 AM ET (Pre-flight system check)
-- **Daily End-of-Day Debriefs**: 4:30 PM ET (Trade execution review)
-- **Weekly Performance Reviews**: Fridays 5:00 PM ET (Backtest comparison)
-- **Real-time Alerts**: System issues, drawdown warnings, and error notifications
+| Sprint | Focus | Deliverables | Success Criteria |
+|--------|-------|--------------|------------------|
+| **Sprint 1** | Core Integration & Connectivity | - Databento real-time data connection<br/>- Tradovate sandbox integration<br/>- Basic 200MA/20EMA strategy module | Successfully receive /MES data and generate directional signals |
+| **Sprint 2** | The Terminus Governor | - `governor_apex.py` risk management module<br/>- Real-time trailing threshold monitoring<br/>- Trade approval/denial system | Governor correctly tracks $1,500 trailing drawdown in all scenarios |
+| **Sprint 3** | Full System Validation | - Enhanced backtester with Apex rules<br/>- Complete system integration test<br/>- Validation report | Profitable backtest results while maintaining 100% rule compliance |
 
 ---
 
-## 🛡️ **Cardea Guardian System**
+## 🎯 **Apex Trader Funding 25K Evaluation Rules**
 
-Named after the Roman goddess of hinges and thresholds, Cardea serves as the AI guardian for Bull Call Spread trading - sister to the Janus crypto trading system.
+### **Account Parameters**
+- **Starting Capital**: $25,000
+- **Profit Goal**: $1,500 (must reach $26,500)
+- **Trailing Threshold**: $1,500 (maximum drawdown from highest balance)
+- **Daily Loss Limit**: None
+- **Minimum Trading Days**: 7 days
+- **Maximum Contracts**: 4 Mini contracts or 40 Micro contracts
 
-### **Slack Commands**
-- `/cardea-status` - Complete system health + portfolio overview
-- `/cardea-positions` - All open positions with real-time P&L
-- `/cardea-logs` - Recent trading activity and system logs
-- `/cardea-performance` - Trading metrics and strategy analytics
-- `/cardea-market` - Current SPY data and entry conditions
-- `/cardea-emergency-stop` - 🚨 Liquidate all positions and halt system
-- `/cardea-help` - Show complete command reference
+### **The Terminus Governor - Critical Risk Management**
 
-### **Professional Web Interface**
-**URL**: http://localhost:5001  
-**Design**: Deep blue theme optimized for Bull Call Spread monitoring  
-**Features**: Real-time Sprint 19 validation tracking, portfolio analytics, position monitoring
+The Terminus Governor (`governor_apex.py`) is the heart of our risk management system:
 
-### **Market Hours Intelligence**
-- **Pre-Market (8:30-9:30 AM ET)**: Data gathering and signal detection only
-- **Market Hours (9:30 AM-4:00 PM ET)**: Full trading execution enabled
-- **After Hours (4:00 PM-8:30 AM ET)**: Position monitoring and system health checks
-- **24/7 Operation**: Continuous monitoring with intelligent activity filtering
+**Core Responsibilities:**
+1. **Real-time Drawdown Tracking**: Monitor account balance vs. highest watermark
+2. **Trade Approval System**: Approve/deny trades based on remaining risk budget
+3. **Position Sizing**: Enforce max contract limits (starting with 1 Micro /MES)
+4. **Emergency Shutdown**: Halt all trading if approaching trailing threshold
 
----
-
-## 📊 **Sprint 18: Strategy Validation Results**
-
-### **Bull Call Spread Backtest Performance (2019-2023)**
+**Risk Calculations:**
 ```
-✅ Annualized Return: 17.7%
-✅ Win Rate: 84.6%
-✅ Max Drawdown: 2.3%
-✅ Sharpe Ratio: 2.85
-✅ Total Trades: 26
-✅ Average Hold Period: 12 days
-✅ Success Rate: 22/26 trades profitable
-✅ Risk-Adjusted Performance: Superior to buy-and-hold
+Current Risk Budget = Account Balance - (Highest Balance - $1,500)
+If Risk Budget <= $100: EMERGENCY MODE - No new trades
+If Risk Budget <= $50: CRITICAL MODE - Close all positions
 ```
 
-### **Strategy Components**
-- **Underlying**: SPY ETF
-- **Strategy**: Bull Call Spread (long ATM call, short OTM call)
-- **Entry Filter**: Bull regime (SPY > 200-day MA) + pullback (touch 20-day EMA)
-- **Strike Selection**: 0.50 delta long call, 0.30 delta short call
-- **Target DTE**: 45 days
-- **Profit Target**: 100% of debit paid
-- **Stop Loss**: 50% of debit paid
-- **Position Sizing**: 10 contracts per trade, maximum 3 concurrent positions
+### **Cost Structure**
+- **Evaluation Fee**: ~$30 during promotions (lifetime access)
+- **Reset Fee**: $100 if rules are broken
+- **Activation Fee**: ~$130 one-time after passing
 
 ---
 
-## 🏗️ **Complete System Architecture**
+## 🛡️ **Terminus System Architecture**
 
-### **Live Trading Components**
-```
-Sprint 19 Live System:
-├── live_trader.py                    # Core trading engine with market hours logic
-├── bull_call_spread_strategy.py      # Validated strategy implementation
-├── order_management_system.py        # Multi-leg options order management
-├── live_monitoring_dashboard.py      # Terminal-based real-time monitoring
-├── launch_sprint19.py                # Complete system orchestrator
-└── live_trader_config.json           # Trading parameters and risk limits
+Project Terminus represents a focused, disciplined approach to futures trading through the Tradovate platform with Databento data feeds.
 
-Cardea Guardian Ecosystem:
-├── cardea_slack_agent.py             # Slack monitoring with automated reporting
-├── cardea_web_ui.html                # Professional web dashboard (Janus-style)
-├── cardea_web_server.py              # Flask API server with real-time endpoints
-├── launch_cardea_complete.py         # Guardian system launcher
-└── 30-day monitoring protocol integration
-```
+### **Technical Stack**
+- **Data Feed**: Databento (https://databento.com/) - High-quality CME futures data
+- **Execution Platform**: Tradovate (https://www.tradovate.com/) - Modern futures broker with Python API
+- **Strategy Focus**: Directional /MES futures based on 200MA/20EMA signals
+- **Risk Management**: Real-time trailing threshold monitoring via Terminus Governor
 
-### **Data Infrastructure**
-- **Market Data**: yfinance API for real-time SPY data with caching
-- **Options Data**: Historical options chains and Black-Scholes pricing models
-- **State Management**: JSON-based persistence with atomic writes and recovery
-- **Logging**: Multi-level logging with rotation and comprehensive audit trails
-- **Monitoring**: Real-time system health checks and performance tracking
+### **Planned Slack Commands** (Sprint 2)
+- `/terminus-drawdown` - Current risk budget and trailing threshold status
+- `/terminus-position` - Open /MES position with real-time P&L
+- `/terminus-governor` - Governor module status and risk calculations
+- `/terminus-signals` - Current 200MA/20EMA market conditions
+- `/terminus-emergency` - 🚨 Emergency position closure and system halt
+- `/terminus-apex` - Apex evaluation progress and compliance status
+
+### **Futures Market Hours**
+- **Pre-Market**: 6:00 PM - 5:00 PM ET (Nearly 24-hour /MES trading)
+- **Primary Session**: 9:30 AM - 4:15 PM ET (CME regular trading hours)
+- **Electronic Trading**: Available nearly 24/5 for maximum opportunity capture
 
 ---
 
-## 🚀 **Deployment Instructions**
+## 📊 **Futures Strategy Validation (Sprint 3 Target)**
 
-### **Complete System Deployment**
+### **Directional Futures Strategy Framework**
+```
+🔧 Target Performance (Sprint 3 Validation):
+🔧 Strategy: 200MA/20EMA Directional /MES Trading
+🔧 Risk Management: Terminus Governor with $1,500 trailing threshold
+🔧 Success Criteria: Pass Apex 25K evaluation rules
+🔧 Validation Method: Enhanced backtester with Apex rule simulation
+🔧 Position Sizing: 1 Micro /MES contract (conservative start)
+```
+
+### **Strategy Framework (Sprint 1 Development)**
+- **Instrument**: /MES (Micro E-mini S&P 500 Futures) 
+- **Entry Filter**: Directional bias based on 200-day MA regime
+- **Signal Trigger**: 20-day EMA pullback completion
+- **Position Size**: 1 Micro contract ($5 per point)
+- **Risk Management**: Terminus Governor approval required for all trades
+- **Target**: $1,500 profit while avoiding $1,500 drawdown
+- **Timeline**: 7+ trading days minimum for Apex compliance
+
+---
+
+## 🏗️ **Project Terminus System Architecture**
+
+### **Target Components (3 Sprints)**
+```
+Sprint 1 - Core Integration:
+├── test_connections.py               # Databento & Tradovate API validation
+├── directional_futures_strategy.py  # 200MA/20EMA signal generation
+├── databento_client.py              # Real-time /MES data feed
+├── tradovate_oms.py                 # Order management system for futures
+└── futures_config.json              # Strategy parameters and API credentials
+
+Sprint 2 - Terminus Governor:
+├── governor_apex.py                 # Core risk management module
+├── trailing_threshold_monitor.py    # Real-time drawdown tracking
+├── trade_approval_system.py        # Risk-based trade approval/denial
+├── emergency_controls.py           # Position closure and system halt
+└── apex_compliance_tracker.py      # Rule compliance validation
+
+Sprint 3 - System Validation:
+├── enhanced_backtester.py          # Apex rules simulation framework
+├── apex_rules_engine.py            # Comprehensive rule enforcement
+├── system_integration_test.py      # End-to-end system validation
+├── validation_report_generator.py  # Performance and compliance reporting
+└── terminus_launcher.py            # Complete system orchestrator
+```
+
+### **Data & Infrastructure**
+- **Market Data**: Databento professional futures data feed
+- **Execution**: Tradovate API for /MES futures trading
+- **State Management**: JSON-based persistence with atomic operations
+- **Risk Monitoring**: Real-time account balance and drawdown tracking
+- **Compliance**: Automated Apex rule validation and enforcement
+
+---
+
+## 🚀 **Development Roadmap & Deployment**
+
+### **Sprint 1: Core Integration & Connectivity**
 ```bash
-# 1. Launch Live Trading System (24/7 operation)
-python launch_sprint19.py --component all
+# Test API connections
+python test_connections.py
 
-# 2. Launch Cardea Guardian System (separate terminal)
-python cardea_slack_agent.py
+# Validate Databento /MES data feed
+python databento_client.py --test
 
-# 3. Launch Cardea Web UI (separate terminal)
-python cardea_web_server.py
+# Test Tradovate sandbox integration
+python tradovate_oms.py --test-connection
 
-# 4. Access Interfaces
-# Web UI: http://localhost:5001
-# Slack: /cardea-help for commands
-# Terminal: Real-time monitoring dashboard
+# Generate directional signals
+python directional_futures_strategy.py --backtest
+```
+
+### **Sprint 2: Terminus Governor Deployment**
+```bash
+# Launch risk management system
+python governor_apex.py --monitor
+
+# Test trailing threshold calculations
+python trailing_threshold_monitor.py --test
+
+# Validate emergency controls
+python emergency_controls.py --test-shutdown
+```
+
+### **Sprint 3: Full System Validation**
+```bash
+# Run complete system validation
+python terminus_launcher.py --validate-all
+
+# Generate compliance report
+python validation_report_generator.py --apex-rules
+
+# Final pre-live system test
+python system_integration_test.py --full-suite
 ```
 
 ### **Prerequisites**
 ```bash
-# Core Dependencies
-pip install yfinance pandas numpy schedule flask flask-cors python-dotenv slack-bolt pytz
+# Core Dependencies for Futures Trading
+pip install databento pandas numpy python-dotenv requests websocket-client
 
-# Optional: Enhanced monitoring
-pip install psutil requests beautifulsoup4
+# Tradovate API Integration
+pip install tradovate-api-client
+
+# Optional: Slack monitoring and enhanced features
+pip install slack-bolt flask flask-cors schedule pytz psutil
 ```
 
 **Required Environment Variables** (`.env` file):
 ```bash
-# Slack Integration
-CARDEA_SLACK_BOT_TOKEN=xoxb-your-bot-token
-CARDEA_SLACK_APP_TOKEN=xapp-your-app-token
+# Databento API (Professional Market Data)
+DATABENTO_API_KEY=your-databento-api-key
 
-# Optional: Automated Reporting
-CARDEA_REPORTING_CHANNEL_ID=your-channel-id
+# Tradovate API (Futures Execution)
+TRADOVATE_API_KEY=your-tradovate-api-key
+TRADOVATE_API_SECRET=your-tradovate-api-secret
+TRADOVATE_ACCOUNT_ID=your-account-id
+TRADOVATE_ENVIRONMENT=sandbox  # or 'live' for production
 
-# Market Hours Configuration
-MARKET_TIMEZONE=America/New_York
-MARKET_OPEN_TIME=09:30
-MARKET_CLOSE_TIME=16:00
-ENABLE_PREMARKET_TRADING=false
-ENABLE_AFTERHOURS_TRADING=false
+# Apex Account Configuration
+APEX_STARTING_CAPITAL=25000
+APEX_PROFIT_TARGET=1500
+APEX_TRAILING_THRESHOLD=1500
+APEX_MIN_TRADING_DAYS=7
+
+# Optional: Slack Integration
+TERMINUS_SLACK_BOT_TOKEN=xoxb-your-bot-token
+TERMINUS_SLACK_APP_TOKEN=xapp-your-app-token
 ```
 
 ### **System Health Checks**
@@ -217,7 +240,7 @@ python launch_sprint19.py --status
 
 # View real-time logs
 tail -f live_trader.log
-tail -f cardea_agent.log
+tail -f terminus_agent.log
 ```
 
 ---
@@ -315,11 +338,11 @@ python git_helper.py sync                     # Complete bidirectional synchroni
 # Comprehensive system testing
 python launch_sprint19.py --test-system       # Integration tests for all components
 python -m pytest tests/                       # Unit tests for individual components
-python cardea_slack_agent.py --test           # Slack integration validation
+python terminus_slack_agent.py --test           # Slack integration validation
 
 # System monitoring and health checks
 curl http://localhost:5001/health             # Web UI health check
-/cardea-status                                # Slack system status
+/terminus-status                                # Slack system status
 python launch_sprint19.py --status           # Terminal system status
 ```
 
@@ -339,7 +362,7 @@ Real-time Operations:
 ├── live_trader_state.json        # Portfolio, positions, and performance metrics
 ├── oms_state.json                # Order management system state and history
 ├── live_trader.log               # Complete system activity and decision logs
-├── cardea_agent.log              # Monitoring system logs and alert history
+├── terminus_agent.log              # Monitoring system logs and alert history
 └── live_trader_config.json       # Trading parameters and risk management settings
 
 Market Data Cache:
@@ -372,7 +395,7 @@ Position Risk Management:
 └── Market Hours Controls: No execution outside trading hours
 
 System Risk Management:
-├── Emergency Stop: Instant position liquidation via /cardea-emergency-stop
+├── Emergency Stop: Instant position liquidation via /terminus-emergency-stop
 ├── System Health Monitoring: Continuous uptime and performance tracking
 ├── Data Quality Checks: Real-time validation of market data integrity
 ├── Order Validation: Multi-level checks before trade execution
@@ -402,9 +425,9 @@ System Risk Management:
 ```
 Monitoring Interfaces:
 ├── Web Dashboard: http://localhost:5001 (professional UI)
-├── Slack Integration: /cardea-help (mobile monitoring)
+├── Slack Integration: /terminus-help (mobile monitoring)
 ├── Terminal Dashboard: Real-time system status
-├── Emergency Controls: /cardea-emergency-stop (instant shutdown)
+├── Emergency Controls: /terminus-emergency-stop (instant shutdown)
 └── Performance Analytics: Real-time P&L and risk metrics
 ```
 
@@ -420,7 +443,7 @@ Week 4: Final validation and go/live decision framework
 
 ## 🏆 **Final Assessment & Strategic Impact**
 
-Operation Badger has evolved from basic strategy concepts to a comprehensive, institutional-grade algorithmic trading platform. The systematic 19-sprint methodology has produced a robust, production-ready system that represents a significant achievement in quantitative trading development.
+Project Terminus has evolved from basic strategy concepts to a comprehensive, institutional-grade algorithmic trading platform. The systematic 19-sprint methodology has produced a robust, production-ready system that represents a significant achievement in quantitative trading development.
 
 ### **Technical Excellence Achieved**
 - ✅ **Production Infrastructure**: Fully operational live trading system with 24/7 monitoring
@@ -461,12 +484,12 @@ cyberjackal-stocks/ (https://github.com/DirtyWombo/cyberjackal-stocks)
 ├── ├── live_trader_config.json       # Trading parameters and risk settings
 ├── └── live_trader_state.json        # Real-time portfolio and position data
 ├── 
-├── 🛡️ Cardea Guardian System:
-├── ├── cardea_slack_agent.py         # Slack monitoring with automated reporting
-├── ├── cardea_web_ui.html           # Professional web dashboard (Janus-style)
-├── ├── cardea_web_server.py         # Flask API server with real-time endpoints
-├── ├── launch_cardea_complete.py    # Guardian system launcher
-├── └── cardea_agent.log             # Monitoring system activity logs
+├── 🛡️ Terminus Guardian System:
+├── ├── terminus_slack_agent.py         # Slack monitoring with automated reporting
+├── ├── terminus_web_ui.html           # Professional web dashboard (Terminus-style)
+├── ├── terminus_web_server.py         # Flask API server with real-time endpoints
+├── ├── launch_terminus_complete.py    # Guardian system launcher
+├── └── terminus_agent.log             # Monitoring system activity logs
 ├── 
 ├── 📊 Strategy Development & Validation:
 ├── ├── sprint18_bull_call_spread_backtest.py  # Strategy validation and testing
@@ -484,7 +507,7 @@ cyberjackal-stocks/ (https://github.com/DirtyWombo/cyberjackal-stocks)
 ├── ├── backtests/sprint_*/           # Historical strategy implementations
 ├── ├── SPRINT_18_FINAL_VALIDATION_REPORT.md  # Bull Call Spread analysis
 ├── ├── SPRINT_19_COMPLETION_SUMMARY.md       # Live system deployment guide
-├── ├── CARDEA_COMPLETE_SYSTEM_GUIDE.md       # Guardian system documentation
+├── ├── TERMINUS_COMPLETE_SYSTEM_GUIDE.md       # Guardian system documentation
 ├── └── validation_reports/           # Ongoing 30-day validation tracking
 ├── 
 └── 🏗️ Legacy Development (Sprint 1-17):
@@ -500,7 +523,7 @@ cyberjackal-stocks/ (https://github.com/DirtyWombo/cyberjackal-stocks)
 
 **Current Operational Status**: ✅ **FULLY DEPLOYED AND MONITORING**
 
-Operation Badger has successfully transitioned from quantitative research to live deployment with comprehensive monitoring. The Bull Call Spread strategy is actively monitoring market conditions with automated execution capabilities. The Cardea Guardian system provides 24/7 oversight with professional-grade monitoring and control systems.
+Project Terminus has successfully transitioned from quantitative research to live deployment with comprehensive monitoring. The Bull Call Spread strategy is actively monitoring market conditions with automated execution capabilities. The Terminus Guardian system provides 24/7 oversight with professional-grade monitoring and control systems.
 
 **This represents the successful culmination of 19 sprints of systematic algorithmic trading development, establishing a production-ready platform for institutional-grade quantitative trading.**
 
